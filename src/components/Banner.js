@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Container, Row, Col} from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import dude from '../assets/img/dude.png'
+import cartoonify from '../assets/img/cartoonify.svg'
+import cartoonify2 from '../assets/img/cartoonify2.svg'
 import singhular from '../assets/img/singhular.png'
 
 
@@ -48,20 +49,19 @@ export const Banner = () => {
       <Container>
         <Col>
         <Row>
-          <h1><span className="wrap"> {text}</span></h1>
-          <p>
-            Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. Currently searching for a great company
-          </p>
-        </Row>
-        
-        <Row>
-          <img src={singhular} size='25%' alt ="banner character"/>
-        </Row>
+          <span>         <img src={cartoonify2} alt ="banner character"/></span>
+          <h1><span className="wrap"> 
+          {text}
+          </span></h1>
 
-        <Row>
-        <button onClick={() => console.log('connect')}> 
+
+          <p>
+            Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. <br/><br/>Currently searching for a great company building great things.
+          </p>
+
+          <button onClick={() => console.log('connect')}> 
           Let's Connect <ArrowRightCircle size={35}/>
-        </button>
+          </button>
         </Row>
         </Col>
       </Container>

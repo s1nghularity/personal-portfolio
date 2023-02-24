@@ -108,8 +108,15 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 9%;
     size: 50vh;
-
 }
+
+nav.navbar .navbar-brand img.logo {
+  transition: 0.32s ease-in-out;
+}
+
+
+
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #388678 !important;
@@ -252,19 +259,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
   position:relative;
   
-}
-
-.banner img{
-  position: relative;
-  z-index: 1;
-  width: 10%;
-  height: 10%;
+  
 }
 
 .banner .container {
   position: relative;
   z-index: 2;
   text-align: center;
+
 }
 .banner h1 {
   color: #246a45;
@@ -284,6 +286,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
+
+.banner img {
+  background-color: #246a45;
+  border: 5px solid #fff;
+  position: relative;
+  border-radius: 50%;
+  width: 156.25px;
+  height: 156.25px;
+  animation: updown 3s linear infinite;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -302,25 +330,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
 
-  display: block;
-  width: auto;
-  height: auto;
-  margin-right: 20px;
-  animation: updown 5s linear infinite;
-}
-@keyframes updown {
-    0% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
-}
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }

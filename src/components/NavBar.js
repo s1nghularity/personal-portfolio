@@ -3,7 +3,7 @@ import {Navbar, Container, Nav}  from 'react-bootstrap';
 import logo from "../assets/img/logo.png";
 import github from "../assets/img/github.svg";
 import linkedin from "../assets/img/linkedin.svg"
-import vLogoDark from "../assets/img/vlogodark.svg";
+import vLogoDark2 from "../assets/img/vlogodark2.svg";
 import vLogoWhite from "../assets/img/vlogowhite.svg";
 import vs from "../assets/img/vs.png";
 import vs2 from "../assets/img/vs2.png";
@@ -12,16 +12,16 @@ import vs2 from "../assets/img/vs2.png";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState(vs2);
+  const [logoSrc, setLogoSrc] = useState(vLogoWhite);
 
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
-        setLogoSrc(vs);
+        setLogoSrc(vLogoDark2);
       } else {
         setScrolled(false);
-        setLogoSrc(vs2);
+        setLogoSrc(vLogoWhite);
       }
     };
     window.addEventListener('scroll', onScroll);
@@ -36,7 +36,7 @@ export const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logoSrc} alt="logo" />
+          <img src={logoSrc} alt="logo" className="logo"/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
