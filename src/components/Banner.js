@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import dude from '../assets/img/dude.png'
+import logo from '../assets/img/logo.png'
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -50,7 +51,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>{`Hi I'm Vikram, a `}<span className="wrap"> {text}</span></h1>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. Currently searching for a great company.</p>
             <button onClick={() => console.log('connect')}> 
             Let's Connect <ArrowRightCircle size={25}/>
             </button>

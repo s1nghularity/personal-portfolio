@@ -34,10 +34,9 @@ export const Skills = () => {
             <div className='skill-bx'>
               <h2>Skills</h2>
               <h3>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                <br /> Lorem Ipsum has been the industry's standard dummy text.
-              </h3>
+                After 15 years of creative, administrative, and communications work, I have completely pivoted to a career in full-stack development.
+              </h3>  
+
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -51,7 +50,7 @@ export const Skills = () => {
                   />
 
                   <ProgressBar
-                    skillName='Corporate Communications'
+                    skillName='Corporate Communications & Administration'
                     startValue={0}
                     endValue={90}
                   />
@@ -63,13 +62,13 @@ export const Skills = () => {
                   />
 
                   <ProgressBar
-                    skillName='Journalistic Storytelling'
+                    skillName='Journalism + Storytelling'
                     startValue={0}
                     endValue={90}
                   />
 
                   <ProgressBar
-                    skillName='Non-Profit Management'
+                    skillName='Non-Profit Development & Management'
                     startValue={0}
                     endValue={80}
                   />
