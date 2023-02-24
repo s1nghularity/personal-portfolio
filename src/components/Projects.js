@@ -88,11 +88,11 @@ export const Projects = () => {
                 </Tab.Pane>
                 
                 <Tab.Pane eventKey="second">
-                  lorem ipsum is simply dummy text
+                  <p>lorem ipsum is simply dummy text</p>
                 </Tab.Pane>
                 
                 <Tab.Pane eventKey="third">
-                  lorem ipsum is simply dummy text
+                <p>lorem ipsum is simply dummy text</p>
                 </Tab.Pane>
               </Tab.Content>
 

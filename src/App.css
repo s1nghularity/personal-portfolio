@@ -34,7 +34,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #282c34 !important;
+  background-color: #246a45 !important;
   color: #fff !important;
   font-family: Phudu, sans-serif !important;
 }
@@ -94,7 +94,7 @@ p.danger {
 }
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  padding: 0 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -103,22 +103,24 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #246a45;
 }
 nav.navbar a.navbar-brand {
     width: 9%;
+    size: 50vh;
+
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #388678 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
-  opacity: 0.75;
+  font-size: 26px;
+  opacity: 1;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+    opacity: .75;
 }
 span.navbar-text {
     display: flex;
@@ -131,7 +133,7 @@ span.navbar-text {
 .social-icon a {
     width: 42px;
     height: 42px;
-    background: #00cdf8;
+    background: #388678;
     display: inline-flex;
     border-radius: 50%;
     margin-right: 6px;
@@ -145,7 +147,7 @@ span.navbar-text {
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color:#ff229d;
+    background-color:#57d2bc;
     border-radius: 50%;
     transform: scale(0);
 	transition: 0.3s ease-in-out;
@@ -163,8 +165,8 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #388678;
+  border: 1px solid #57d2bc;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -243,45 +245,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: linear-gradient(to top, #ff781d, #fe712a, #fc6b35, #f9663e, #f56146, #ea5253, #db465d, #c93d66, #a3336e, #782f6e, #4b2b65, #1e2454);
-  background-position: top center;
+  margin: 0;
+  padding: 200px 0 20px 0;
+  background-image: linear-gradient(to bottom, #ffffff, #c9d6e4, #83b2c1, #40908b, #246a45);
   background-size: cover;
   background-repeat: no-repeat;
   position:relative;
+  
 }
 
 .banner img{
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 1;
+  width: 10%;
+  height: 10%;
 }
 
-
-
-.banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
+.banner .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 .banner h1 {
+  color: #246a45;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  
 }
 .banner p {
-  color: #B8B8B8;
-  font-size: 18px;
+  color: #246a45;
+  font-size: 35px;
+  font-weight: 300;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -305,22 +303,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  position: relative;
-  display: inline-block;
+
+  display: block;
   width: auto;
   height: auto;
   margin-right: 20px;
-  animation: updown 3s linear infinite;
+  animation: updown 5s linear infinite;
 }
 @keyframes updown {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
     50% {
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
     100% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 .txt-rotate > .wrap {
@@ -329,7 +327,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /*Skills Section*/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 400px 0 50px 0;
   position: relative;
 }
 

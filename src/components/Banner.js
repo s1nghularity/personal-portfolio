@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col} from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import dude from '../assets/img/dude.png'
-import logo from '../assets/img/logo.png'
+import singhular from '../assets/img/singhular.png'
+
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack Fanatic'];
+  const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack N00b'];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300-Math.random()*100)
   const [period, setPeriod] = useState(2000)
@@ -43,25 +44,26 @@ export const Banner = () => {
   }
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" >
       <Container>
-        
-        <Row className="align-items-center">
-          
-          <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1>{`Hi I'm Vikram, a `}<span className="wrap"> {text}</span></h1>
-            <p>Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. Currently searching for a great company.</p>
-            <button onClick={() => console.log('connect')}> 
-            Let's Connect <ArrowRightCircle size={25}/>
-            </button>
-          </Col>
-          
-          <Col xs={12} md={6} xl={5}>
-            <img src={dude} alt ="banner character"/>
-          </Col>
-  
+        <Col>
+        <Row>
+          <h1><span className="wrap"> {text}</span></h1>
+          <p>
+            Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. Currently searching for a great company
+          </p>
         </Row>
+        
+        <Row>
+          <img src={singhular} size='25%' alt ="banner character"/>
+        </Row>
+
+        <Row>
+        <button onClick={() => console.log('connect')}> 
+          Let's Connect <ArrowRightCircle size={35}/>
+        </button>
+        </Row>
+        </Col>
       </Container>
 
     </section>
