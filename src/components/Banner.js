@@ -12,7 +12,7 @@ export const Banner = () => {
   const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack N00b'];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300-Math.random()*100)
-  const [period, setPeriod] = useState(2000)
+  const [period, setPeriod] = useState(1500)
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -49,8 +49,11 @@ export const Banner = () => {
       <Container>
         <Col>
         <Row>
-          <span>         <img src={cartoonify2} alt ="banner character"/></span>
-          <h1><span className="wrap"> 
+          <span>         
+            <img src={cartoonify2} alt ="banner character"/>
+          </span>
+          
+          <h1 style={{ height: '50px' }}><span> 
           {text}
           </span></h1>
 

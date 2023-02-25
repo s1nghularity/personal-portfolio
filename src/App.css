@@ -254,7 +254,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin: 0;
   padding: 200px 0 20px 0;
-  background-image: linear-gradient(to bottom, #ffffff, #c9d6e4, #83b2c1, #40908b, #246a45);
+  background-image: url(../src/assets/img/blurry2.png);
   background-size: cover;
   background-repeat: no-repeat;
   position:relative;
@@ -271,9 +271,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner h1 {
   color: #246a45;
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.8px;
   line-height: 1;
+  margin-top: 25px;
   margin-bottom: 20px;
   display: block;
   
