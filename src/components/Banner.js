@@ -1,75 +1,87 @@
-import { useState, useEffect } from 'react'
-import { Container, Row, Col} from 'react-bootstrap'
-import { ArrowRightCircle } from 'react-bootstrap-icons'
-import cartoonify from '../assets/img/cartoonify.svg'
-import cartoonify2 from '../assets/img/cartoonify2.svg'
-import singhular from '../assets/img/singhular.png'
-
+import { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { ArrowRightCircle } from 'react-bootstrap-icons';
+import avatar2 from '../assets/img/vs-avatar2.png';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack N00b'];
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300-Math.random()*100)
-  const [period, setPeriod] = useState(1500)
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [period, setPeriod] = useState(1500);
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
-    }, delta)
+    }, delta);
 
-    return () => {clearInterval(ticker)};
-    }, [text])
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
 
-    const tick = () => {
-      let i = loopNum % toRotate.length;
-      let fullText = toRotate[i];
-      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-      setText(updatedText);
-
-      if (isDeleting) {
-        setDelta(prevDelta => prevDelta / 2);
-      }
-
-      if (!isDeleting && updatedText === fullText) {
-        setIsDeleting(true);
-        setDelta(period);
-      } else if (isDeleting && updatedText === '') {
-        setIsDeleting(false);
-        setLoopNum(loopNum + 1);
-        setDelta(500);
-      }
-
-  }
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+  
+    setText(updatedText);
+  
+    // update cursor visibility based on text length and whether text is being typed or deleted
+    let cursorVisible = !isDeleting && text.length < fullText.length;
+    if (text.length === 0) {
+      cursorVisible = true;
+    }
+    document.querySelector('.cursor').style.visibility = cursorVisible ? 'visible' : 'hidden';
+  
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+  
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === '') {
+      setIsDeleting(false);
+      setLoopNum((loopNum) => loopNum + 1);
+      setDelta(500);
+    }
+  };
+  
 
   return (
-    <section className="banner" >
+    <section className='banner'>
       <Container>
         <Col>
-        <Row>
-          <span>         
-            <img src={cartoonify2} alt ="banner character"/>
-          </span>
-          
-          <h1 style={{ height: '50px' }}><span> 
-          {text}
-          </span></h1>
+          <Row>
+            <h1 style={{ height: '100px' }}>
+              <span> {text} </span>
+              <span
+                className='cursor'
+                style={{ visibility: isDeleting ? 'visible' : 'hidden' }}
+              >
+                <b>|</b>
+              </span>
+            </h1>
 
+            <p>
+              I build and code pretty useful things, <br /> and love to tell
+              stories.
+            </p>
 
-          <p>
-            Thanks for visiting my site! I am a Winter 2022 graduate of MIT's MERN coding bootcamp. <br/><br/>Currently searching for a great company building great things.
-          </p>
+            <span>
+              <img src={avatar2} alt='banner character' />
+            </span>
 
-          <button onClick={() => console.log('connect')}> 
-          Let's Connect <ArrowRightCircle size={35}/>
-          </button>
-        </Row>
+            <button onClick={() => console.log('connect')}>
+              Let's Connect <ArrowRightCircle size={35} />
+            </button>
+          </Row>
         </Col>
       </Container>
-
     </section>
-  )
-}
-
+  );
+};

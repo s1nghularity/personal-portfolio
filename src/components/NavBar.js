@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import {Navbar, Container, Nav}  from 'react-bootstrap';
-import logo from "../assets/img/logo.png";
 import github from "../assets/img/github.svg";
 import linkedin from "../assets/img/linkedin.svg"
 import vLogoDark2 from "../assets/img/vlogodark2.svg";
 import vLogoWhite from "../assets/img/vlogowhite.svg";
-import vs from "../assets/img/vs.png";
-import vs2 from "../assets/img/vs2.png";
+
 
 
 export const NavBar = () => {
@@ -78,7 +76,7 @@ export const NavBar = () => {
 
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://github.com/s1nghularity/">
                 {' '}
                 <img src={github} alt="github" />
               </a>

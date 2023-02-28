@@ -1,14 +1,11 @@
-import { useState } from 'react';
-import colorSharp from '../assets/img/color-sharp.png';
 import 'react-multi-carousel/lib/styles.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import { ProgressBar } from '../components/ProgressBar.js';
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -30,12 +27,13 @@ export const Skills = () => {
     <section className='skill' id='skills'>
       <Container>
         <Row>
-          <Col>
+
             <div className='skill-bx'>
               <h2>Skills</h2>
-              <h3>
-                After 15 years of creative, administrative, and communications work, I have completely pivoted to a career in full-stack development.
-              </h3>  
+              <p>
+                My career pivot towards full-stack software development<br/> has been supercharged by over a decade and a half of experience: <br/><br/>
+                Journalism | Corporate Communications |<br/> Non-Profit Development & Management | Social Media Marketing
+              </p>  <br/>
 
               <Carousel
                 responsive={responsive}
@@ -50,7 +48,7 @@ export const Skills = () => {
                   />
 
                   <ProgressBar
-                    skillName='Corporate Communications & Administration'
+                    skillName='Corporate Comms/Admin'
                     startValue={0}
                     endValue={90}
                   />
@@ -74,7 +72,7 @@ export const Skills = () => {
                   />
               </Carousel>
             </div>
-          </Col>
+
         </Row>
       </Container>
     </section>

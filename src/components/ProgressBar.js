@@ -16,7 +16,7 @@ export const ProgressBar = ({ skillName, startValue, endValue }) => {
       progressStartValue++;
       progressValue.textContent = `${progressStartValue}%`;
       
-      circularProgress.style.background = `conic-gradient(#ff781d ${progressStartValue * 3.6}deg,  #ea5253 1.8deg, #c6c7ce 0deg)`;
+      circularProgress.style.background = `conic-gradient(#246a45 ${progressStartValue * 3.6}deg, #a7ffc4 0deg)`;
 
       if (progressStartValue === endValue) {
         clearInterval(progress);
