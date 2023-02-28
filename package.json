@@ -1,5 +1,6 @@
 {
   "name": "personal-portfolio",
+  "homepage": "https://s1nghularity.onrender.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --homepage https://s1nghularity.onrender.com/ ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
