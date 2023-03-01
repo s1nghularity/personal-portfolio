@@ -25,7 +25,7 @@
         let game = document.getElementById('game');
         let newimg = document.createElement('img');
         newimg.style.position = 'absolute';
-        newimg.src = "/src/assets/projects/pacmen-factory/PacMan1.png";
+        newimg.src = "./assets/projects/pacmen-factory/PacMan1.png";
         newimg.width = 100;
         newimg.style.left = position.x;
         newimg.style.top = position.y;
@@ -62,8 +62,8 @@
                 item.position.y + item.velocity.y < 0) 
                 {item.focus = true; 
                 item.velocity.y = -item.velocity.y;}
-        if (item.focus) {item.newimg.src = "/src/assets/projects/pacmen-factory/PacMan1.png";} 
-        else {item.newimg.src = "/src/assets/projects/pacmen-factory/PacMan3.png";}
+        if (item.focus) {item.newimg.src = "./assets/projects/pacmen-factory/PacMan1.png";} 
+        else {item.newimg.src = "./assets/projects/pacmen-factory/PacMan3.png";}
     }
 
     function makeOne() {
