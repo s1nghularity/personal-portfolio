@@ -53,7 +53,7 @@ export const Banner = () => {
   
 
   return (
-    <section className='banner'>
+    <section className='banner' id='home'>
       <Container>
         <Col>
           <Row>

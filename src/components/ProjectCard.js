@@ -1,12 +1,9 @@
 import { Col, Button } from 'react-bootstrap';
 
-export const ProjectCard = ({
-  title,
-  description,
-  imgUrl,
-  codeLink,
-  liveLink,
-}) => {
+export const ProjectCard = ({title, description, imgUrl, codeLink,
+  liveLink}) => {
+
+
   return (
     <Col sm={8} md={6}>
       <div className='proj-imgbx'>
@@ -26,6 +23,7 @@ export const ProjectCard = ({
           </div>
         </div>
       </div>
+      
     </Col>
   );
 };
