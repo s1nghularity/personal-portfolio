@@ -18,9 +18,7 @@ function App() {
       <About/>
       <Skills/>
       <Projects/>
-      <div className='contact-form-container'>
       <ContactForm/>
-      </div>
       <Footer/>
     </div>
   );

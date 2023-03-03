@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L500 0L500 500L0 500L0 0L0 0L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="vlogofavi">
+    <g id="vlogowhite">
+      <path d="M0 0L500 0L500 500L0 500L0 0L0 0L0 0Z" id="Background" fill="#D3D3D3" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+      <g id="Mask-Group">
+        <path d="M0 0L500 0L500 500L0 500L0 0L0 0L0 0Z" id="path_1#1" fill="none" stroke="none" />
+        <g id="Mask-Group">
+          <path d="M0 0L500 0L500 500L0 500L0 0L0 0L0 0Z" id="path_1" fill="none" stroke="none" />
+          <g clip-path="url(#mask_1)">
+            <g id="Group" transform="translate(-50 -50)">
+              <g id="Group">
+                <path d="M0 0L600 0L600 600L0 600L0 0L0 0L0 0Z" id="Rectangle" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+                <path d="M0 0L600 0L600 600L0 600L0 0L0 0L0 0Z" id="Rectangle#1" fill="none" fill-rule="evenodd" stroke="none" />
+                <path d="M53 53.5L548 53.5L548 548.5L53 548.5L53 53.5L53 53.5L53 53.5Z" id="Group#1" fill="#246A45" fill-rule="evenodd" stroke="none" />
+                <path d="M83.5005 83.9589L517.94 83.9589L517.94 518.441L83.5005 518.441L83.5005 83.9589L83.5005 83.9589L83.5005 83.9589Z" id="Group#2" fill="#246A45" fill-rule="evenodd" stroke="none" />
+                <path d="M326.412 394.5L274.172 394.5L197.016 195.988L250.864 195.988L301.66 342.099L352.453 195.988L404.37 195.988L326.412 394.5L326.412 394.5L326.412 394.5Z" id="Group#9" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

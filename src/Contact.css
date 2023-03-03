@@ -1,17 +1,14 @@
 
-
-.contact-form-container {
-  padding: 10px 10px 20px 30px;
-  background-color: #f8f8f8;
-  align-content: center;
-}
-
 .contact-form {
-  width: 100%;;
+  width: 100%;
   padding: 20px;
-  background-color: #f1f1f1;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 5px 5px 5px;
+  
 }
+
+
 
 .contact-form label {
   display: block;
@@ -34,7 +31,8 @@
 }
 
 .contact-form button {
-  display: block;
+  /*align content to the right*/
+  float: right;
   margin-top: 20px;
   padding: 10px;
   border: none;
@@ -63,10 +61,38 @@
 .work-together {
   color:#246a45;
   padding: 20px;
+  height: 50vh;
 }
 
 .work-together img{
   scroll-behavior: smooth;
   animation: wobble; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+.modal-header {
+  background-color: #246a45;
+  color: white;
+}
+
+.modal-footer {
+  background-color: #246a45;
+}
+
+.modal-svg {
+  height: 50%;
+
+  /* Add your animation styles here */
+}
+
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
