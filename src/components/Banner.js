@@ -27,20 +27,22 @@ export const Banner = () => {
     let updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
-  
+
     setText(updatedText);
-  
+
     // update cursor visibility based on text length and whether text is being typed or deleted
     let cursorVisible = !isDeleting && text.length < fullText.length;
     if (text.length === 0) {
       cursorVisible = true;
     }
-    document.querySelector('.cursor').style.visibility = cursorVisible ? 'visible' : 'hidden';
-  
+    document.querySelector('.cursor').style.visibility = cursorVisible
+      ? 'visible'
+      : 'hidden';
+
     if (isDeleting) {
       setDelta((prevDelta) => prevDelta / 2);
     }
-  
+
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setDelta(period);
@@ -50,7 +52,6 @@ export const Banner = () => {
       setDelta(500);
     }
   };
-  
 
   return (
     <section className='banner' id='home'>
@@ -76,7 +77,13 @@ export const Banner = () => {
               <img src={avatar2} alt='banner character' />
             </span>
 
-            <button onClick={() => console.log('connect')}>
+            <button
+              onClick={() =>
+                document
+                  .querySelector('#contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              }
+            >
               Let's Connect <ArrowRightCircle size={35} />
             </button>
           </Row>

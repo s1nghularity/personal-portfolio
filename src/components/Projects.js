@@ -50,7 +50,7 @@ export const Projects = () => {
       title: 'Full Stack Banking App',
       description: 'While this portfolio website could be considered a capstone CSS project itself, this is the real deal. A full stack MERN banking app. A very simple yet functional REST API built to allow one to register, login (and out), withdraw/deposit money and even delete user accounts.',
       imgUrl: projImg5,
-      codeLink: '',
+      codeLink: 'https://github.com/s1nghularity/bb-server',
       liveLink:'https://bb-client-r4iq.onrender.com/',
     },
 

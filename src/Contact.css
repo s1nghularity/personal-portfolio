@@ -1,0 +1,72 @@
+
+
+.contact-form-container {
+  padding: 10px 10px 20px 30px;
+  background-color: #f8f8f8;
+  align-content: center;
+}
+
+.contact-form {
+  width: 100%;;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #246a45;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #246a45;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1a4e32;
+}
+
+.contact-form button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.work-together {
+  color:#246a45;
+  padding: 20px;
+}
+
+.work-together img{
+  scroll-behavior: smooth;
+  animation: wobble; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}

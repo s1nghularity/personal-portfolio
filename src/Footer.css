@@ -1,0 +1,53 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.tagline p {
+  color: #246a45;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  color: #246a45;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-links i {
+  display: block;
+}
+
+.crafted-by p {
+  color: #246a45;
+  font-size: 14px;
+  text-align: center;
+}

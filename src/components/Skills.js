@@ -71,6 +71,9 @@ export const Skills = () => {
                     endValue={80}
                   />
               </Carousel>
+              <p>
+                Assuming 10K hours reflects proficiency, the above percentages show time spent in each profession.
+              </p> 
             </div>
 
         </Row>

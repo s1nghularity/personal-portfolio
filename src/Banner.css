@@ -1,0 +1,93 @@
+.banner {
+  margin: 0;
+  padding: 100px 0 20px 0;
+  background-color: 'white';
+}
+
+.cursor {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0.2em;
+  height: 1em;
+  margin-left: -0.3em;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.banner .container {
+  z-index: 2;
+  text-align: center;
+}
+
+.banner img {
+  margin-top: 50px;
+  background-color: #246a45;
+  position: relative;
+  border-radius: 50%;
+  width: 12rem;
+  height: 196.25px;
+  animation: updown 3s linear infinite;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.banner h1 {
+  color: #246a45;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  line-height: 1; 
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+  
+
+
+.banner p {
+  color: #246a45;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.banner button {
+  color: #246a45;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 40px;
+  letter-spacing: 0.8px;
+}
+
+.banner button svg {
+  font-size: 15px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
