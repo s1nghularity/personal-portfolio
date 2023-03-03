@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.e41cc552.css",
-    "main.js": "/personal-portfolio/static/js/main.aea2e29b.js",
+    "main.css": "/personal-portfolio/static/css/main.2ebdf29c.css",
+    "main.js": "/personal-portfolio/static/js/main.3f174fc8.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/bank.png": "/personal-portfolio/static/media/bank.bc2cc150b82b9b78c18b.png",
     "static/media/bus.png": "/personal-portfolio/static/media/bus.fe40fa62982011289e4b.png",
     "static/media/panopticon.png": "/personal-portfolio/static/media/panopticon.774855e31d4df6cea377.png",
     "static/media/pacman.png": "/personal-portfolio/static/media/pacman.6fdf21260ca5858b61ed.png",
+    "static/media/contact1.svg": "/personal-portfolio/static/media/contact1.dc14736e67346988446e1d0c88e26055.svg",
     "static/media/ndtv.png": "/personal-portfolio/static/media/ndtv.426ad7ba0341c2e0726d.png",
     "static/media/Phudu-Light.ttf": "/personal-portfolio/static/media/Phudu-Light.3552a14d261a983e56f1.ttf",
     "static/media/Phudu-Black.ttf": "/personal-portfolio/static/media/Phudu-Black.48fda745e2577d4e8498.ttf",
@@ -21,12 +22,12 @@
     "index.html": "/personal-portfolio/index.html",
     "static/media/github.svg": "/personal-portfolio/static/media/github.e7ab8675a2cbadea548cafe724065b9e.svg",
     "static/media/linkedin.svg": "/personal-portfolio/static/media/linkedin.9e52cf326e0bbf3cd9a3378906c0d35c.svg",
-    "main.e41cc552.css.map": "/personal-portfolio/static/css/main.e41cc552.css.map",
-    "main.aea2e29b.js.map": "/personal-portfolio/static/js/main.aea2e29b.js.map",
+    "main.2ebdf29c.css.map": "/personal-portfolio/static/css/main.2ebdf29c.css.map",
+    "main.3f174fc8.js.map": "/personal-portfolio/static/js/main.3f174fc8.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e41cc552.css",
-    "static/js/main.aea2e29b.js"
+    "static/css/main.2ebdf29c.css",
+    "static/js/main.3f174fc8.js"
   ]
 }
