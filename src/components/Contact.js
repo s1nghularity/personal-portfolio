@@ -4,6 +4,7 @@ import contact from '../assets/img/contact1.svg'
 import 'animate.css'
 import { Card, Modal, Button } from 'react-bootstrap';
 import turtle from '../assets/img/turtle.svg'
+import {TurtleSvg} from '../components/Modal.js';
 
 export const ContactForm = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -58,12 +59,10 @@ export const ContactForm = () => {
 
       <Modal show={showModal} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Thank you for connecting!</Modal.Title>
+            <Modal.Title>Thanks for reaching out.</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div className="modal-svg">
-              <img src={contact} alt="contact-img" />
-            </div>
+            <TurtleSvg/>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
