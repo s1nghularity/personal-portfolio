@@ -71,7 +71,7 @@ export default class Carousel extends Component {
         </div>
 
         <div>
-          <img src={css} alt='css3' />
+          <img src={css} alt='css3' className='bottom'/>
         </div>
 
         <div>
@@ -79,7 +79,7 @@ export default class Carousel extends Component {
         </div>
 
         <div>
-          <img src={express} alt='express' />
+          <img src={express} alt='express' className='top'  />
         </div>
 
         <div>
@@ -87,7 +87,7 @@ export default class Carousel extends Component {
         </div>
 
         <div>
-          <img src={heroku} alt='heroku' />
+          <img src={heroku} alt='heroku' className='top' />
         </div>
 
         <div>
@@ -95,7 +95,7 @@ export default class Carousel extends Component {
         </div>
 
         <div>
-          <img src={jquery} alt='jquery' />
+          <img src={jquery} alt='jquery' className='top'/>
         </div>
 
         <div>
@@ -107,7 +107,7 @@ export default class Carousel extends Component {
         </div>
 
         <div>
-          <img src={npm} alt='npm' />
+          <img src={npm} alt='npm'  className='top'/>
         </div>
 
         <div>
