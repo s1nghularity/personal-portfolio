@@ -3,7 +3,7 @@
 .project {
   padding: 100px 0 100px;
   position: relative;
-  background: linear-gradient(0deg, #599e75 0%, #246a45 100%);
+  background: #f0f0f0
 }
 .project h2 {
   font-size: 45px;
@@ -11,7 +11,7 @@
   text-align: center;
 }
 .project p {
-  color: #a7ffc4;
+  color: #246a45;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -48,7 +48,11 @@
   position: absolute;
   width: 0;
   height: 100%;
-  background: #246a45 111.58%;
+background: linear-gradient(
+    90.21deg,
+    #59c173 0%,
+    #246a45 111.58%
+  );
   top: 0;
   left: 0;
   z-index: -1;
@@ -79,10 +83,12 @@
 .proj-imgbx {
   position: relative;
   width: 100%;
+  height: 0.01px;
   padding-top: 56.25%; /* 16:9 aspect ratio */
   border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 24px;
+  overflow: scroll;
+  margin-bottom: 1rem;
+
 }
 
 .proj-imgbx img {
@@ -127,7 +133,7 @@
   opacity: 0;
   width: 100%;
   z-index: 2;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 3rem 0.5rem 3rem;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -138,6 +144,7 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+
 }
 .proj-txtx span {
   font-style: italic;
@@ -148,11 +155,11 @@
 
 @media (max-width: 768px) {
   .proj-txtx {
-    line-height: 1.1em;
+    line-height: .8rem;
   }
 
   .proj-txtx h4 {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1.1em;
@@ -160,8 +167,8 @@
 
   .proj-txtx span {
     font-style: italic;
-    font-weight: 400;
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: .7rem;
     letter-spacing: 0.4px;
   }
 }

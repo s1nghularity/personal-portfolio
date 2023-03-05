@@ -1,0 +1,25 @@
+.slick-slide {
+
+} 
+.slick-slide div{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+.slick-slide div{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+}

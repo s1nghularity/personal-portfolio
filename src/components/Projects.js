@@ -59,6 +59,9 @@ export const Projects = () => {
   return (
     <section className ="project" id="projects">
       <Container>
+
+
+
         <Row>
           <Col>
             <h2>Projects</h2>
@@ -67,13 +70,13 @@ export const Projects = () => {
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Intro</Nav.Link>
+                  <Nav.Link eventKey="first">Warm-Up</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Intermediate</Nav.Link>
+                  <Nav.Link eventKey="second">Sprints</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">Capstone</Nav.Link>
+                  <Nav.Link eventKey="third">Marathon</Nav.Link>
                 </Nav.Item>
               </Nav>
 

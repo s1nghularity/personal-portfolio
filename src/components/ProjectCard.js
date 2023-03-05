@@ -1,9 +1,13 @@
-import { Col, Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { FileCodeFill, FilePlayFill } from 'react-bootstrap-icons';
 
-export const ProjectCard = ({title, description, imgUrl, codeLink,
-  liveLink}) => {
-
-
+export const ProjectCard = ({
+  title,
+  description,
+  imgUrl,
+  codeLink,
+  liveLink,
+}) => {
   return (
     <Col sm={8} md={6}>
       <div className='proj-imgbx'>
@@ -13,17 +17,26 @@ export const ProjectCard = ({title, description, imgUrl, codeLink,
           <span>{description}</span>
           <div>
             <br />
-            <Button variant='outline-primary' size='sm' href={codeLink}>
-              Code
-            </Button>{' '}
-            <span />
-            <Button variant='outline-secondary' size='sm' href={liveLink}>
-              Live
-            </Button>
+
+            <button 
+              bsPrefix='btn' 
+              size='sm' 
+              href={codeLink}
+              className='code-link'> 
+              <FileCodeFill size={'2em'} color='#246a45' />
+            </button>{' '}
+
+            <button
+              bsPrefix='btn'
+              size='sm'
+              href={liveLink}
+              className='code-link'>
+              <FilePlayFill size={'2em'} color='#B51D25'/>
+            </button>
+
           </div>
         </div>
       </div>
-      
     </Col>
   );
 };
