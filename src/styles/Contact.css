@@ -4,6 +4,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 5px 5px 5px;
+  height: auto;
 }
 
 .contact-form label {
@@ -94,4 +95,44 @@
   100% {
     transform: translate(0, 0);
   }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form {
+    font-size: 14px;
+  }
+
+  .contact-form label {
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    height: 100px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .work-together {
+    height: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .work-together img {
+  display: none;
+  }
+
 }

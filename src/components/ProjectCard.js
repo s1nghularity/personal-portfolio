@@ -15,25 +15,25 @@ export const ProjectCard = ({
         <div className='proj-txtx'>
           <h3>{title}</h3>
           <span>{description}</span>
+        
           <div>
-            <br />
-
-            <button 
+          
+            <a 
               bsPrefix='btn' 
               size='sm' 
               href={codeLink}
               className='code-link'> 
               <FileCodeFill size={'2em'} color='#246a45' />
-            </button>{' '}
+            </a>{' '}
 
-            <button
+            <a
               bsPrefix='btn'
               size='sm'
               href={liveLink}
               className='code-link'>
               <FilePlayFill size={'2em'} color='#B51D25'/>
-            </button>
-
+            </a>
+            <br/>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../Carousel.css';
+import '../styles/Carousel.css';
 
 import adobe from '../assets/img/tech-icons/adobe-illustrator.svg';
 import bootstrap from '../assets/img/tech-icons/bootstrap.svg';
@@ -25,17 +25,27 @@ export default class Carousel extends Component {
     const settings = {
       dots: false,
       infinite: true,
-      slidesToShow: 10,
+      slidesToShow: 11,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
+      speed: 4000,
+      autoplaySpeed: 4000,
       cssEase: "linear",
       centerpadding: "100px",
       responsive: [
         {
           breakpoint: 1024,
-          settings: {
+          settings: { 
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            dots: false,
+          },
+        },
+
+        {
+          breakpoint: 1024,
+          settings: { 
             slidesToShow: 4,
             slidesToScroll: 4,
             infinite: true,
@@ -47,7 +57,8 @@ export default class Carousel extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            initialSlide: 2,
+            autoplaySpeed: 5000,
+            speed: 5000,
           },
         },
         {
@@ -55,6 +66,8 @@ export default class Carousel extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
+            autoplaySpeed: 6000,
+            speed: 6000,
           },
         },
       ],

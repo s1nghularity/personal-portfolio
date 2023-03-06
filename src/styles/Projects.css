@@ -1,9 +1,9 @@
 /*PROJECTS TABBED NAVIGATION*/
 
 .project {
-  padding: 100px 0 100px;
+  padding: 50px 0 100px;
   position: relative;
-  background: #f0f0f0
+  background: #f0f0f0;
 }
 .project h2 {
   font-size: 45px;
@@ -20,17 +20,24 @@
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 72%;
+  width: 52%;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
+
+@media screen and (max-width: 768px) {
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+}
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
-  background-color: transparent;
+  background-color: #9b9b9b;
   border-radius: 0;
   padding: 17px 0;
   color: #fff;
@@ -48,11 +55,7 @@
   position: absolute;
   width: 0;
   height: 100%;
-background: linear-gradient(
-    90.21deg,
-    #59c173 0%,
-    #246a45 111.58%
-  );
+  background: linear-gradient(90.21deg, #59c173 0%, #246a45 111.58%);
   top: 0;
   left: 0;
   z-index: -1;
@@ -71,6 +74,7 @@ background: linear-gradient(
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0;
 }
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -80,72 +84,83 @@ background: linear-gradient(
 /*PROJECT CARDS*/
 /*PROJECT CARDS*/
 /*PROJECT CARDS*/
-.proj-imgbx {
+
+.proj-imgbx 
+{
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 0.01px;
   padding-top: 56.25%; /* 16:9 aspect ratio */
-  border-radius: 30px;
-  overflow: scroll;
-  margin-bottom: 1rem;
-
+  border-radius: 25px;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
 }
 
 .proj-imgbx img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
+  border-radius: 25px;
+}
+
+.proj-imgbx .code-link {
+
 }
 
 .proj-imgbx::before {
   content: '';
-  background: linear-gradient(
-    90.21deg,
-    #59c173 0%,
-    #a17fe0 50%,
-    #5d26c1 111.58%
-  );
+  background: linear-gradient(90.21deg, #59c173 0%, #246a45 111.58%);
   opacity: 0.95;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
   height: 0.01px;
+  object-fit: cover;
+  border-radius: 25px;
   transition: height 0.4s ease-in-out;
   z-index: 0;
 }
 
 .proj-imgbx:hover::before {
-  height: 100%;
+  width: 80%;
+  height: 80%;
   z-index: 1;
 }
 
 .proj-txtx {
   position: absolute;
+  padding: 0 1rem .5rem 1rem;
   text-align: center;
-  top: 65%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
   opacity: 0;
-  width: 100%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 25px;
   z-index: 2;
-  padding: 0.5rem 3rem 0.5rem 3rem;
+  top: calc(50% + 1rem);
 }
+
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
+  border-radius: 25px;
 }
-.proj-txtx h4 {
-  font-size: 30px;
+
+.proj-txtx h3 {
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
-
 }
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
@@ -153,22 +168,33 @@ background: linear-gradient(
   letter-spacing: 0.8px;
 }
 
+
 @media (max-width: 768px) {
-  .proj-txtx {
-    line-height: .8rem;
+  .proj-imgbx {
+    position: relative;
+    width: calc(100% - (2 * var(--padding)));
+    padding-top: calc(100% * (9 / 16));
+    left: 2rem;
   }
 
-  .proj-txtx h4 {
-    font-size: 1.25em;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
+  .proj-txtx {
+    line-height: 1rem;
+    top: 50%;
+    border-radius: 25px;
+  }
+
+  .proj-txtx h3 {
+    margin-top: -0.75rem;
+    font-size: 1.2rem;
   }
 
   .proj-txtx span {
-    font-style: italic;
+    font-size: 0.8rem;
     font-weight: 300;
-    font-size: .7rem;
-    letter-spacing: 0.4px;
+  }
+
+  .proj-imgbx .code-link {
+
+    font-size: 0.7rem;
   }
 }

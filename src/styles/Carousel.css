@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+}
+
+.slick-list {
+  padding-top: 1rem;
+  background-color: #f0f0f07c;
+}
+.slick-slide {
+  padding-bottom: 1rem;
+}
+
+.slick-slide div {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem;
+}
+
+.slick-slide div .top {
+  padding-top: 1.1rem;
+  width: 150%;
+}
+
+.slick-slide div .bottom {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .slick-slide div {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+}
+
+/*for tablets*/
+@media (max-width: 768px) {
+  .slick-slide div {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+}
