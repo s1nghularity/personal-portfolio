@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import github from '../assets/img/github.svg';
-import linkedin from '../assets/img/linkedin.svg';
+import { Navbar, Nav } from 'react-bootstrap';
 import vLogoDark2 from '../assets/img/vlogodark2.svg';
 import vLogoWhite from '../assets/img/vlogowhite.svg';
 
@@ -70,26 +68,17 @@ export const NavBar = () => {
         </Nav>
 
         <span className='navbar-text'>
-          <div className='social-icon'>
-            <a href='https://github.com/s1nghularity/'>
-              {' '}
-              <img src={github} alt='github' />
-            </a>
-            <a href='https://www.linkedin.com/in/vikramsinghca/'>
-              {' '}
-              <img src={linkedin} alt='linkedin' />
-            </a>
-          </div>
           <button
             onClick={() =>
               document
                 .querySelector('#contact')
-                .scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 1000 })
+                .scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 5000 })
             }
           >
             <span> Let's Connect</span>
           </button>
         </span>
+        
       </Navbar.Collapse>
     </Navbar>
   );

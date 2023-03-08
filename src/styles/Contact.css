@@ -28,7 +28,7 @@
 }
 
 .contact-form button {
-  /*align content to the right*/
+  /* align content to the right */
   float: right;
   margin-top: 20px;
   padding: 10px;
@@ -39,6 +39,15 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+@media screen and (max-width: 480px) {
+  .contact-form button {
+    float: none;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
 
 .contact-form button:hover {
   background-color: #1a4e32;

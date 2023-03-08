@@ -13,8 +13,7 @@ export const About = () => {
         <br/>
         
         <p>As a <b>Winter 2022</b> graduate of MIT's MERN bootcamp, I'm eager to work with agencies, startups, as well as small and large corporations. I've worked with teams all over the world, supporting artists, activists, entreprenuers and executives alike.
-        
-        <br/><br/>Looking for <b>great</b> people <br/>building <b>great</b> things. </p>
+        </p>
 
       </div>
     </div>

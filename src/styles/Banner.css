@@ -53,7 +53,7 @@
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: 0.025rem;
-  line-height: 1; 
+  line-height: 1;
 }
 
 @media (max-width: 768px) {
@@ -61,8 +61,6 @@
     font-size: 3rem;
   }
 }
-  
-
 
 .banner p {
   color: #246a45;

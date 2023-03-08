@@ -1,9 +1,8 @@
-@media screen and (max-width: 768px) {
-}
 
 .slick-list {
   padding-top: 1rem;
   background-color: #f0f0f07c;
+  margin-bottom: -.2rem;
 }
 .slick-slide {
   padding-bottom: 1rem;

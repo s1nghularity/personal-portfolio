@@ -1,9 +1,39 @@
+.react-multi-carousel-list .react-multiple-carousel__arrow {
+  background: #246a45;
+  color: #fff;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  z-index: 0;
+}
+
+button.react-multiple-carousel__arrow:nth-child(2)::before {
+  content: '🢔';
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  height: 100%;
+}
+
+button.react-multiple-carousel__arrow:nth-child(3)::before {
+  content: '🢖';
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
+  height: 100%;
+}
+
 .skill {
-  padding: 5rem 0 5rem 0;
+  padding: 5rem 0;
 }
 
 .skill-bx {
-  /*gradient between two colors*/
   object-fit: center;
   text-align: center;
 }
@@ -26,13 +56,11 @@
 .skill-slider {
   justify-content: center;
   object-fit: center;
-  padding-left: 11.5rem;
 }
 
-@media (max-width: 768px) {
-  .skill-slider {
-    padding-left: 16rem;
-  }
+li.react-multi-carousel-item {
+  display: flex;
+  justify-content: center;
 }
 
 /*SKILLS ANIMATION*/
@@ -41,7 +69,6 @@
 
 .progress-container {
   width: min-content;
-  
 }
 
 .circular-progress {

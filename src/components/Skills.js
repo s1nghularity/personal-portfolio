@@ -24,52 +24,60 @@ export const Skills = () => {
   };
 
   return (
-    <section className='skill' id='skills'>
-      <Container>
-        <Row>
-
-            <div className='skill-bx'>
-              <h2>Skills</h2>
-              <p>
-                My career pivot towards full-stack software development<br/> has been supercharged by over a decade and a half of experience: <br/><br/>
-                Journalism | Corporate Communications |<br/> Non-Profit Development & Management | Social Media Marketing
-              </p>  <br/>
+<section className='skill' id='skills'>
+  <Container>
+    <Row className="justify-content-center">
+      <div className='skill-bx'>
+        <h2>Skills</h2>
+        <p>
+          My career pivot towards full-stack software development<br/> has been supercharged by over a decade and a half of experience: <br/><br/>
+          Journalism | Corporate Communications |<br/> Non-Profit Development & Management | Social Media Marketing
+        </p>
+        <br/>
 
               <Carousel
+                partialVisbile ={false}
+                itemClass="skill-bx"
                 responsive={responsive}
                 infinite={true}
-                className='skill-slider'
+                containerClass='skill-slider'
+                z-index='1'
               >
-
+                <div>
                   <ProgressBar
                     skillName='Full-Stack Web Development'
                     startValue={0}
                     endValue={50}
-                  />
-
+                  /></div>
+                  
+                  <div>
                   <ProgressBar
                     skillName='Corporate Comms/Admin'
                     startValue={0}
                     endValue={90}
-                  />
+                  /></div>
 
+                  <div>
                   <ProgressBar
                     skillName='Social Media Marketing'
                     startValue={0}
                     endValue={75}
-                  />
+                  /></div>
 
+                  <div>
                   <ProgressBar
                     skillName='Journalism + Storytelling'
                     startValue={0}
                     endValue={90}
-                  />
+                  /></div>
 
+                  <div>
                   <ProgressBar
                     skillName='Non-Profit Development & Management'
                     startValue={0}
                     endValue={80}
-                  />
+                  /></div>
+                  
               </Carousel>
               <p>
                 Assuming 10K hours reflects proficiency, the above percentages show time spent in each profession.

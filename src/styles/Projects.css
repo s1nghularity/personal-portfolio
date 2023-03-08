@@ -27,9 +27,108 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 800px) {
+  .proj-imgbx {
+    position: relative;
+    width: calc(100% - (2 * var(--padding)));
+    padding-top: calc(100% * (9 / 16));
+    left: 2rem;
+  }
+
+  .proj-txtx {
+    line-height: 1rem;
+    top: 50%;
+    border-radius: 25px;
+  }
+
+  .proj-txtx h3 {
+    margin-top: -0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .proj-txtx span {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
   .project .nav.nav-pills {
     width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .project
+    div.container
+    div.row
+    div.col
+    div.tab-content
+    div.proj-imgbx
+    div.proj-txtx
+    div
+    a.code-link
+    svg {
+    font-size: 1rem;
+  }
+
+  #projects-tabs-tabpane-third
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(2) {
+    margin-top: -0.9rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 480px) {
+  .proj-imgbx {
+    width: 115% !important;
+    height: 120% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .project div.container div.row div.col div.tab-content {
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+
+  .project div.container div.row div.col div.tab-content .proj-txtx h3 {
+    font-size: 1.5rem;
+  }
+
+  .project div.container div.row div.col div.tab-content .proj-txtx span {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem !important;
+  }
+
+  .project
+    div.container
+    div.row
+    div.col
+    div.tab-content
+    div.proj-imgbx
+    div.proj-txtx
+    div
+    a.code-link
+    svg {
+    font-size: 1rem;
+  }
+
+  #projects-tabs-tabpane-third
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(2) {
+    margin-top: -0.9rem;
   }
 }
 
@@ -82,11 +181,8 @@
 }
 
 /*PROJECT CARDS*/
-/*PROJECT CARDS*/
-/*PROJECT CARDS*/
 
-.proj-imgbx 
-{
+.proj-imgbx {
   position: relative;
   width: 90%;
   height: 0.01px;
@@ -105,10 +201,6 @@
   height: 80%;
   object-fit: cover;
   border-radius: 25px;
-}
-
-.proj-imgbx .code-link {
-
 }
 
 .proj-imgbx::before {
@@ -134,7 +226,7 @@
 
 .proj-txtx {
   position: absolute;
-  padding: 0 1rem .5rem 1rem;
+  padding: 0 1rem 0.5rem 1rem;
   text-align: center;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -164,37 +256,21 @@
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
+  font-size: 1.25rem;
+  letter-spacing: 0.4px;
+  line-height: 1.1em;
 }
 
-
-@media (max-width: 768px) {
-  .proj-imgbx {
-    position: relative;
-    width: calc(100% - (2 * var(--padding)));
-    padding-top: calc(100% * (9 / 16));
-    left: 2rem;
-  }
-
-  .proj-txtx {
-    line-height: 1rem;
-    top: 50%;
-    border-radius: 25px;
-  }
-
-  .proj-txtx h3 {
-    margin-top: -0.75rem;
-    font-size: 1.2rem;
-  }
-
-  .proj-txtx span {
-    font-size: 0.8rem;
-    font-weight: 300;
-  }
-
-  .proj-imgbx .code-link {
-
-    font-size: 0.7rem;
-  }
+.project
+  div.container
+  div.row
+  div.col
+  div.tab-content
+  div.proj-imgbx
+  div.proj-txtx
+  div
+  a.code-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
 }
