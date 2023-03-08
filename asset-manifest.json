@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.e577bd28.css",
-    "main.js": "/personal-portfolio/static/js/main.469c7bf5.js",
+    "main.css": "/personal-portfolio/static/css/main.e9a1dd62.css",
+    "main.js": "/personal-portfolio/static/js/main.0abc08b2.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/bank.png": "/personal-portfolio/static/media/bank.bc2cc150b82b9b78c18b.png",
+    "static/media/VikramSingh-Resume2023.docx": "/personal-portfolio/static/media/VikramSingh-Resume2023.b0e5e49c600cdbc2803d.docx",
     "static/media/bus.png": "/personal-portfolio/static/media/bus.fe40fa62982011289e4b.png",
     "static/media/panopticon.png": "/personal-portfolio/static/media/panopticon.774855e31d4df6cea377.png",
     "static/media/pacman.png": "/personal-portfolio/static/media/pacman.6fdf21260ca5858b61ed.png",
@@ -42,14 +43,12 @@
     "static/media/slick.woff": "/personal-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/personal-portfolio/index.html",
     "static/media/adobe-illustrator.svg": "/personal-portfolio/static/media/adobe-illustrator.6738dc923e906e00f26fda09192a6251.svg",
-    "static/media/github.svg": "/personal-portfolio/static/media/github.e7ab8675a2cbadea548cafe724065b9e.svg",
-    "static/media/linkedin.svg": "/personal-portfolio/static/media/linkedin.9e52cf326e0bbf3cd9a3378906c0d35c.svg",
-    "main.e577bd28.css.map": "/personal-portfolio/static/css/main.e577bd28.css.map",
-    "main.469c7bf5.js.map": "/personal-portfolio/static/js/main.469c7bf5.js.map",
+    "main.e9a1dd62.css.map": "/personal-portfolio/static/css/main.e9a1dd62.css.map",
+    "main.0abc08b2.js.map": "/personal-portfolio/static/js/main.0abc08b2.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e577bd28.css",
-    "static/js/main.469c7bf5.js"
+    "static/css/main.e9a1dd62.css",
+    "static/js/main.0abc08b2.js"
   ]
 }
