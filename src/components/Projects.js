@@ -19,7 +19,7 @@ export const Projects = () => {
 
     {
       title: 'The Panopticon',
-      description: 'A quick example of tracking mouse movements via the DOM and using onmouse movements to generate the movement of the pupils.',
+      description: 'A quick example of tracking mouse movements via the DOM, using onmouse to generate the movement of the pupils.',
       imgUrl: projImg2,
       codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/eyes-solution/README-eye-movement.md',
       liveLink:'https://s1nghularity.github.io/eyes-solution/index.html',
@@ -29,7 +29,7 @@ export const Projects = () => {
   const mediumProjects = [
     {
       title: 'Boston Bus Tracker',
-      description: 'Finally interacting with live data and harnessing the power of APIs! Live tracking busses going north and south in the MIT/Harvard area.',
+      description: 'Finally harnessing the power of APIs! Live tracking north/southbound busses in the MIT/Harvard area.',
       imgUrl: projImg3,
       codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/bus-tracker/README-bus-tracker.md',
       liveLink:'https://s1nghularity.github.io/bus-tracker/index.html',
@@ -42,6 +42,8 @@ export const Projects = () => {
       codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/ndtv-route/README-ndtv.md',
       liveLink:'https://s1nghularity.github.io/ndtv-route/index.html',
     },
+
+    
   ];
 
   const capstoneProjects = [
@@ -59,8 +61,6 @@ export const Projects = () => {
   return (
     <section className ="project" id="projects">
       <Container>
-
-
 
         <Row>
           <Col>
@@ -81,53 +81,50 @@ export const Projects = () => {
               </Nav>
 
               <Tab.Content>
-
-
-                <Tab.Pane eventKey="first">
-                  <Row>
-                    {
-                      introProjects.map((project, index) => {
-                        return (
-                        <ProjectCard
-                          key={index}
-                          {...project}
-                        />
-                        )
-                      })
-                    }
-                  </Row>
-                </Tab.Pane>
-                
-                <Tab.Pane eventKey="second">
-                  <Row>
-                    {
-                      mediumProjects.map((project, index) => {
-                        return (
-                        <ProjectCard
-                          key={index}
-                          {...project}
-                        />
-                        )
-                      })
-                    }
-                  </Row>
-                </Tab.Pane>
-                
-                <Tab.Pane eventKey="third">
-                  <Row>
-                    {
-                      capstoneProjects.map((project, index) => {
-                        return (
-                        <ProjectCard
-                          key={index}
-                          {...project}
-                        />
-                        )
-                      })
-                    }
-                  </Row>
-                </Tab.Pane>
-
+                    <Tab.Pane eventKey="first">
+                      <Row>
+                        {
+                          introProjects.map((project, index) => {
+                            return (
+                            <ProjectCard
+                              key={index}
+                              {...project}
+                            />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          mediumProjects.map((project, index) => {
+                            return (
+                            <ProjectCard
+                              key={index}
+                              {...project}
+                            />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    
+                    <Tab.Pane eventKey="third">
+                      <Row>
+                        {
+                          capstoneProjects.map((project, index) => {
+                            return (
+                            <ProjectCard
+                              key={index}
+                              {...project}
+                            />
+                            )
+                          })
+                        }
+                      </Row>
+                    </Tab.Pane>
               </Tab.Content>
 
             </Tab.Container>
