@@ -30,7 +30,7 @@ export const Skills = () => {
       <div className='skill-bx'>
         <h2>Skills</h2>
         <p>
-          My career pivot towards full-stack software development<br/> has been supercharged by over a decade and a half of experience: <br/><br/>
+          They say 10,000 hours reflects complete mastery over a skillset.<br/> My pivot towards web development has been supercharged by over a decade and a half of experience: <br/><br/>
           Journalism | Corporate Communications |<br/> Non-Profit Development & Management | Social Media Marketing
         </p>
         <br/>
@@ -47,7 +47,7 @@ export const Skills = () => {
                   <ProgressBar
                     skillName='Full-Stack Web Development'
                     startValue={0}
-                    endValue={50}
+                    endValue={13}
                   /></div>
                   
                   <div>
@@ -61,14 +61,14 @@ export const Skills = () => {
                   <ProgressBar
                     skillName='Social Media Marketing'
                     startValue={0}
-                    endValue={75}
+                    endValue={85}
                   /></div>
 
                   <div>
                   <ProgressBar
                     skillName='Journalism + Storytelling'
                     startValue={0}
-                    endValue={90}
+                    endValue={80}
                   /></div>
 
                   <div>
@@ -77,11 +77,9 @@ export const Skills = () => {
                     startValue={0}
                     endValue={80}
                   /></div>
-                  
               </Carousel>
-              <p>
-                Assuming 10K hours reflects proficiency, the above percentages show time spent in each profession.
-              </p> 
+              <p>^Percentage of 'mastering' a field according to Malcolm Gladwell.^</p>
+ 
             </div>
 
         </Row>
