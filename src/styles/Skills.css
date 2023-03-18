@@ -8,7 +8,19 @@
   background-size: cover;
   width: 300px;
   height: 300px;
+  border-radius: 8px;
 }
+
+/*media queries for mobile to show slimmer smaller version of the swiper-slide on mobile*/
+
+@media screen and (max-width: 768px) {
+  div.swiper-slide {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+
 
 div .swiper-slide {
   display: flex;
@@ -16,7 +28,7 @@ div .swiper-slide {
   align-items: center;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px #246a45;
+  box-shadow: 0 1px 4px #246a45;
 }
 
 
@@ -83,11 +95,19 @@ div .swiper-slide {
 }
 
 div .text {
+  margin-top: 1.5rem;
   font-size: 20px;
   font-weight: 500;
   color: #246a45;
   object-position:center;
 }
+
+div.skill-bx p.skill-tag {
+  font-size: 1rem;
+}
+
+
+
 
 
 /*SKILLS ANIMATION*/

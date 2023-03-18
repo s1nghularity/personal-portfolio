@@ -1,16 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 
-export const ProgressBar = ({ skillName, startValue, endValue }) => {
+export const ProgressBar = ({ startAnimation, skillName, startValue, endValue }) => {
 
   const circularProgressRef = useRef(null);
   const progressValueRef = useRef(null);
 
   useEffect(() => {
+    if (!startAnimation) {
+      return;
+    }
     const circularProgress = circularProgressRef.current;
     const progressValue = progressValueRef.current;
 
     let progressStartValue = startValue;
-    const speed = 10;
+    const speed = 1;
 
     const progress = setInterval(() => {
       progressStartValue++;
@@ -26,7 +29,7 @@ export const ProgressBar = ({ skillName, startValue, endValue }) => {
     
 
     return () => clearInterval(progress);
-  }, [startValue, endValue]);
+  }, [startAnimation, startValue, endValue]);
 
   return (
 
