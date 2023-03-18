@@ -2,7 +2,7 @@ import './App.css';
 import {NavBar} from './components/NavBar.js';
 import {Banner} from './components/Banner.js';
 import {About} from './components/About.js';
-import {Skills} from './components/Skills.js';
+import Skills from './components/Skills.js';
 import Carousel from './components/Carousel.js';
 import {Projects} from './components/Projects.js';
 import {ContactForm} from './components/Contact.js';

@@ -22,6 +22,8 @@ export const ProgressBar = ({ skillName, startValue, endValue }) => {
         clearInterval(progress);
       }
     }, speed);
+    console.log('progress: ', progress)
+    
 
     return () => clearInterval(progress);
   }, [startValue, endValue]);
@@ -33,7 +35,7 @@ export const ProgressBar = ({ skillName, startValue, endValue }) => {
         <span className="progress-value" ref={progressValueRef}>{startValue}%</span>
       </div>
       
-      <span className="text">{skillName}</span>
+      <div className="text">{skillName}</div>
     
     </div>
   );
