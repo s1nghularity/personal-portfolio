@@ -1,5 +1,6 @@
 
 .slick-list {
+  margin-top: 1rem;
   padding-top: 1rem;
   background-color: #f0f0f07c;
   margin-bottom: -.2rem;
@@ -39,15 +40,3 @@
   }
 }
 
-/*for tablets*/
-@media (max-width: 768px) {
-  .slick-slide div {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-  }
-}

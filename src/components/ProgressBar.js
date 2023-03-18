@@ -29,6 +29,7 @@ export const ProgressBar = ({ skillName, startValue, endValue }) => {
   }, [startValue, endValue]);
 
   return (
+
     <div className="progress-container">
       
       <div className="circular-progress" ref={circularProgressRef}>

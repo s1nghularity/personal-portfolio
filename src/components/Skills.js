@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import { ProgressBar } from './ProgressBar.js';
 
 // Import Swiper React components
@@ -16,65 +17,86 @@ import { EffectCoverflow, Pagination } from 'swiper';
 
 export default function Skills() {
   return (
-    <>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'3'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className='mySwiper'
-      >
+    <section className='skill' id='skills'>
+      <Container>
+        <Row className='justify-content-center'>
+          <div className='skill-bx'>
+            <h2>Skills</h2>
+            <p>
+              They say 10,000 hours reflects complete mastery over a skillset.
+              <br /> My pivot towards web development has been supercharged by
+              over a decade of experience: <br />
+              <br />
+              Journalism | Corporate Communications |<br /> Non-Profit
+              Development & Management | Social Media Marketing
+            </p>
+            <br />
 
-        <SwiperSlide>
-          <ProgressBar
-            skillName='Full-Stack Web Development'
-            startValue={0}
-            endValue={13}
-          />
-        </SwiperSlide>
+            <>
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={true}
+                modules={[EffectCoverflow, Pagination]}
+                className='mySwiper'
+              >
+                <SwiperSlide>
+                  <ProgressBar
+                    skillName='Full-Stack Web Development'
+                    startValue={0}
+                    endValue={13}
+                  />
+                </SwiperSlide>
 
-        <SwiperSlide>
-          <ProgressBar
-            skillName='Corporate Comms/Admin'
-            startValue={0}
-            endValue={90}
-          />
-        </SwiperSlide>
+                <SwiperSlide>
+                  <ProgressBar
+                    skillName='Corporate Comms/Admin'
+                    startValue={0}
+                    endValue={90}
+                  />
+                </SwiperSlide>
 
-        <SwiperSlide>
-          <ProgressBar
-            skillName='Social Media Marketing'
-            startValue={0}
-            endValue={85}
-          />
-        </SwiperSlide>
+                <SwiperSlide>
+                  <ProgressBar
+                    skillName='Social Media Marketing'
+                    startValue={0}
+                    endValue={85}
+                  />
+                </SwiperSlide>
 
-        <SwiperSlide>
-          <ProgressBar
-            skillName='Journalism + Storytelling'
-            startValue={0}
-            endValue={80}
-          />
-        </SwiperSlide>
+                <SwiperSlide>
+                  <ProgressBar
+                    skillName='Journalism + Storytelling'
+                    startValue={0}
+                    endValue={80}
+                  />
+                </SwiperSlide>
 
-        <SwiperSlide>
-          <ProgressBar
-            skillName='Non-Profit Development & Management'
-            startValue={0}
-            endValue={80}
-          />
-        </SwiperSlide>
+                <SwiperSlide>
+                  <ProgressBar
+                    skillName='Non-Profit Development & Management'
+                    startValue={0}
+                    endValue={80}
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </>
 
-      </Swiper>
-    </>
+            <p>
+              ^Percentage of 'mastering' a field according to Malcolm Gladwell.^
+            </p>
+          </div>
+        </Row>
+      </Container>
+    </section>
   );
 }
