@@ -91,6 +91,7 @@ span.timeline-card-caption {
 
   div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root{
     padding-left: 1rem !important;
+    padding-right: .25rem !important;
   }
 
 
