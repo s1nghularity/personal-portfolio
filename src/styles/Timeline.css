@@ -83,17 +83,22 @@ span.timeline-card-caption {
 
 @media (max-width: 768px) {
 
+  .MuiTimelineContent-root .MuiCard-root {
+    width: 100%;
+    padding-left: 160px;
+    padding-right: 16px;
+  }
+
+  li.MuiTimelineItem-root.MuiTimeLineItem-positionAlternate.MuiTimeline-MissingOppositeContent.css-tobvrq {
+    padding-left: 1rem !important;
+  }
+
+
   .MuiTimeline-root {
     padding-left: 0 !important;
   }
 
-  li.MuiTimelineItem-root:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
-    padding-left: 0 !important;
-  }
 
-  html body div#root div.App div.MuiContainer-root.MuiContainer-maxWidthNone.css-1ffe9fu-MuiContainer-root div.MuiBox-root.css-1kz9tdg ul.MuiTimeline-root.MuiTimeline-positionAlternate.css-55vwbm-MuiTimeline-root li.MuiTimelineItem-root.MuiTimelineItem-positionAlternate.MuiTimelineItem-missingOppositeContent.css-1v6o2d9-MuiTimelineItem-root div.MuiTypography-root.MuiTypography-body1.MuiTimelineContent-root.MuiTimelineContent-positionAlternate.css-18y2uza-MuiTypography-root-MuiTimelineContent-root div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.css-vmhzwx-MuiPaper-root-MuiCard-root.aos-init.aos-animate {
-    padding-left: 1rem !important;
-  }
 
   .MuiTimelineItem-root {
     flex-direction: row !important;
