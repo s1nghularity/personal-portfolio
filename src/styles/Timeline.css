@@ -1,0 +1,161 @@
+
+
+
+
+h4 {
+  font-family: 'Phudu' !important;
+  font-weight: 700 !important;
+  color: #fff;
+  font-size: 54px !important;
+  padding-bottom: 4rem !important;
+}
+
+.experience-tag{
+  font-family: 'Phudu' !important;
+  font-weight: 400 !important;
+  color: #fff;
+  font-size: 1.5rem !important;
+}
+
+span.timeline-connector-visible {
+  height: 200px !important;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.timeline-dot-visible {
+  animation: pop-in 0.3s linear forwards;
+  background-color: #A9F2A9;
+  border-color: #A9F2A9;
+}
+
+
+@keyframes connector-color {
+  0% {
+    border-color: white;
+  }
+  100% {
+    border-color: #A9F2A9;
+  }
+}
+
+.timeline-connector-visible {
+  animation: connector-color 0.3s linear forwards;
+  transition: border-color 1s ease-in-out;
+}
+
+h6.timeline-card-title {
+  font-family: 'Phudu', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timeline-card-subtitle {
+  font-family: 'Phudu', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+p.timeline-card-text {
+  font-family: 'Phudu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+span.timeline-card-caption {
+  font-family: 'Phudu', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+
+  .MuiTimeline-root {
+    padding-left: 0 !important;
+  }
+
+  li.MuiTimelineItem-root:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    padding-left: 0 !important;
+  }
+
+  html body div#root div.App div.MuiContainer-root.MuiContainer-maxWidthNone.css-1ffe9fu-MuiContainer-root div.MuiBox-root.css-1kz9tdg ul.MuiTimeline-root.MuiTimeline-positionAlternate.css-55vwbm-MuiTimeline-root li.MuiTimelineItem-root.MuiTimelineItem-positionAlternate.MuiTimelineItem-missingOppositeContent.css-1v6o2d9-MuiTimelineItem-root div.MuiTypography-root.MuiTypography-body1.MuiTimelineContent-root.MuiTimelineContent-positionAlternate.css-18y2uza-MuiTypography-root-MuiTimelineContent-root div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root.css-vmhzwx-MuiPaper-root-MuiCard-root.aos-init.aos-animate {
+    padding-left: 1rem !important;
+  }
+
+  .MuiTimelineItem-root {
+    flex-direction: row !important;
+  }
+
+  .MuiTimelineItem-root .MuiTimelineContent-root {
+    text-align: left !important;
+    padding-left: .5rem !important;
+  }
+
+  .MuiTimelineItem-root .MuiTimelineSeparator-root {
+    align-items: flex-start;
+    padding-top: -1px;
+    margin-left: .5rem;
+  }
+
+  .MuiTimelineItem-root .MuiTimelineConnector-root {
+    margin-left: .70rem !important;
+  }
+
+  .MuiTimelineItem-root::before {
+    left: 24px !important;
+  }
+
+  .MuiTimelineItem-root::after {
+    left: 24px !important;
+  }
+
+  .MuiTimelineItem-root::before {
+    left: 24px;
+    display: none;
+  }
+
+  .MuiTimelineItem-root::after {
+    left: 24px;
+  }
+
+  .MuiTimelineItem-positionAlternate:not(.MuiTimelineItem-missingOppositeContent) .MuiTimelineContent-root {
+    padding-left: 0;
+  }
+
+  .MuiTimelineContent-root .MuiCard-root {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 16px;
+  }
+
+  /* Change card animation to slide in from right */
+  .MuiTimelineItem-alignAlternate:nth-of-type(even) .MuiCard-root,
+  .MuiTimelineItem-alignAlternate:nth-of-type(odd) .MuiCard-root {
+    animation: slide-right 0.6s ease-in-out !important;
+  }
+}
+
+/* Define slide-right animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

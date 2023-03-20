@@ -44,7 +44,7 @@ export default function Skills() {
             <p>
               Pop culture says 10,000 hours of solid work reflects mastery over a skillset.
               <br /> My pivot towards web development has been supercharged by
-              over a decade of experience.           
+              over a decade of communications experience.           
             </p>
 
             <>

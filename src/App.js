@@ -5,6 +5,7 @@ import {About} from './components/About.js';
 import Skills from './components/Skills.js';
 import Carousel from './components/Carousel.js';
 import {Projects} from './components/Projects.js';
+import WorkTimeline from './components/Timeline.js';
 import {ContactForm} from './components/Contact.js';
 import {Footer} from './components/Footer.js';
 
@@ -20,6 +21,7 @@ function App() {
       <Skills/>
       <Carousel/>
       <Projects/>
+      <WorkTimeline/>
       <ContactForm/>
       <Footer/>
     </div>
