@@ -63,6 +63,7 @@ export default function Skills() {
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
                 className='mySwiper'
+                touchEventsTarget='wrapper'
               >
 
                 <SwiperSlide>

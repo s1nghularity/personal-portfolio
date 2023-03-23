@@ -1,6 +1,12 @@
+.timeline-dot-visible,
+.timeline-connector-visible,
+.MuiCard-root {
+  will-change: transform, opacity;
+}
 
-
-
+.MuiTimeline-root {
+  padding: 6px 16px !important;
+}
 
 h4 {
   font-family: 'Phudu' !important;
@@ -18,10 +24,10 @@ h4 {
 }
 
 span.timeline-connector-visible {
-  height: 200px !important;
+  height: 300px !important;
 }
 
-@keyframes pop-in {
+@keyframes fade-in {
   0% {
     transform: scale(0);
   }
@@ -31,9 +37,8 @@ span.timeline-connector-visible {
 }
 
 .timeline-dot-visible {
-  animation: pop-in 0.3s linear forwards;
-  background-color: #A9F2A9;
-  border-color: #A9F2A9;
+  animation: fade-in 0.5s linear forwards;
+  border-color: #A9F2A9 !important;
 }
 
 
@@ -83,11 +88,11 @@ span.timeline-card-caption {
 
 @media (max-width: 768px) {
 
-  .MuiTimelineContent-root .MuiCard-root {
-	width: 100%;
-	padding-left: 60px;
-	padding-right: 16px;
-}
+  .timeline-card-container{
+    margin-left: -1rem !important;
+    margin-right: -4rem !important;
+  }
+  
 
   div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root{
     padding-left: 1rem !important;
@@ -99,6 +104,7 @@ span.timeline-card-caption {
     padding-left: 0 !important;
   }
 
+ 
 
 
   .MuiTimelineItem-root {
@@ -163,5 +169,18 @@ span.timeline-card-caption {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .MuiTimelineItem-root .MuiTimelineConnector-root {
+    width: 1px !important;
+    height: 40px !important;
+    margin-left: 12px !important;
+  }
+  
+  .MuiTimelineItem-root .MuiTimelineContent-root {
+    padding-left: 50px !important;
   }
 }

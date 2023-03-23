@@ -18,7 +18,9 @@ const useVisible = (ref) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
       },
       {
         root: null,
@@ -38,17 +40,22 @@ const useVisible = (ref) => {
 export default function WorkTimelineItem({ experience, index }) {
   const ref = useRef(null);
   const isVisible = useVisible(ref);
-  AOS.init();
-  const isMobile = window.innerWidth <= 768;
+  useEffect(() => {
+    AOS.init({
+      duration: 3500,
+      easing: 'ease-in-cubic',
   
+    });
+  }, []);
+
+  const isMobile = window.innerWidth <= 768;
+
   return (
-    
     <MuiTimelineItem ref={ref}>
       <TimelineSeparator>
         <TimelineDot
-          variant='outlined'
           sx={{
-            borderColor: isVisible ? '#A9F2A9' : 'white',
+            borderColor: isVisible ? '#A9F2A9' : 'transparent',
             width: '24px',
             height: '24px',
             borderWidth: '2px',
@@ -57,17 +64,25 @@ export default function WorkTimelineItem({ experience, index }) {
           className={isVisible ? 'timeline-dot-visible' : ''}
           data-aos='zoom-in'
           data-aos-anchor-placement='top-bottom'
+          data-aos-easing='ease-in-cubic'
+          data-aos-duration='10000'
+
+
         />
         <TimelineConnector
           sx={{
-            backgroundColor: isVisible ? '#A9F2A9' : 'white',
-            borderColor: isVisible ? '#A9F2A9' : 'white',
-            width: '1px',
+            backgroundColor: isVisible ? '#A9F2A9' : 'transparent',
+            borderColor: isVisible ? '#A9F2A9' : 'transparent',
+            width: '2px',
+            height: '60px', // Increase the height of the connectors
           }}
           className={isVisible ? 'timeline-connector-visible' : ''}
+          data-aos-easing='ease-in-cubic'
         />
       </TimelineSeparator>
       <TimelineContent>
+        <div className = 'timeline-card-container'
+>
         <Card
           sx={{
             backgroundColor: 'white',
@@ -79,12 +94,34 @@ export default function WorkTimelineItem({ experience, index }) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            width: 'calc(100% - 32px)',
+            maxWidth: {
+              xs: 'calc(100% - 2rem)',
+              sm: 'calc(100% - 32px)',
+            },
+            marginLeft: {
+              xs: '1rem',
+              sm: '0',
+            },
+            marginRight: {
+              xs: '1rem',
+              sm: '0',
+            },
             color: '#246a45',
-
           }}
-          data-aos={isMobile ? 'fade-left' : (index % 2 === 0 ? 'fade-left' : 'fade-right')}
+          className = 'timeline-card-container'
+
+          data-aos={
+            isMobile
+              ? 'fade-left'
+              : index % 2 === 0
+              ? 'fade-left'
+              : 'fade-right'
+          }
           data-aos-anchor-placement='top-bottom'
+          data-aos-delay={index * 250}
+          data-aos-easing='ease-in-cubic'
+          data-aos-duration='10000'
+
         >
           <CardContent
             sx={{
@@ -96,7 +133,6 @@ export default function WorkTimelineItem({ experience, index }) {
                 fontFamily: 'Phudu',
                 fontWeight: 700,
               },
-
             }}
           >
             <Typography variant='h6' className='timeline-card-title'>
@@ -119,6 +155,7 @@ export default function WorkTimelineItem({ experience, index }) {
             </Typography>
           </CardContent>
         </Card>
+        </div>
       </TimelineContent>
     </MuiTimelineItem>
   );
