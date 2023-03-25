@@ -7,10 +7,12 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [navbrand, setNavbrand] = useState(vLogoWhite);
+  const [menuClicked, setMenuClicked] = useState(false);
+  const [navbarExpanded, setNavbarExpanded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (document.documentElement.scrollTop > 25) {
         setScrolled(true);
         setNavbrand(vLogoDark2);
       } else {
@@ -32,11 +34,20 @@ export const NavBar = () => {
         <img src={navbrand} alt='logo' className='logo' />
       </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls='basic-navbar-nav'>
+      <Navbar.Toggle
+        aria-controls='basic-navbar-nav'
+        data-bs-toggle='collapse'
+        data-bs-target='#basic-navbar-nav'
+      >
         <span className='navbar-toggler-icon'></span>
       </Navbar.Toggle>
 
-      <Navbar.Collapse id='basic-navbar-nav'>
+      <Navbar.Collapse
+        id='basic-navbar-nav'
+        className={`collapse ${navbarExpanded ? 'expanded' : ''}`}
+
+        
+      >
         <Nav className='me-auto'>
           <Nav.Link
             href='#home'
@@ -67,18 +78,21 @@ export const NavBar = () => {
           </Nav.Link>
         </Nav>
 
-        <span className='navbar-text'>
-          <button
-            onClick={() =>
-              document
-                .querySelector('#contact')
-                .scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', duration: 5000 })
-            }
-          >
-            <span> Let's Connect</span>
-          </button>
-        </span>
-        
+        <button
+          className='navbar-connect'
+          onClick={() =>
+            document
+              .querySelector('#contact')
+              .scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest',
+                duration: 5000,
+              })
+          }
+        >
+          <span> Let's Connect</span>
+        </button>
       </Navbar.Collapse>
     </Navbar>
   );

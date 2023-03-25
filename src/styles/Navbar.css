@@ -1,33 +1,29 @@
+
+
 @media (max-width: 400px) {
-  nav.navbar.scrolled .navbar-collapse {
-    background-color: #246a45;
-    align-items: center;
-    width: 100%;
-
+  
+  .navbar-toggler {
+    align-content: end;
+    margin-right: 0.5rem !important;
   }
-
-  .navbar-collapse {
-    display: flex;
-  }
-
-  @media (max-width: 576px) {
-    .navbar-toggler {
-      align-content: end;
-    }
-  }
-
-  .navbar-collapse {
-    background-color: #fff;
-    display: flex;
-  }
-
-  nav.navbar.navbar-expand-lg.navbar-light
-  {
+  
+  nav.navbar.navbar-expand-lg.navbar-light {
     padding: 0 0 0 0;
   }
 
-}
+  nav.navbar:not(.scrolled) #basic-navbar-nav.collapse.show {
+    background-color: #fff;
+  }
   
+  nav.navbar.scrolled #basic-navbar-nav.collapse.show {
+    background-color: #246a45;
+  }
+
+
+  
+}
+
+/*MAIN NAVBAR*/
 
 nav.navbar {
   padding: 0 10rem 0 10rem;
@@ -37,11 +33,11 @@ nav.navbar {
   top: 0;
   z-index: 999;
   transition: 0.32s ease-in-out;
+  background-color: #fff;
 }
 nav.navbar.scrolled {
   background-color: #246a45;
   padding: none;
-
 }
 
 .navbar-collapse {
@@ -51,7 +47,6 @@ nav.navbar.scrolled {
   width: 100%;
   height: 100%;
   padding: 0 0 0 0;
-  background-color: #246a45;
 }
 
 nav.navbar a.navbar-brand {
@@ -62,6 +57,7 @@ nav.navbar a.navbar-brand {
   transition: 0.32s ease-in-out;
 }
 
+/*NAVBAR LINKS*/
 nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #246a45;
   font-weight: 400;
@@ -80,7 +76,8 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 0.75;
 }
 
-.navbar-text button {
+/*LETS CONNECT BUTTON*/
+.navbar-connect {
   font-weight: 700;
   border-radius: 1rem;
   padding: 10px 14px 10px 14px;
@@ -90,34 +87,15 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   position: relative;
   background-color: #a7ffc4;
   transition: 0.3s ease-in-out;
-}
-.navbar-text button span {
   z-index: 1;
+  scroll-behavior: smooth;
 }
-.navbar-text button::before {
-  content: '';
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-}
-.navbar-text button:hover {
+
+.navbar-connect:hover {
   color: #246a45;
-  border-radius: 15px;
-  padding: 10px 14px;
-  scroll-behavior: smooth;
 }
-.navbar-text button:hover::before {
-  content: '';
-  color: #121212;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  scroll-behavior: smooth;
-}
+
+/*HAMBURGER MENU*/
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
   outline: none;
