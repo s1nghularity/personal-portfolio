@@ -6,7 +6,7 @@ import Skills from './components/Skills.js';
 import Carousel from './components/Carousel.js';
 import {Projects} from './components/Projects.js';
 import WorkTimeline from './components/Timeline.js';
-// import {Testimonials} from './components/Testimonials';
+import {Testimonials} from './components/Testimonials';
 import {ContactForm} from './components/Contact.js';
 import {Footer} from './components/Footer.js';
 
@@ -23,7 +23,7 @@ function App() {
       <Carousel/>
       <Projects/>
       <WorkTimeline/>
-      {/* <Testimonials/> */}
+      <Testimonials/>
       <ContactForm/>
       <Footer/>
     </div>

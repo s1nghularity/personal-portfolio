@@ -87,8 +87,7 @@ p.danger {
   color: red;
 }
 
-/*ABOUT*/
-/*ABOUT*/
+
 /*ABOUT*/
 .about {
   z-index: 1;
@@ -130,5 +129,12 @@ p.danger {
 @media (max-width: 768px) {
   .about .about-bx {
     padding: 5rem 2rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  
+  .custom-carousel {
+    touch-action: pan-y;
   }
 }
