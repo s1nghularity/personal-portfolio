@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.6d2c58dc.css",
-    "main.js": "/personal-portfolio/static/js/main.6f3c112f.js",
+    "main.js": "/personal-portfolio/static/js/main.1a7777a2.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/bank.png": "/personal-portfolio/static/media/bank.bc2cc150b82b9b78c18b.png",
     "static/media/VikramSingh-Resume2023.docx": "/personal-portfolio/static/media/VikramSingh-Resume2023.86cb77c49eb8d634dd73.docx",
@@ -43,11 +43,11 @@
     "index.html": "/personal-portfolio/index.html",
     "static/media/adobe-illustrator.svg": "/personal-portfolio/static/media/adobe-illustrator.6738dc923e906e00f26fda09192a6251.svg",
     "main.6d2c58dc.css.map": "/personal-portfolio/static/css/main.6d2c58dc.css.map",
-    "main.6f3c112f.js.map": "/personal-portfolio/static/js/main.6f3c112f.js.map",
+    "main.1a7777a2.js.map": "/personal-portfolio/static/js/main.1a7777a2.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d2c58dc.css",
-    "static/js/main.6f3c112f.js"
+    "static/js/main.1a7777a2.js"
   ]
 }
