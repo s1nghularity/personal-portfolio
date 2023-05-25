@@ -29,7 +29,7 @@ Here are some of my skills:
 
 Check out some of the projects that I've worked on:
 
-- [Beechler Website](https://github.com/s1nghularity/beechler-website)
+- [Beechler Website](https://beechler-website.onrender.com)
 - [Bad Bank Capstone Project](https://github.com/s1nghularity/bad-bank-capstone-project)
 - [Additional Class Projects for MIT Bootcamp](https://github.com/s1nghularity/MIT-class-projects)
 
