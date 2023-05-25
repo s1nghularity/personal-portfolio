@@ -3,7 +3,6 @@
 Hello there! I'm Vikram Singh, a Full Stack Developer with a passion for problem-solving and creative communications. 
 
 📍 **Location:** Apple Valley, CA  
-📞 **Phone:** 408-705-8314  
 ✉️ **Email:** [singhularity@proton.me](mailto:singhularity@proton.me)  
 💼 **LinkedIn:** [linkedin.com/in/vikramsinghca](https://linkedin.com/in/vikramsinghca)  
 
