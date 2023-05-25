@@ -69,7 +69,7 @@ export const Banner = () => {
             </h1>
 
             <p>
-              I build and code pretty useful things, <br /> and love to tell
+              I build and code useful things, <br /> and love to tell
               stories.
             </p>
 

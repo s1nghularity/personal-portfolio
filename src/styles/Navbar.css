@@ -1,27 +1,6 @@
 
 
-@media (max-width: 400px) {
-  
-  .navbar-toggler {
-    align-content: end;
-    margin-right: 0.5rem !important;
-  }
-  
-  nav.navbar.navbar-expand-lg.navbar-light {
-    padding: 0 0 0 0;
-  }
 
-  nav.navbar:not(.scrolled) #basic-navbar-nav.collapse.show {
-    background-color: #fff;
-  }
-  
-  nav.navbar.scrolled #basic-navbar-nav.collapse.show {
-    background-color: #246a45;
-  }
-
-
-  
-}
 
 /*MAIN NAVBAR*/
 
@@ -96,6 +75,13 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 /*HAMBURGER MENU*/
+nav.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-right: 1rem;
+
+}
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
   outline: none;
@@ -141,4 +127,38 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+
+nav.navbar.navbar-expand-lg.navbar-light {
+  padding: 0 0 0 0;
+}
+
+nav.navbar:not(.scrolled) #basic-navbar-nav.collapse.show {
+  background-color: #fff;
+}
+
+nav.navbar.scrolled #basic-navbar-nav.collapse.show {
+  background-color: #246a45;
+}
+
+@media (max-width: 440px) {
+
+   .navbar-toggler {
+    align-content: flex-end;
+    margin-right: 1rem !important;
+  }
+  
+  nav.navbar.navbar-expand-lg.navbar-light {
+    padding: 0 0 0 0;
+  }
+
+  nav.navbar:not(.scrolled) #basic-navbar-nav.collapse.show {
+    background-color: #fff;
+  }
+  
+  nav.navbar.scrolled #basic-navbar-nav.collapse.show {
+    background-color: #246a45;
+  }
+
 }

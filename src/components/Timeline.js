@@ -35,6 +35,47 @@ const workExperiences = [
     description: ['Non-profit admin', 'Social media manager', 'Content designer', 'Payroll facilitator'],
     dates: 'Jun \'16 - Jan \'19',
   },
+  {
+    "title": "Technical Content Editor",
+    "location": "SQA Services",
+    "href": "https://www.sqaservices.com/",
+    "description": [
+      "Audit report review",
+      "Localization editing",
+      "Client engagement",
+      "Technical content review",
+      "Narrative tone maintenance"
+
+    ],
+    "dates": "2015 - 2016"
+  },
+  {
+    "title": "Internal Communications Specialist",
+    "location": "PayPal/Security Industry Specialists",
+    "href": "https://www.paypal.com/",
+    "description": [
+      "Security briefing creation",
+      "Real-time threat tracking",
+      "Emergency response",
+      "Cross-departmental communication",
+
+    ],
+    "dates": "2013 - 2014"
+  },
+  {
+    "title": "English Output Editor",
+    "location": "New Delhi Television 24x7",
+    "href": "https://www.ndtv.com/",
+    "description": [
+      "Rapid advancement",
+      "Newsroom operations",
+      "Recession survival",
+      "Major event coverage",
+      "Content editing"
+    ],
+    "dates": "2008 - 2012"
+  }
+  
 
 ];
 

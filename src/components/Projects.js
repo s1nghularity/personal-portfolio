@@ -58,7 +58,7 @@ export const Projects = () => {
     },
     {
       title: 'Beechler Website',
-      description: 'A front-end website for a local business, built with React and Bootstrap.',
+      description: 'A front-end website for a local business, built with React and Bootstrap. The goal was to create a website with international appeal and modern design. A future update may include a back-end for the client to manage their own content.',
       imgUrl: projImg6,
       codeLink: 'https://github.com/s1nghularity/',
       liveLink:'https://beechler-website.onrender.com/',
