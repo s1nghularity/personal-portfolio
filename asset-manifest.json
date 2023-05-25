@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.6d2c58dc.css",
-    "main.js": "/personal-portfolio/static/js/main.9bc16908.js",
+    "main.css": "/personal-portfolio/static/css/main.c8bd31ba.css",
+    "main.js": "/personal-portfolio/static/js/main.e77d0cf4.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/bank.png": "/personal-portfolio/static/media/bank.bc2cc150b82b9b78c18b.png",
     "static/media/bus.png": "/personal-portfolio/static/media/bus.fe40fa62982011289e4b.png",
@@ -16,7 +16,7 @@
     "static/media/Phudu-Black.ttf": "/personal-portfolio/static/media/Phudu-Black.48fda745e2577d4e8498.ttf",
     "static/media/Phudu-Medium.ttf": "/personal-portfolio/static/media/Phudu-Medium.e6f700fad674e49078ac.ttf",
     "static/media/cityscape.svg": "/personal-portfolio/static/media/cityscape.883e2c2123ff8856dd3a91e16244e6bb.svg",
-    "static/media/VikramSingh-Resume2023.docx": "/personal-portfolio/static/media/VikramSingh-Resume2023.f7fd93297c30aa4c3aaf.docx",
+    "static/media/VikramSingh-Resume2023.docx": "/personal-portfolio/static/media/VikramSingh-Resume2023.9527913a380654bd6835.docx",
     "static/media/vs-avatar2.png": "/personal-portfolio/static/media/vs-avatar2.aaeecdda34f53fd811a7.png",
     "static/media/loren.jpg": "/personal-portfolio/static/media/loren.fc195d6007e6f6753b69.jpg",
     "static/media/express.svg": "/personal-portfolio/static/media/express.778883a8c616cdae1ae2eded6c460ee0.svg",
@@ -43,12 +43,12 @@
     "static/media/slick.woff": "/personal-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/personal-portfolio/index.html",
     "static/media/adobe-illustrator.svg": "/personal-portfolio/static/media/adobe-illustrator.6738dc923e906e00f26fda09192a6251.svg",
-    "main.6d2c58dc.css.map": "/personal-portfolio/static/css/main.6d2c58dc.css.map",
-    "main.9bc16908.js.map": "/personal-portfolio/static/js/main.9bc16908.js.map",
+    "main.c8bd31ba.css.map": "/personal-portfolio/static/css/main.c8bd31ba.css.map",
+    "main.e77d0cf4.js.map": "/personal-portfolio/static/js/main.e77d0cf4.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d2c58dc.css",
-    "static/js/main.9bc16908.js"
+    "static/css/main.c8bd31ba.css",
+    "static/js/main.e77d0cf4.js"
   ]
 }
