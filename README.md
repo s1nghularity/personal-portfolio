@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Welcome to Vikram Singh's Coding Portfolio! 👋 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello there! I'm Vikram Singh, a Full Stack Developer with a passion for problem-solving and creative communications. 
 
-## Available Scripts
+📍 **Location:** Apple Valley, CA  
+📞 **Phone:** 408-705-8314  
+✉️ **Email:** [singhularity@proton.me](mailto:singhularity@proton.me)  
+💼 **LinkedIn:** [linkedin.com/in/vikramsinghca](https://linkedin.com/in/vikramsinghca)  
 
-In the project directory, you can run:
+## 📚 Background
 
-### `npm start`
+I'm an experienced journalist turned Full Stack Developer with over 10 years of experience in the non-profit, arts & entertainment space, and journalism. I bring a unique blend of administrative experience, creative communication skills, and hyper-adaptability. I recently completed my professional certification from M.I.T’s Full Stack bootcamp and have been exploring the world of web app development ever since.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Here are some of my skills:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Full-stack development
+- Proficient in React/Node.js
+- Responsive design
+- Successful project delivery
+- Interactive library integration
+- Secure authentication techniques
+- RESTful API experience
+- Creative Problem Solving
+- Version control/deployment
+- Cross-browser mobile focus
+- New Language Acquisition
+- Project / Program Management
 
-### `npm test`
+## 💻 Projects
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Check out some of the projects that I've worked on:
 
-### `npm run build`
+- [Beechler Website](https://github.com/s1nghularity/beechler-website)
+- [Bad Bank Capstone Project](https://github.com/s1nghularity/bad-bank-capstone-project)
+- [Additional Class Projects for MIT Bootcamp](https://github.com/s1nghularity/MIT-class-projects)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📝 Contact
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feel free to reach out if you're looking for a developer, have questions, or simply want to connect!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✉️ [singhularity@proton.me](mailto:singhularity@proton.me)  
+💼 [LinkedIn](https://linkedin.com/in/vikramsinghca)
