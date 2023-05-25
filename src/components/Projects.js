@@ -5,6 +5,7 @@ import projImg2 from "../assets/img/proj-img/intro/panopticon.png";
 import projImg3 from "../assets/img/proj-img/medium/bus.png";
 import projImg4 from "../assets/img/proj-img/medium/ndtv.png";
 import projImg5 from "../assets/img/proj-img/capstone/bank.png";
+import projImg6 from "../assets/img/proj-img/capstone/beechler.png";
 
 export const Projects = () => {
 
@@ -54,6 +55,13 @@ export const Projects = () => {
       imgUrl: projImg5,
       codeLink: 'https://github.com/s1nghularity/bb-server/blob/main/README.md',
       liveLink:'https://bb-client-r4iq.onrender.com/',
+    },
+    {
+      title: 'Beechler Website',
+      description: 'A front-end website for a local business, built with React and Bootstrap.',
+      imgUrl: projImg6,
+      codeLink: 'https://github.com/s1nghularity/',
+      liveLink:'https://beechler-website.onrender.com/',
     },
 
   ]
