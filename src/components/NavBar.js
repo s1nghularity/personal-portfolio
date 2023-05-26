@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import vLogoDark2 from '../assets/img/vlogodark2.svg';
 import vLogoWhite from '../assets/img/vlogowhite.svg';
 
@@ -29,7 +29,7 @@ export const NavBar = () => {
 
   return (
     <Navbar className={`navbar-light ${scrolled ? 'scrolled' : ''}`}>
-
+      <Container>
       <Navbar.Brand href='#home'>
         <img src={navbrand} alt='logo' className='logo' />
       </Navbar.Brand>
@@ -79,7 +79,7 @@ export const NavBar = () => {
         >
           <span> Let's Connect</span>
         </button>
-
+        </Container>
     </Navbar>
   );
 };

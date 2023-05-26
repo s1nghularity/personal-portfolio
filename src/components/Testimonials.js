@@ -23,6 +23,8 @@ export const Testimonials = () => {
         transitionTime={500}
         className='custom-carousel'
       >
+  
+
         <div className='testimonial-wrapper'>
           <div className='testimonial'>
             <div className='testimonial-image-wrapper'>
@@ -53,6 +55,27 @@ export const Testimonials = () => {
             <div className='testimonial-image-wrapper'>
               <img
                 className='testimonial-img'
+                src={tousi}
+                alt='Multidisciplinary artist, writer, and filmmaker Mahyad Tousi'
+              />
+            </div>
+            <div className='testimonial-content'>
+              <blockquote>
+                <p className='testimonial-text'>
+                "Vikram came on board for the founding of the non-profit Starfish Accelerator and worked with the team on several other projects. He is a solid social media manager who can produce engaging content to increase brand visibility across channels. I appreciated his journalistic tilt to creative copywriting, and valued his contribution to Starfish's brand identity development.""
+                </p>
+              </blockquote>
+              <p className='testimonial-author'>Mahyad Tousi</p>
+              <p className='testimonial-position'>Founder of Starfish Accelerator and Boomgen Studios, Executive Producer of CBS primetime comedy 'United States of Al'</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='testimonial-wrapper'>
+          <div className='testimonial'>
+            <div className='testimonial-image-wrapper'>
+              <img
+                className='testimonial-img'
                 src={loren}
                 alt='COO of Barrel Bag Loren Quaglieri'
               />
@@ -73,26 +96,8 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <div className='testimonial-wrapper'>
-          <div className='testimonial'>
-            <div className='testimonial-image-wrapper'>
-              <img
-                className='testimonial-img'
-                src={tousi}
-                alt='Multidisciplinary artist, writer, and filmmaker Mahyad Tousi'
-              />
-            </div>
-            <div className='testimonial-content'>
-              <blockquote>
-                <p className='testimonial-text'>
-                ?Vikram came on board for the founding of the non-profit Starfish Accelerator and worked with the team on several other projects. He is a solid social media manager who can produce engaging content to increase brand visibility across channels. I appreciated his journalistic tilt to creative copywriting, and valued his contribution to Starfish's brand identity development.
-                </p>
-              </blockquote>
-              <p className='testimonial-author'>Mahyad Tousi</p>
-              <p className='testimonial-position'>Founder of Starfish Accelerator and Boomgen Studios, Executive Producer of CBS primetime comedy 'United States of Al'</p>
-            </div>
-          </div>
-        </div>
+
+
 
       </Carousel>
     </section>

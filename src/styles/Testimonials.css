@@ -1,14 +1,9 @@
-.carousel .slider-wrapper {
-  margin-bottom: 2rem;
-}
 
 .testimonials-container {
   font-family: "Phudu", serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 2rem 0 2rem;
-  padding-bottom: 50px;
   position: relative;
   box-sizing: border-box;
 }
@@ -16,30 +11,36 @@
 .testimonial-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 
 .testimonial {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   position: relative;
   padding: 20px;
   background-color: #dfe9d7;
-  overflow: hidden;
+  width: 40rem;
 }
 
 .testimonial-image-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-right: 1rem;
 }
 
 .testimonial-img {
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 100px;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -49,36 +50,19 @@
 
 .testimonial-content {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
 }
 
-@media screen and (min-width: 465px) {
-  .testimonial {
-    flex-direction: row;
-    margin: 0 1rem;
-    max-width: 70rem;
-    
-  }
 
-  .testimonial-img {
-    margin-right: 0;
-    margin-bottom: 0;
-    object-fit: cover;
-    object-position: center; 
-  }
-
-  .testimonial-content {
-    align-items: flex-start;
-    text-align: left;
-    border-left: 1px solid #246a45;
-    padding-left: 20px;
-  }
-}
 
 .testimonial-text {
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 300;
   color: #333;
@@ -86,6 +70,8 @@
 }
 
 .testimonial-author {
+  justify-content: center;
+  align-items: center;
   font-size: 1.4rem;
   font-weight: 700;
   color: #448a5d;
@@ -93,49 +79,19 @@
 }
 
 .testimonial-position {
+  justify-content: center;
+  align-items: center;
   font-size: 1.1rem;
   font-weight: 400;
   color: #64ac76;
   margin: 0;
 }
 
-.custom-carousel {
-  position: relative;
-  touch-action: pan-y;
+#root > div > div.container > section > div > div > div > ul > li:nth-child(4) > div > div {
+  margin-top: 4rem;
 }
-
-.control-dots {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: -4rem; /* Updated value */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.control-dots li {
-  list-style: none;
-  margin-right: 10px;
-}
-
-.control-dots li button {
-  background-color: #a9f2a9;
-  border: none;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-}
-
-.control-dots li button:hover,
-.control-dots li button:focus {
-  background-color: #86ce8f;
-  outline: none;
-}
-
-.carousel-item-padding-40-px {
-  padding: 0 20px;
+#root > div > div.container > section > div > div > div > ul > li:nth-child(2) > div > div {
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 464px) {

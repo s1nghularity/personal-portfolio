@@ -9,7 +9,7 @@ import WorkTimeline from './components/Timeline.js';
 import {Testimonials} from './components/Testimonials';
 import {ContactForm} from './components/Contact.js';
 import {Footer} from './components/Footer.js';
-
+import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,8 +23,12 @@ function App() {
       <Carousel/>
       <Projects/>
       <WorkTimeline/>
-      <Testimonials/>
-      <ContactForm/>
+
+      <Container>
+        <Testimonials/>
+        <ContactForm/>
+      </Container>
+      
       <Footer/>
     </div>
   );
