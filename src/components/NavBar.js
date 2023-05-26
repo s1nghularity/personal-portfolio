@@ -7,8 +7,7 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [navbrand, setNavbrand] = useState(vLogoWhite);
-  const [menuClicked, setMenuClicked] = useState(false);
-  const [navbarExpanded, setNavbarExpanded] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,7 +28,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand='lg' className={`navbar-light ${scrolled ? 'scrolled' : ''} custom-navbar`}>
+    <Navbar className={`navbar-light ${scrolled ? 'scrolled' : ''}`}>
 
       <Navbar.Brand href='#home'>
         <img src={navbrand} alt='logo' className='logo' />
@@ -43,22 +42,8 @@ export const NavBar = () => {
         <span className='navbar-toggler-icon'></span>
       </Navbar.Toggle>
 
-      <Navbar.Collapse
-        id='basic-navbar-nav'
-        className={`collapse ${navbarExpanded ? 'expanded' : ''}`}
-
-        
-      >
         <Nav className='me-auto'>
-          <Nav.Link
-            href='#home'
-            className={
-              activeLink === 'home' ? 'active navbar-link' : 'navbar-link'
-            }
-            onClick={() => onUpdateActiveLink('home')}
-          >
-            Home
-          </Nav.Link>
+
           <Nav.Link
             href='#skills'
             className={
@@ -94,7 +79,7 @@ export const NavBar = () => {
         >
           <span> Let's Connect</span>
         </button>
-      </Navbar.Collapse>
+
     </Navbar>
   );
 };

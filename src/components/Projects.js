@@ -29,8 +29,8 @@ export const Projects = () => {
   
   const mediumProjects = [
     {
-      title: 'Boston Bus Tracker',
-      description: 'Finally harnessing the power of APIs! Live tracking north/southbound busses in the MIT/Harvard area.',
+      title: 'Bus Tracker',
+      description: 'Finally, a basic understanding and harnessing the power of APIs! Live tracking north/southbound busses in the MIT/Harvard area.',
       imgUrl: projImg3,
       codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/bus-tracker/README-bus-tracker.md',
       liveLink:'https://s1nghularity.github.io/bus-tracker/index.html',
