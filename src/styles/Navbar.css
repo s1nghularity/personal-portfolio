@@ -58,7 +58,8 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 
   .navbar-brand{
     margin-top: -.5rem!important;
-    width: 7rem!important;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
 
