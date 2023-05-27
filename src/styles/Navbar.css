@@ -1,8 +1,8 @@
 @media (max-width: 440px) {
 
   nav.navbar a.navbar-brand {
-    width: 6rem!important;
-    height: 4rem!important;
+    width: 9rem!important;
+    height: 3rem!important;
   }
 
   .navbar-connect {
