@@ -1,8 +1,9 @@
 .contact-form {
-  padding: 20px;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 25rem!important;
+  height: 25rem !important;
+  min-width: 25rem !important;
 }
 
 .contact-form label {
@@ -38,15 +39,6 @@
   transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 480px) {
-  .contact-form button {
-    float: none;
-    margin: 20px auto 0;
-    display: block;
-  }
-}
-
-
 .contact-form button:hover {
   background-color: #1a4e32;
 }
@@ -64,14 +56,13 @@
 
 .work-together {
   color: #246a45;
-  padding: 20px;
-  height: 50vh;
+  height: 20vh;
 }
 
 .work-together img {
   scroll-behavior: smooth;
-  animation: wobble; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 3s; /* don't forget to set a duration! */
+  animation: wobble;
+  animation-duration: 3s;
 }
 
 .modal-body {
@@ -104,42 +95,34 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .contact-form {
-    font-size: 14px;
-  }
-
-  .contact-form label {
-    font-size: 16px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 16px;
-  }
-
-  .contact-form textarea {
-    height: 100px;
-  }
-
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-form {
-    width: 90%;
-    max-width: 400px;
-  }
-
+@media screen and (max-width: 440px) {
   .work-together {
     height: 50%;
     padding: 10px;
     text-align: center;
   }
 
-  .work-together img {
-  display: none;
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 441px) and (max-width: 768px) {
+  .work-together {
+    height: 50%;
+    padding: 10px;
+    text-align: center;
   }
 
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .work-together {
+    margin-left: -5rem;
+  }
 }

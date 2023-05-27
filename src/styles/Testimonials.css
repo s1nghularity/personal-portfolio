@@ -24,7 +24,6 @@
   border-radius: 20px;
   position: relative;
   padding: 20px;
-  background-color: #dfe9d7;
   width: 40rem;
   max-width: 90%;
   margin: 0 1rem;
@@ -35,19 +34,19 @@
   justify-content: center;
   align-items: center;
   padding-right: 1rem;
-  border-radius: 50%!important;
+  border-radius: 50% !important;
 }
 
 .testimonial-img {
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: auto;
-  border-radius: 50%!important;
+  width: 200px;
+  height: 200px;
+  border-radius: 50% !important;
   margin-bottom: 10px;
   object-fit: cover;
-  object-position: center; 
-  max-width: 100%;
+  object-position: center;
+  max-width: 100% !important;
 }
 
 .testimonial-content {
@@ -63,7 +62,7 @@
 .testimonial-text {
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #333;
   margin: 0;
@@ -87,10 +86,30 @@
   margin: 0;
 }
 
-#root > div > div.container > section > div > div > div > ul > li:nth-child(4) > div > div {
+#root
+  > div
+  > div.container
+  > section
+  > div
+  > div
+  > div
+  > ul
+  > li:nth-child(4)
+  > div
+  > div {
   margin-top: 4rem;
 }
-#root > div > div.container > section > div > div > div > ul > li:nth-child(2) > div > div {
+#root
+  > div
+  > div.container
+  > section
+  > div
+  > div
+  > div
+  > ul
+  > li:nth-child(2)
+  > div
+  > div {
   margin-top: 4rem;
 }
 
@@ -103,12 +122,16 @@
     border-radius: 20px;
     overflow: hidden;
   }
-  
+
+
   .testimonial-text {
-    font-size: 1rem;
-    margin-bottom: -1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
   }
-  
   .testimonial-img {
     max-width: 150px;
     min-height: 150px;
@@ -117,8 +140,35 @@
     object-fit: cover;
     object-position: center;
   }
-  
+
   .custom-carousel {
     margin-top: 1rem;
+  }
+
+  #root
+    > div
+    > div.container
+    > section
+    > div
+    > div
+    > div
+    > ul
+    > li:nth-child(4)
+    > div
+    > div {
+    margin-top: 7.5rem;
+  }
+  #root
+    > div
+    > div.container
+    > section
+    > div
+    > div
+    > div
+    > ul
+    > li:nth-child(2)
+    > div
+    > div {
+    margin-top: 7.5rem;
   }
 }
