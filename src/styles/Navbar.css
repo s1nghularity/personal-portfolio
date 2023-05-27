@@ -15,8 +15,8 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
   margin-bottom: .5rem;
   margin-left: 1rem;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.5rem!important;
+  height: 4.5rem!important;
   transition: 300ms ease-in-out;
 }
 
@@ -54,12 +54,4 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 }
 
 
-@media (max-width: 440px) {
 
-  .navbar-brand{
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-
-
-}
