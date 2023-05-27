@@ -3,6 +3,7 @@
   nav.navbar a.navbar-brand {
     width: 9rem!important;
     height: 3rem!important;
+    margin-bottom: -1rem!important;
   }
 
   .navbar-connect {
