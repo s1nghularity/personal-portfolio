@@ -47,11 +47,21 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   transition: 0.300ms ease-in-out;
   z-index: 1;
   scroll-behavior: smooth;
+  color: black;
 }
 
 .navbar-connect:hover {
   color: #246a45;
 }
 
+@media (max-width: 440px) {
+
+  nav.navbar a.navbar-brand {
+    width: 6rem!important;
+    height: 4rem!important;
+  }
+
+}
+  
 
 
