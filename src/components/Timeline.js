@@ -36,16 +36,14 @@ const workExperiences = [
     dates: 'Jun \'16 - Jan \'19',
   },
   {
-    "title": "Technical Content Editor",
-    "location": "SQA Services",
-    "href": "https://www.sqaservices.com/",
+    "title": "Catering Staff",
+    "location": "3CF Staffing",
+    "href": "https://www.3cfstaffing.com/",
     "description": [
-      "Audit report review",
-      "Localization editing",
-      "Client engagement",
-      "Technical content review",
-      "Narrative tone maintenance"
-
+      "Barback and server",
+      "Event setup and breakdown",
+      "Kitchen prep and cleanup",
+      "Hollywood Bowl, Staples Center, and more",
     ],
     "dates": "2015 - 2016"
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, SignpostSplitFill } from 'react-bootstrap-icons';
 import logo from '../assets/img/vlogowhite.svg';
-import resume from '../assets/VikramSingh-Resume2023.docx';
+import resume from '../assets/VikramSingh-Resume2024.docx';
 
 export const Footer = () => {
   return (
