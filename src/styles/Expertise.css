@@ -1,0 +1,107 @@
+.expertise {
+  background: linear-gradient(#246a45 0%, #599e75 100%);
+  background-color: #246a45;
+  padding: 80px 0 100px;
+  position: relative;
+}
+
+.expertise .xp-heading {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.expertise .xp-heading-spaced {
+  margin-top: 4rem;
+}
+
+.xp-col {
+  display: flex;
+  margin-bottom: 1.75rem;
+}
+
+.xp-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.xp-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.xp-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #246a45;
+  margin-bottom: 0.75rem;
+}
+
+.xp-card-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.55em;
+  margin: 0;
+}
+
+/* Skills */
+.xp-skills {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.xp-skill-group {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.xp-skill-label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #A9F2A9;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.85rem;
+}
+
+.xp-chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.xp-chip {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.xp-chip:hover {
+  background-color: #fff;
+  color: #246a45;
+}
+
+@media (max-width: 768px) {
+  .expertise {
+    padding: 50px 0 60px;
+  }
+
+  .expertise .xp-heading {
+    font-size: 34px;
+  }
+}

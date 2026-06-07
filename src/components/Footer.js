@@ -11,8 +11,8 @@ export const Footer = () => {
       </div>
       <div className='tagline'>
         <p>
-          Looking for <i>great</i> people <br />
-          building <i>great</i> things.
+          Open to new projects — <br />
+          let's build something <i>great</i>.
         </p>
       </div>
       <div className='download'>

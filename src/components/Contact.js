@@ -20,9 +20,9 @@ export const ContactForm = () => {
   return (
     <div className="contact-container" id="contact">
       <div className="work-together">
-        <h2 className="animate__wobble">Let's work together</h2>
-        <p>Have a project you'd like to discuss?</p>
-        <p>Send me a message and I'll get back to you as soon as possible.</p>
+        <h2 className="animate__wobble">Let's build something.</h2>
+        <p>I'm open to new projects in technical project management and web-platform ownership.</p>
+        <p>The fastest way to reach me is below.</p>
         <img src={contact} alt="contact-img" />
       </div>
       <Card className="contact-form">

@@ -6,7 +6,7 @@ import avatar2 from '../assets/img/vs-avatar2.png';
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack N00b'];
+  const toRotate = ['Technical Project Owner', 'Product Owner', 'Web Platform Operator'];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [period, setPeriod] = useState(1500);
@@ -69,8 +69,8 @@ export const Banner = () => {
             </h1>
 
             <p>
-              I build and code useful things, <br /> and love to tell
-              stories.
+              I own web platforms end to end — scoping the work, <br />
+              directing the build, and making sure it ships and keeps running.
             </p>
 
             <span>
