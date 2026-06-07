@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.e37203f3.css",
-    "main.js": "/personal-portfolio/static/js/main.238f2dbb.js",
+    "main.css": "/personal-portfolio/static/css/main.7047e851.css",
+    "main.js": "/personal-portfolio/static/js/main.cf30f8dd.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/bus.png": "/personal-portfolio/static/media/bus.fe40fa62982011289e4b.png",
     "static/media/beechler.png": "/personal-portfolio/static/media/beechler.a52c9d78ef0443a51eaa.png",
@@ -9,24 +9,20 @@
     "static/media/bootstrap-icons.woff2?": "/personal-portfolio/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "static/media/contact1.svg": "/personal-portfolio/static/media/contact1.5df8f321a58ff3e52d7658e5af217c4e.svg",
     "static/media/ndtv.png": "/personal-portfolio/static/media/ndtv.426ad7ba0341c2e0726d.png",
-    "static/media/Phudu-Light.ttf": "/personal-portfolio/static/media/Phudu-Light.3552a14d261a983e56f1.ttf",
     "static/media/Phudu-Black.ttf": "/personal-portfolio/static/media/Phudu-Black.48fda745e2577d4e8498.ttf",
-    "static/media/Phudu-Medium.ttf": "/personal-portfolio/static/media/Phudu-Medium.e6f700fad674e49078ac.ttf",
-    "static/media/cityscape.svg": "/personal-portfolio/static/media/cityscape.3eaa20ec2d354dbd678fd63ec5874bbd.svg",
     "static/media/VikramSingh-Resume2024.docx": "/personal-portfolio/static/media/VikramSingh-Resume2024.28d89f9d67bae9442b94.docx",
     "static/media/vs-avatar2.png": "/personal-portfolio/static/media/vs-avatar2.aaeecdda34f53fd811a7.png",
     "static/media/loren.jpg": "/personal-portfolio/static/media/loren.fc195d6007e6f6753b69.jpg",
     "static/media/tousi.jpg": "/personal-portfolio/static/media/tousi.76c50382d90aa934a521.jpg",
     "static/media/vani.jpg": "/personal-portfolio/static/media/vani.4df29cd16364fff73332.jpg",
-    "static/media/vlogodark2.svg": "/personal-portfolio/static/media/vlogodark2.dd0ceea78660340b0647dc3b5ba24601.svg",
     "static/media/vlogowhite.svg": "/personal-portfolio/static/media/vlogowhite.f445e2df76493ecf43d6c63c0aede5fd.svg",
     "index.html": "/personal-portfolio/index.html",
-    "main.e37203f3.css.map": "/personal-portfolio/static/css/main.e37203f3.css.map",
-    "main.238f2dbb.js.map": "/personal-portfolio/static/js/main.238f2dbb.js.map",
+    "main.7047e851.css.map": "/personal-portfolio/static/css/main.7047e851.css.map",
+    "main.cf30f8dd.js.map": "/personal-portfolio/static/js/main.cf30f8dd.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e37203f3.css",
-    "static/js/main.238f2dbb.js"
+    "static/css/main.7047e851.css",
+    "static/js/main.cf30f8dd.js"
   ]
 }
