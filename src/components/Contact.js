@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import contact from "../assets/img/contact1.svg";
 import "animate.css";
@@ -20,9 +20,10 @@ export const ContactForm = () => {
   return (
     <div className="contact-container" id="contact">
       <div className="work-together">
-        <h2 className="animate__wobble">Let's work together</h2>
-        <p>Have a project you'd like to discuss?</p>
-        <p>Send me a message and I'll get back to you as soon as possible.</p>
+        <span className="kicker">Get in touch</span>
+        <h2>Got a platform that needs a steady hand?</h2>
+        <p>I'm open to new projects in technical project management and web-platform ownership.</p>
+        <p>Drop me a line — I read everything, and I'll get back to you.</p>
         <img src={contact} alt="contact-img" />
       </div>
       <Card className="contact-form">

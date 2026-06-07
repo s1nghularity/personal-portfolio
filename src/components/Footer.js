@@ -11,8 +11,8 @@ export const Footer = () => {
       </div>
       <div className='tagline'>
         <p>
-          Looking for <i>great</i> people <br />
-          building <i>great</i> things.
+          Open to new projects. <br />
+          Partial to the ones that still have to work on <i>Monday</i>.
         </p>
       </div>
       <div className='download'>
@@ -29,16 +29,25 @@ export const Footer = () => {
       <div className='social-links'>
         <a
           href='https://github.com/s1nghularity/'
-          target='https://github.com/s1nghularity/'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='GitHub'
         >
           <Github />
         </a>
-        <a href='https://www.linkedin.com/in/vikramsinghca/' target='https://www.linkedin.com/in/vikramsinghca/'>
+        <a
+          href='https://www.linkedin.com/in/vikramsinghca/'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='LinkedIn'
+        >
           <Linkedin />
         </a>
         <a
           href='https://linktr.ee/theviksingh'
-          target='https://linktr.ee/theviksingh'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Linktree'
         >
           {<SignpostSplitFill />}
         </a>

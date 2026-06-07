@@ -6,10 +6,10 @@ import avatar2 from '../assets/img/vs-avatar2.png';
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['Web Developer', 'Storyteller', 'Full-Stack N00b'];
+  const toRotate = ['scope the work.', 'direct the build.', 'keep it running.'];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [period, setPeriod] = useState(1500);
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -19,6 +19,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
 
   const tick = () => {
@@ -29,15 +30,6 @@ export const Banner = () => {
       : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
-
-    // update cursor visibility based on text length and whether text is being typed or deleted
-    let cursorVisible = !isDeleting && text.length < fullText.length;
-    if (text.length === 0) {
-      cursorVisible = true;
-    }
-    document.querySelector('.cursor').style.visibility = cursorVisible
-      ? 'visible'
-      : 'hidden';
 
     if (isDeleting) {
       setDelta((prevDelta) => prevDelta / 2);
@@ -56,38 +48,41 @@ export const Banner = () => {
   return (
     <section className='banner' id='home'>
       <Container>
-        <Col>
-          <Row>
-            <h1 style={{ height: '100px' }}>
-              <span> {text} </span>
-              <span
-                className='cursor'
-                style={{ visibility: isDeleting ? 'visible' : 'hidden' }}
-              >
+        <Row className='align-items-center'>
+          <Col md={8} className='banner-copy'>
+            <span className='kicker'>Vikram Singh</span>
+            <h1>
+              Technical Project &amp; <br className='d-none d-md-block' />
+              Product Owner
+            </h1>
+            <p className='banner-role'>
+              I <span className='typed'>{text}</span>
+              <span className='cursor'>
                 <b>|</b>
               </span>
-            </h1>
-
-            <p>
-              I build and code useful things, <br /> and love to tell
-              stories.
+            </p>
+            <p className='banner-tag'>
+              I own web platforms end to end — scoping the work, directing the
+              build, and making sure it ships and keeps running.
             </p>
 
-            <span>
-              <img src={avatar2} alt='banner character' />
-            </span>
-
             <button
+              className='banner-cta'
               onClick={() =>
                 document
                   .querySelector('#contact')
                   .scrollIntoView({ behavior: 'smooth' })
               }
             >
-              Let's Connect <ArrowRightCircle size={35} />
+              Let's talk <ArrowRightCircle size={28} />
             </button>
-          </Row>
-        </Col>
+          </Col>
+
+          <Col md={4} className='banner-portrait'>
+            <span className='available'>Open to new projects</span>
+            <img src={avatar2} alt='Vikram Singh' />
+          </Col>
+        </Row>
       </Container>
     </section>
   );

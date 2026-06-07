@@ -72,9 +72,10 @@ export const Projects = () => {
 
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p><i>Sharpening the axe.</i></p>
-            
+            <span className="kicker">Where I started</span>
+            <h2>Sharpening the axe</h2>
+            <p>The bootcamp-era builds that turned a journalist into someone who can read a stack trace. Small, but they're where the hands-on part began.</p>
+
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>

@@ -1,6 +1,8 @@
 @import url('./styles/Navbar.css');
 @import url('./styles/Banner.css');
+@import url('./styles/Impact.css');
 @import url('./styles/Carousel.css');
+@import url('./styles/Expertise.css');
 @import url('./styles/Projects.css');
 @import url('./styles/Skills.css');
 @import url('./styles/Contact.css');
@@ -29,8 +31,57 @@
   font-display: swap;
 }
 
-/*global styles*/
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* green brand scale (consolidated from ~9 ad-hoc greens) */
+  --green-900: #1a4e32;
+  --green-700: #246a45;
+  --green-500: #599e75;
+  --green-300: #86ce8f;
+  --green-100: #a9f2a9;
+  --mint: #a7ffc4;
 
+  /* neutrals */
+  --ink: #1c2620;
+  --paper: #faf8f3;   /* warm off-white, editorial */
+  --paper-2: #f0f0f0;
+  --line: #e3ded3;
+  --muted: #5b6b60;
+
+  /* display + body type pairing (newsroom) */
+  --font-display: 'Phudu', sans-serif;
+  --font-body: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia,
+    'Times New Roman', serif;
+
+  /* fluid type scale */
+  --step--1: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --step-3: clamp(1.95rem, 1.6rem + 1.6vw, 2.8rem);
+  --step-4: clamp(2.4rem, 1.9rem + 2.5vw, 3.8rem);
+  --step-5: clamp(3rem, 2.2rem + 4vw, 5.5rem);
+
+  /* spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  --radius: 14px;
+  --shadow: 0 0.5rem 1.5rem rgba(26, 78, 50, 0.12);
+  --shadow-lg: 0 1rem 2.5rem rgba(26, 78, 50, 0.2);
+  --transition: 0.3s ease-in-out;
+  --measure: 65ch;
+}
+
+/* ============================================================
+   GLOBALS
+   ============================================================ */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -39,8 +90,11 @@ html {
 body {
   overflow-x: hidden;
   position: relative;
-  color: #fff !important;
-  font-family: Phudu, sans-serif !important;
+  color: var(--ink);
+  background-color: var(--paper);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
 }
 
 h1,
@@ -51,10 +105,9 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  line-height: normal;
+  line-height: 1.05;
+  font-family: var(--font-display);
 }
-
-/*credit to judygab @github for the css below with personal modifications made for style*/
 
 img {
   width: 100%;
@@ -66,10 +119,25 @@ button {
   background-color: transparent;
 }
 
+a {
+  color: inherit;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
+}
+
+/* visible keyboard focus everywhere (a11y) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid var(--green-300);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 @media (min-width: 1700px) {
@@ -80,60 +148,109 @@ select:focus {
 }
 
 p.success {
-  color: green;
+  color: var(--green-700);
 }
 
 p.danger {
-  color: red;
+  color: #c0392b;
 }
 
+/* ============================================================
+   REUSABLE EDITORIAL SECTION PATTERN
+   ============================================================ */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step--1);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
 
-/*ABOUT*/
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-3);
+  line-height: 1.02;
+  margin-bottom: var(--space-3);
+}
+
+.section-lead {
+  font-size: var(--step-1);
+  max-width: var(--measure);
+  color: var(--muted);
+}
+
+/* ============================================================
+   ABOUT (editorial reading column with drop cap)
+   ============================================================ */
 .about {
   z-index: 1;
+  background: var(--green-700);
 }
 
-.about img {
+.about > img {
   width: 105%;
   margin: 0 auto -0.5rem auto;
   overflow: hidden;
 }
 
 .about .about-bx {
-  /*gradient between two colors from to bottom*/
-  background: linear-gradient(#246a45 0%, #599e75 100%);
+  background: linear-gradient(var(--green-700) 0%, var(--green-500) 100%);
   margin: 0 auto;
-  background-color: #246a45;
-  padding: 50px 200px;
-  font-size: 2rem;
-  font-weight: 300;
+  padding: var(--space-6) var(--space-3) var(--space-5);
+  color: #fff;
+}
+
+.about .about-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+.about-bx .kicker {
+  color: var(--green-100);
 }
 
 .about-bx h2 {
-  font-size: 2.5rem;
+  font-size: var(--step-4);
   font-weight: 700;
   color: #fff;
-  margin-top: -5rem;
-  text-align: center;
+  margin-bottom: var(--space-4);
+  line-height: 1;
 }
 
 .about-bx p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: 0.8px;
-  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.94);
+  line-height: 1.65;
+  margin-bottom: var(--space-3);
 }
 
-/* Mobile Media queries */
+/* drop cap on the lead paragraph */
+.about-bx p.lead::first-letter {
+  font-family: var(--font-display);
+  font-weight: 700;
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.72;
+  padding: 0.06em 0.12em 0 0;
+  color: var(--green-100);
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
 @media (max-width: 768px) {
   .about .about-bx {
-    padding: 5rem 2rem;
+    padding: var(--space-5) var(--space-2) var(--space-4);
   }
   body {
     overflow-x: hidden;
   }
-  
   .custom-carousel {
     touch-action: pan-y;
   }

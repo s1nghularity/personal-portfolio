@@ -1,0 +1,217 @@
+.expertise {
+  background: var(--paper);
+  padding: var(--space-6) 0 0;
+}
+
+.expertise .kicker {
+  color: var(--green-700);
+}
+
+.expertise .section-title {
+  color: var(--green-900);
+  max-width: 18ch;
+}
+
+/* ---- What I do: numbered editorial index ---- */
+.xp-index {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.xp-index-row {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 16rem) 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  transition: var(--transition);
+}
+
+.xp-index-row:hover {
+  background: rgba(134, 206, 143, 0.08);
+}
+
+.xp-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-2);
+  color: var(--green-300);
+}
+
+.xp-index-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-1);
+  color: var(--green-900);
+}
+
+.xp-index-text {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---- Skills ---- */
+.xp-skills {
+  margin: var(--space-6) 0 0;
+}
+
+.xp-skills .kicker {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.xp-skill-group {
+  margin-bottom: var(--space-3);
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.xp-skill-label {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--green-700);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.xp-chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.xp-chip {
+  background-color: #fff;
+  border: 1px solid var(--green-300);
+  color: var(--green-900);
+  border-radius: 50px;
+  padding: 0.4rem 0.95rem;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  transition: var(--transition);
+}
+
+.xp-chip:hover {
+  background-color: var(--green-700);
+  border-color: var(--green-700);
+  color: #fff;
+}
+
+/* ---- Selected work: case-study index ---- */
+.xp-work {
+  background: var(--green-900);
+  margin-top: var(--space-6);
+  padding: var(--space-6) 0;
+}
+
+.xp-work .kicker {
+  color: var(--green-100);
+}
+
+.xp-work .section-title {
+  color: #fff;
+  max-width: 20ch;
+}
+
+.xp-work-list {
+  margin-top: var(--space-5);
+  border-top: 1px solid rgba(169, 242, 169, 0.25);
+}
+
+.xp-work-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(169, 242, 169, 0.25);
+  transition: var(--transition);
+}
+
+.xp-work-row:hover {
+  background: rgba(169, 242, 169, 0.06);
+}
+
+.xp-work-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-3);
+  color: var(--green-300);
+  line-height: 1;
+}
+
+.xp-work-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-2);
+  color: #fff;
+  margin-bottom: var(--space-2);
+}
+
+.xp-work-text {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: var(--measure);
+  margin-bottom: var(--space-3);
+}
+
+.xp-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.xp-tag {
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--green-100);
+  border: 1px solid rgba(169, 242, 169, 0.4);
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .expertise {
+    padding-top: var(--space-5);
+  }
+
+  .xp-index-row {
+    grid-template-columns: 3rem 1fr;
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .xp-index-text {
+    grid-column: 1 / -1;
+  }
+
+  .xp-skill-group {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .xp-work-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}
