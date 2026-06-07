@@ -4,9 +4,9 @@ import '../styles/Expertise.css';
 
 const capabilities = [
   {
-    title: 'Platform ownership',
+    title: 'Fleet maintenance & triage',
     description:
-      'Run a 40+ site WordPress portfolio end to end: configuration, releases, security, performance, and ongoing maintenance across multiple hosting environments.',
+      'First responder for a 40+ site WordPress fleet: keep them updated and running on ManageWP and Cloudways, triage and fix front-line issues, and route the deep engineering to the devs who live in it.',
   },
   {
     title: 'Delivery & project management',
@@ -73,15 +73,15 @@ const skillGroups = [
 
 const selectedWork = [
   {
-    title: 'Multi-site platform ownership',
+    title: 'Multi-site fleet, kept running',
     description:
-      'Own a 40+ site WordPress portfolio: releases, security, performance, and maintenance across multiple managed-hosting environments — keeping the whole estate stable and reportable.',
-    tags: ['WordPress', 'Releases', 'Security'],
+      'First responder for a 40+ site WordPress fleet across multiple managed-hosting environments: updates, uptime, and front-line triage, with the deep engineering routed to the devs.',
+    tags: ['WordPress', 'ManageWP', 'Triage'],
   },
   {
     title: 'Procurement web application',
     description:
-      'Took over and re-architected a complex multi-vendor procurement application serving 100+ organizations, from requirements through production — designed to cut manual processing time substantially.',
+      'Took over and re-architected a complex multi-vendor procurement application serving 100+ organizations, from requirements through production, designed to cut manual processing time substantially.',
     tags: ['Re-architecture', 'PHP', 'Vendors'],
   },
   {
@@ -99,7 +99,7 @@ const selectedWork = [
   {
     title: 'PCI-DSS hardening',
     description:
-      'Led security hardening on an e-commerce platform — security headers, transport enforcement, and credential handling — to pass external PCI vulnerability scans cleanly.',
+      'Led security hardening on an e-commerce platform: security headers, transport enforcement, and credential handling, to pass external PCI vulnerability scans cleanly.',
     tags: ['PCI-DSS', 'WooCommerce', 'Security'],
   },
   {
@@ -113,21 +113,23 @@ const selectedWork = [
 export const Expertise = () => {
   return (
     <section className='expertise' id='expertise'>
-      {/* WHAT I DO — magazine-style numbered index */}
+      {/* WHAT I DO */}
       <Container>
-        <span className='kicker'>What I do</span>
-        <h2 className='section-title'>
-          Five things I'm on the hook for.
-        </h2>
+        <div className='reveal'>
+          <span className='kicker'>What I do</span>
+          <h2 className='section-title'>Five things I'm on the hook for.</h2>
+        </div>
 
         <ol className='xp-index'>
           {capabilities.map((item, index) => (
-            <li className='xp-index-row' key={index}>
+            <li className='xp-index-row reveal' key={index}>
               <span className='xp-num'>
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 className='xp-index-title'>{item.title}</h3>
-              <p className='xp-index-text'>{item.description}</p>
+              <div className='xp-index-body'>
+                <h3 className='xp-index-title'>{item.title}</h3>
+                <p className='xp-index-text'>{item.description}</p>
+              </div>
             </li>
           ))}
         </ol>
@@ -138,7 +140,7 @@ export const Expertise = () => {
         <div className='xp-skills'>
           <span className='kicker'>Skills</span>
           {skillGroups.map((group, index) => (
-            <div className='xp-skill-group' key={index}>
+            <div className='xp-skill-group reveal' key={index}>
               <h4 className='xp-skill-label'>{group.label}</h4>
               <ul className='xp-chip-list'>
                 {group.skills.map((skill, i) => (
@@ -152,31 +154,31 @@ export const Expertise = () => {
         </div>
       </Container>
 
-      {/* SELECTED WORK — case-study index */}
+      {/* SELECTED WORK */}
       <div className='xp-work' id='work'>
         <Container>
-          <span className='kicker'>Selected work</span>
-          <h2 className='section-title'>
-            What that looks like in production.
-          </h2>
+          <div className='reveal'>
+            <span className='kicker'>Selected work</span>
+            <h2 className='section-title'>What that looks like in production.</h2>
+          </div>
 
           <div className='xp-work-list'>
             {selectedWork.map((item, index) => (
-              <article className='xp-work-row' key={index}>
+              <article className='xp-work-row reveal' key={index}>
                 <span className='xp-work-num'>
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div className='xp-work-body'>
                   <h3 className='xp-work-title'>{item.title}</h3>
                   <p className='xp-work-text'>{item.description}</p>
-                  <ul className='xp-tags'>
-                    {item.tags.map((tag, i) => (
-                      <li className='xp-tag' key={i}>
-                        {tag}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
+                <ul className='xp-tags'>
+                  {item.tags.map((tag, i) => (
+                    <li className='xp-tag' key={i}>
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>

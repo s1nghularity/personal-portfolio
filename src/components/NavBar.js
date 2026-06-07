@@ -1,23 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import vLogoDark2 from '../assets/img/vlogodark2.svg';
 import vLogoWhite from '../assets/img/vlogowhite.svg';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const [navbrand, setNavbrand] = useState(vLogoWhite);
-
+  // dark nav throughout — keep the white logo at all scroll positions
+  const navbrand = vLogoWhite;
 
   useEffect(() => {
     const onScroll = () => {
-      if (document.documentElement.scrollTop > 25) {
-        setScrolled(true);
-        setNavbrand(vLogoDark2);
-      } else {
-        setScrolled(false);
-        setNavbrand(vLogoWhite);
-      }
+      setScrolled(document.documentElement.scrollTop > 25);
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--space-5);
-  padding: var(--space-6) 0;
+  padding: var(--section-y) 0;
 }
 
 .work-together {
@@ -56,9 +56,12 @@
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   font-weight: 700;
-  color: var(--green-900);
+  color: var(--ink);
 }
 
 .contact-form input,
@@ -85,19 +88,22 @@
 .contact-form button {
   float: right;
   margin-top: var(--space-2);
-  padding: 0.7rem 1.4rem;
+  padding: 0.7rem 1.5rem;
   border: none;
-  border-radius: 8px;
-  background-color: var(--green-700);
-  color: #fff;
-  font-family: var(--font-display);
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: #10271a;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
 }
 
 .contact-form button:hover {
-  background-color: var(--green-900);
+  filter: brightness(1.05);
   transform: translateY(-2px);
 }
 

@@ -1,5 +1,5 @@
 .stack-marquee {
-  background: var(--green-700);
+  background: var(--forest-2);
   overflow: hidden;
   padding: var(--space-3) 0;
   white-space: nowrap;
@@ -22,17 +22,18 @@
 .stack-item {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--step-1);
-  letter-spacing: 0.02em;
-  color: var(--green-100);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--on-dark-soft);
   padding: 0 var(--space-2);
 }
 
 .stack-dot {
   margin-left: var(--space-3);
-  color: rgba(169, 242, 169, 0.5);
+  color: var(--accent);
 }
 
 @keyframes stack-scroll {

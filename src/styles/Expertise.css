@@ -1,87 +1,128 @@
+/* ============================================================
+   EXPERTISE — What I do / Skills (light) + Selected work (dark)
+   ============================================================ */
 .expertise {
   background: var(--paper);
-  padding: var(--space-6) 0 0;
+  color: var(--ink);
+  padding: var(--section-y) 0 0;
 }
 
 .expertise .kicker {
-  color: var(--green-700);
+  color: var(--accent-ink);
 }
 
 .expertise .section-title {
-  color: var(--green-900);
+  color: var(--ink);
   max-width: 18ch;
 }
 
-/* ---- What I do: numbered editorial index ---- */
+/* ---- What I do: numbered rows ---- */
 .xp-index {
   list-style: none;
-  margin: var(--space-5) 0 0;
+  margin: clamp(36px, 5vw, 60px) 0 0;
   padding: 0;
-  border-top: 1px solid var(--line);
 }
 
 .xp-index-row {
   display: grid;
-  grid-template-columns: 4rem minmax(0, 16rem) 1fr;
-  gap: var(--space-3);
-  align-items: baseline;
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--line);
-  transition: var(--transition);
+  grid-template-columns: auto 1fr;
+  gap: clamp(16px, 3vw, 44px);
+  align-items: start;
+  padding: clamp(22px, 3vw, 36px) 0;
+  border-top: 1px solid var(--line-light);
+  position: relative;
+  transition: padding-left 0.25s ease;
+}
+
+.xp-index-row:last-child {
+  border-bottom: 1px solid var(--line-light);
+}
+
+.xp-index-row::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
 }
 
 .xp-index-row:hover {
-  background: rgba(134, 206, 143, 0.08);
+  padding-left: 18px;
+}
+
+.xp-index-row:hover::before {
+  transform: scaleY(1);
 }
 
 .xp-num {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--step-2);
-  color: var(--green-300);
+  font-weight: 800;
+  font-size: clamp(34px, 3.4vw, 52px);
+  line-height: 0.8;
+  color: oklch(0.26 0.02 152 / 0.16);
+  transition: color 0.25s ease;
+}
+
+.xp-index-row:hover .xp-num {
+  color: var(--accent-ink);
 }
 
 .xp-index-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--step-1);
-  color: var(--green-900);
+  text-transform: uppercase;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 10px;
 }
 
 .xp-index-text {
   font-family: var(--font-body);
-  font-size: var(--step-0);
-  color: var(--muted);
-  margin: 0;
+  font-size: 16.5px;
   line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 62ch;
 }
 
 /* ---- Skills ---- */
 .xp-skills {
-  margin: var(--space-6) 0 0;
+  margin: clamp(48px, 7vw, 90px) 0 0;
+  padding-bottom: var(--section-y);
 }
 
 .xp-skills .kicker {
   display: block;
-  margin-bottom: var(--space-4);
+  margin-bottom: clamp(20px, 3vw, 36px);
 }
 
 .xp-skill-group {
-  margin-bottom: var(--space-3);
   display: grid;
-  grid-template-columns: 16rem 1fr;
-  gap: var(--space-3);
-  align-items: baseline;
-  padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: 240px 1fr;
+  gap: clamp(20px, 4vw, 56px);
+  align-items: start;
+  padding: clamp(22px, 3vw, 36px) 0;
+  border-top: 1px solid var(--line-light);
+  margin: 0;
+}
+
+.xp-skill-group:last-child {
+  border-bottom: 1px solid var(--line-light);
 }
 
 .xp-skill-label {
   font-family: var(--font-display);
-  font-size: var(--step-0);
   font-weight: 700;
-  color: var(--green-700);
-  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 0.95;
+  color: var(--accent-ink);
   margin: 0;
 }
 
@@ -91,118 +132,139 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 10px;
 }
 
 .xp-chip {
-  background-color: #fff;
-  border: 1px solid var(--green-300);
-  color: var(--green-900);
-  border-radius: 50px;
-  padding: 0.4rem 0.95rem;
-  font-family: var(--font-body);
-  font-size: var(--step--1);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: transparent;
   transition: var(--transition);
 }
 
 .xp-chip:hover {
-  background-color: var(--green-700);
-  border-color: var(--green-700);
-  color: #fff;
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
 }
 
-/* ---- Selected work: case-study index ---- */
+/* ---- Selected work: dark rows ---- */
 .xp-work {
-  background: var(--green-900);
-  margin-top: var(--space-6);
-  padding: var(--space-6) 0;
+  background: var(--forest);
+  color: var(--on-dark);
+  padding: var(--section-y) 0;
 }
 
 .xp-work .kicker {
-  color: var(--green-100);
+  color: var(--accent);
 }
 
 .xp-work .section-title {
-  color: #fff;
+  color: var(--on-dark);
   max-width: 20ch;
 }
 
 .xp-work-list {
-  margin-top: var(--space-5);
-  border-top: 1px solid rgba(169, 242, 169, 0.25);
+  margin-top: clamp(36px, 5vw, 60px);
 }
 
 .xp-work-row {
   display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: var(--space-3);
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid rgba(169, 242, 169, 0.25);
-  transition: var(--transition);
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(20px, 4vw, 56px);
+  align-items: start;
+  padding: clamp(26px, 3.4vw, 44px) 0;
+  border-top: 1px solid var(--line-dark);
+  position: relative;
+  transition: padding-left 0.25s ease;
+}
+
+.xp-work-row:last-child {
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.xp-work-row::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
 }
 
 .xp-work-row:hover {
-  background: rgba(169, 242, 169, 0.06);
+  padding-left: 18px;
+}
+
+.xp-work-row:hover::before {
+  transform: scaleY(1);
 }
 
 .xp-work-num {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--step-3);
-  color: var(--green-300);
-  line-height: 1;
+  font-weight: 800;
+  font-size: clamp(34px, 3.4vw, 52px);
+  line-height: 0.8;
+  color: oklch(0.95 0.012 110 / 0.2);
+  transition: color 0.25s ease;
+}
+
+.xp-work-row:hover .xp-work-num {
+  color: var(--accent);
 }
 
 .xp-work-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--step-2);
-  color: #fff;
-  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  font-size: clamp(24px, 2.7vw, 36px);
+  line-height: 1;
+  color: var(--on-dark);
+  margin-bottom: 12px;
 }
 
 .xp-work-text {
   font-family: var(--font-body);
-  font-size: var(--step-0);
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 16.5px;
   line-height: 1.6;
-  max-width: var(--measure);
-  margin-bottom: var(--space-3);
+  color: var(--on-dark-soft);
+  max-width: 62ch;
+  margin: 0;
 }
 
 .xp-tags {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
   padding: 0;
   margin: 0;
+  justify-content: flex-end;
+  max-width: 200px;
 }
 
 .xp-tag {
-  font-family: var(--font-display);
-  font-size: var(--step--1);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--green-100);
-  border: 1px solid rgba(169, 242, 169, 0.4);
-  border-radius: 50px;
-  padding: 0.25rem 0.75rem;
+  color: var(--on-dark-soft);
+  border: 1px solid var(--line-dark);
+  border-radius: 6px;
+  padding: 5px 9px;
 }
 
-@media (max-width: 768px) {
-  .expertise {
-    padding-top: var(--space-5);
-  }
-
+@media (max-width: 820px) {
   .xp-index-row {
-    grid-template-columns: 3rem 1fr;
-    gap: var(--space-2) var(--space-3);
-  }
-
-  .xp-index-text {
-    grid-column: 1 / -1;
+    grid-template-columns: auto 1fr;
   }
 
   .xp-skill-group {
@@ -211,7 +273,12 @@
   }
 
   .xp-work-row {
-    grid-template-columns: 1fr;
-    gap: var(--space-2);
+    grid-template-columns: auto 1fr;
+  }
+
+  .xp-tags {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    max-width: none;
   }
 }

@@ -1,125 +1,105 @@
 import React from 'react';
-import { Timeline as MuiTimeline } from '@mui/lab';
-import { Container, Typography, Box } from '@mui/material';
-import WorkTimelineItem from '../components/TimelineItem.js';
+import { Container } from 'react-bootstrap';
+import '../styles/Timeline.css';
 
-const workExperiences = [
+const roles = [
   {
     title: 'Project Specialist',
-    location: 'Foundation for California Community Colleges',
-    href: 'https://foundationccc.org/',
-    description: ['Leveraging tech to promote equity and access', 'Supporting the statewide community college system', 'Platform work and reporting'],
-    dates: 'Apr \'24 - Present',
+    company: 'Foundation for California Community Colleges',
+    dates: "Apr '24 - Present",
+    desc: 'First responder for a fleet of ~40 client WordPress sites: keep them updated and running (ManageWP/Cloudways), triage and fix front-line issues, route deep engineering to devs, and manage the projects, budgets, and vendors around the work.',
   },
-
   {
     title: 'Full Stack Web Developer',
-    location: 'S1nghularity (Freelance)',
-    href: 'https://github.com/s1nghularity/',
-    description: ['Refreshing business sites with modern design and UX', 'Built and shipped beechler.com and privateaffairband.com', 'Maintains a 40+ WordPress fleet'],
-    dates: 'Jan \'23 - Present',
+    company: 'S1nghularity · Freelance',
+    dates: "Jan '23 - Present",
+    desc: 'Refreshing business sites with modern design and UX. Built and shipped beechler.com and privateaffairband.com, start to finish.',
   },
-
   {
     title: 'Social Media Manager',
-    location: 'Boomgen Studios',
-    href: 'https://www.boomgenstudios.com/',
-    description: ['Promoted CBS comedy', 'Coordinated book promotion', 'Managed social media accounts'],
-    dates: 'Jan \'21 - Dec \'22',
+    company: 'Boomgen Studios',
+    dates: "Jan '21 - Dec '22",
+    desc: 'Promoted CBS comedy, coordinated book promotion, and ran the social accounts.',
   },
-
+  {
+    title: 'Social Media Manager',
+    company: 'Barrel Bag',
+    dates: "Oct '21 - May '22",
+    desc: 'Built and ran the monthly newsletter and social content.',
+  },
   {
     title: 'Communications Specialist',
-    location: 'Starfish Accelerator Foundation',
-    href: 'https://starfishaccelerator.org/',
-    description: ['Brand/identity creation', 'Social media', 'Founding team', 'Artist/Activist community engagement', 'Non-profit admin'],
-    dates: 'Oct \'19 - Dec \'22',
+    company: 'Starfish Accelerator Foundation',
+    dates: "Oct '19 - Dec '22",
+    desc: 'Brand and identity, social, and artist/activist community engagement on the founding team.',
   },
-
   {
-    title: 'Copywriter',
-    location: 'Design Spinners',
-    href: 'https://designspinners.com/',
-    description: ['Content creation', 'Social media consulting', 'Copywriting', 'Marketing strategy'],
-    dates: 'Jan \'19 - Jun \'22',
+    title: 'Creative Copywriter',
+    company: 'Design Spinners',
+    dates: "Jan '19 - Jun '22",
+    desc: 'Content and copywriting, social consulting, and marketing strategy.',
   },
-
   {
     title: 'Communications Specialist',
-    location: 'Whitaker Peace & Development Initiative',
-    href: 'https://www.wpdi.org/',
-    description: ['Internal communications and content', 'Program highlight videos', 'Design and copy', 'Digital marketing'],
-    dates: 'Aug \'16 - Jan \'19',
+    company: 'Whitaker Peace & Development Initiative',
+    dates: "Aug '16 - Jan '19",
+    desc: 'Internal communications and content, program highlight videos, design and copy, and digital marketing.',
   },
   {
-    "title": "Catering Staff",
-    "location": "3CF Staffing",
-    "href": "https://www.3cfstaffing.com/",
-    "description": [
-      "Barback and server",
-      "Event setup and breakdown",
-      "Kitchen prep and cleanup",
-      "Hollywood Bowl, Staples Center, and more",
-    ],
-    "dates": "2015 - 2016"
+    title: 'Catering Staff',
+    company: '3CF Staffing',
+    dates: "Jun '15 - Jun '16",
+    desc: 'Barback and server at the Hollywood Bowl, Crypto.com Arena, and more.',
   },
   {
-    "title": "Internal Communications Specialist",
-    "location": "PayPal/Security Industry Specialists",
-    "href": "https://www.paypal.com/",
-    "description": [
-      "Security briefing creation",
-      "Real-time threat tracking",
-      "Emergency response",
-      "Cross-departmental communication",
-
-    ],
-    "dates": "2013 - 2014"
+    title: 'Internal Communications Specialist',
+    company: 'Security Industry Specialists (PayPal)',
+    dates: "Jul '13 - Jul '14",
+    desc: 'Security briefings, real-time threat tracking, emergency response, and cross-department comms.',
   },
   {
-    "title": "English Output Editor",
-    "location": "New Delhi Television 24x7",
-    "href": "https://www.ndtv.com/",
-    "description": [
-      "Rapid advancement",
-      "Newsroom operations",
-      "Recession survival",
-      "Major event coverage",
-      "Content editing"
-    ],
-    "dates": "2008 - 2012"
-  }
-  
-
+    title: 'Content Writer',
+    company: 'SFBay.ca',
+    dates: "Dec '12 - Jan '14",
+    desc: 'Bay Area news and features, with an ongoing story archive.',
+  },
+  {
+    title: 'Student Reporter',
+    company: 'San Francisco Business Times',
+    dates: "Jan '13 - Jun '13",
+    desc: 'Reported business features as an editorial intern.',
+  },
+  {
+    title: 'English Output Editor',
+    company: 'New Delhi Television (NDTV 24x7)',
+    dates: "Mar '08 - May '10",
+    desc: 'Newsroom operations, major-event coverage, and content editing. Rapid advancement through the recession.',
+  },
 ];
 
 const WorkTimeline = () => {
   return (
-    <Container
-      maxWidth='none'
-      sx={{
-        backgroundImage: 'linear-gradient(to bottom, #246a45, #448a5d, #64ac76, #86ce8f, #a9f2a9)',
-        color: '#A9F2A9',
-        padding: '4rem 0',
-      }}
-    >
-      <Typography variant="h4" textAlign="center">How I got here.</Typography>
+    <section className='work-history' id='experience'>
+      <Container>
+        <div className='sec-head reveal'>
+          <span className='eyebrow'>Where I've been</span>
+          <h2 className='section-title'>How I got here.</h2>
+        </div>
 
-      <Box
-        sx={{
-          width: '100%',
-          maxWidth: '800px',
-          margin: '0 auto',
- 
-        }}
-      >
-      <MuiTimeline position='alternate'>
-        {workExperiences.map((experience, index) => (
-          <WorkTimelineItem experience={experience} index={index} key={index} />
-        ))}
-      </MuiTimeline>
-      </Box>
-    </Container>
+        <div className='jh-list'>
+          {roles.map((role, i) => (
+            <article className='job reveal' key={i}>
+              <div className='job-dates'>{role.dates}</div>
+              <div className='job-main'>
+                <h3 className='job-title'>{role.title}</h3>
+                <div className='job-co'>{role.company}</div>
+                <p className='job-desc'>{role.desc}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 };
 

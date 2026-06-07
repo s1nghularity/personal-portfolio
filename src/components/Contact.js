@@ -22,8 +22,8 @@ export const ContactForm = () => {
       <div className="work-together">
         <span className="kicker">Get in touch</span>
         <h2>Got a platform that needs a steady hand?</h2>
-        <p>I'm open to new projects in technical project management and web-platform ownership.</p>
-        <p>Drop me a line — I read everything, and I'll get back to you.</p>
+        <p>I'm open to new projects: building and maintaining web platforms, and the words around them.</p>
+        <p>Drop me a line. I read everything, and I'll get back to you.</p>
         <img src={contact} alt="contact-img" />
       </div>
       <Card className="contact-form">

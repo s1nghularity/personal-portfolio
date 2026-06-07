@@ -1,186 +1,103 @@
-.timeline-dot-visible,
-.timeline-connector-visible,
-.MuiCard-root {
-  will-change: transform, opacity;
+/* ============================================================
+   WORK HISTORY — "How I got here." (dark, clean rows)
+   ============================================================ */
+.work-history {
+  background: var(--forest);
+  color: var(--on-dark);
+  padding: var(--section-y) 0;
 }
 
-.MuiTimeline-root {
-  padding: 6px 16px !important;
+.work-history .eyebrow {
+  display: block;
+  color: var(--accent);
 }
 
-h4 {
-  font-family: 'Phudu' !important;
-  font-weight: 700 !important;
-  color: #fff;
-  font-size: 54px !important;
-  padding-bottom: 4rem !important;
+.work-history .section-title {
+  color: var(--on-dark);
 }
 
-.experience-tag{
-  font-family: 'Phudu' !important;
-  font-weight: 400 !important;
-  color: #fff;
-  font-size: 1.5rem !important;
+.jh-list {
+  margin-top: clamp(36px, 5vw, 60px);
 }
 
-span.timeline-connector-visible {
-  height: 300px !important;
+.job {
+  display: grid;
+  grid-template-columns: minmax(120px, 170px) 1fr;
+  gap: clamp(16px, 3vw, 48px);
+  align-items: start;
+  padding: clamp(22px, 3vw, 36px) 0;
+  border-top: 1px solid var(--line-dark);
+  position: relative;
+  transition: padding-left 0.25s ease;
 }
 
-@keyframes fade-in {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.job:last-child {
+  border-bottom: 1px solid var(--line-dark);
 }
 
-.timeline-dot-visible {
-  animation: fade-in 0.5s linear forwards;
-  border-color: #A9F2A9 !important;
+.job::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s ease;
 }
 
-
-@keyframes connector-color {
-  0% {
-    border-color: white;
-  }
-  100% {
-    border-color: #A9F2A9;
-  }
+.job:hover {
+  padding-left: 18px;
 }
 
-.timeline-connector-visible {
-  animation: connector-color 0.3s linear forwards;
-  transition: border-color 1s ease-in-out;
+.job:hover::before {
+  transform: scaleY(1);
 }
 
-h6.timeline-card-title {
-  font-family: 'Phudu', sans-serif;
-  font-size: 24px;
+.job-dates {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--on-dark-soft);
+  padding-top: 6px;
+}
+
+.job-title {
+  font-family: var(--font-display);
   font-weight: 700;
-  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1;
+  letter-spacing: 0.005em;
+  color: var(--on-dark);
 }
 
-.timeline-card-subtitle {
-  font-family: 'Phudu', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 8px;
+.job-co {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  margin-top: 8px;
 }
 
-p.timeline-card-text {
-  font-family: 'Phudu', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 8px;
+.job-desc {
+  margin-top: 10px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--on-dark-soft);
+  max-width: 64ch;
+  margin-bottom: 0;
 }
 
-span.timeline-card-caption {
-  font-family: 'Phudu', sans-serif;
-  font-size: 12px;
-  font-weight: 200;
-  margin-bottom: 8px;
-  font-style: italic;
-}
-
-
-@media (max-width: 768px) {
-
-  .timeline-card-container{
-    margin-left: -1rem !important;
-    margin-right: -4rem !important;
+@media (max-width: 820px) {
+  .job {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
-  
-
-  div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiCard-root{
-    padding-left: 1rem !important;
-    padding-right: .25rem !important;
-  }
-
-
-  .MuiTimeline-root {
-    padding-left: 0 !important;
-  }
-
- 
-
-
-  .MuiTimelineItem-root {
-    flex-direction: row !important;
-  }
-
-  .MuiTimelineItem-root .MuiTimelineContent-root {
-    text-align: left !important;
-    padding-left: .5rem !important;
-  }
-
-  .MuiTimelineItem-root .MuiTimelineSeparator-root {
-    align-items: flex-start;
-    padding-top: -1px;
-    margin-left: .5rem;
-  }
-
-  .MuiTimelineItem-root .MuiTimelineConnector-root {
-    margin-left: .70rem !important;
-  }
-
-  .MuiTimelineItem-root::before {
-    left: 24px !important;
-  }
-
-  .MuiTimelineItem-root::after {
-    left: 24px !important;
-  }
-
-  .MuiTimelineItem-root::before {
-    left: 24px;
-    display: none;
-  }
-
-  .MuiTimelineItem-root::after {
-    left: 24px;
-  }
-
-  .MuiTimelineItem-positionAlternate:not(.MuiTimelineItem-missingOppositeContent) .MuiTimelineContent-root {
-    padding-left: 0;
-  }
-
-  .MuiTimelineContent-root .MuiCard-root {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 16px;
-  }
-
-  /* Change card animation to slide in from right */
-  .MuiTimelineItem-alignAlternate:nth-of-type(even) .MuiCard-root,
-  .MuiTimelineItem-alignAlternate:nth-of-type(odd) .MuiCard-root {
-    animation: slide-right 0.6s ease-in-out !important;
-  }
-}
-
-/* Define slide-right animation */
-@keyframes slide-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .MuiTimelineItem-root .MuiTimelineConnector-root {
-    width: 1px !important;
-    height: 40px !important;
-    margin-left: 12px !important;
-  }
-  
-  .MuiTimelineItem-root .MuiTimelineContent-root {
-    padding-left: 50px !important;
+  .job-dates {
+    padding-top: 0;
   }
 }
