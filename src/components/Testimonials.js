@@ -37,6 +37,11 @@ export const Testimonials = () => {
       <div className="testimonials-head">
         <span className="kicker">In their words</span>
         <h2 className="section-title">People I've worked with.</h2>
+        <p className="testimonials-intro">
+          Different clients, different projects, different years, and they all
+          land on the same two things: organized and dependable, with a writer's
+          eye for the work.
+        </p>
       </div>
       <Carousel
         showStatus={false}

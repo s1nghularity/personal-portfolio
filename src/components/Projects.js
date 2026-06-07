@@ -1,70 +1,41 @@
 import { Container, Row, Nav, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard.js";
-import projImg1 from "../assets/img/proj-img/intro/pacman.png";
-import projImg2 from "../assets/img/proj-img/intro/panopticon.png";
 import projImg3 from "../assets/img/proj-img/medium/bus.png";
 import projImg4 from "../assets/img/proj-img/medium/ndtv.png";
-import projImg5 from "../assets/img/proj-img/capstone/bank.png";
 import projImg6 from "../assets/img/proj-img/capstone/beechler.png";
 
 export const Projects = () => {
 
-  const introProjects = [
+  // Real builds, shipped end to end.
+  // TODO: add Private Affair (privateaffairband.com) once a screenshot asset
+  // is available, and confirm the Beechler live URL below.
+  const realBuilds = [
     {
-      title: 'Pacmen Factory',
-      description: 'A creative way to engage with DOM and DIV manipulation. This resulted in an event driven, dynamic display of flying pacmen.',
-      imgUrl: projImg1,
-      codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/pacmen-factory/',
-      liveLink:'https://s1nghularity.github.io/pacmen-factory/index.html',
+      title: 'Beechler',
+      description: 'A custom React site I designed and built from scratch. I shot the product photography too. Start to finish, solo.',
+      imgUrl: projImg6,
+      codeLink: 'https://github.com/s1nghularity/',
+      liveLink: 'https://beechler.com/',
     },
+  ];
 
-    {
-      title: 'The Panopticon',
-      description: 'A quick example of tracking mouse movements via the DOM, using onmouse to generate the movement of the pupils.',
-      imgUrl: projImg2,
-      codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/eyes-solution/README-eye-movement.md',
-      liveLink:'https://s1nghularity.github.io/eyes-solution/index.html',
-    },
-    ];
-  
-  const mediumProjects = [
-    {
-      title: 'Bus Tracker',
-      description: 'Finally, a basic understanding and harnessing the power of APIs! Live tracking north/southbound busses in the MIT/Harvard area.',
-      imgUrl: projImg3,
-      codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/bus-tracker/README-bus-tracker.md',
-      liveLink:'https://s1nghularity.github.io/bus-tracker/index.html',
-    },
-
+  // Where the hands-on part started: small builds from learning to code.
+  const earlyBuilds = [
     {
       title: 'A Past Life',
-      description: 'Mapping all the bus stops going from Sainik Farms to New Delhi Television in South New Delhi using a for loop with Mapbox.',
+      description: 'Maps my old commute through South Delhi to the NDTV newsroom with Mapbox. Looking back, it is the same story-on-a-map thing I still like making.',
       imgUrl: projImg4,
       codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/ndtv-route/README-ndtv.md',
       liveLink:'https://s1nghularity.github.io/ndtv-route/index.html',
     },
-
-    
+    {
+      title: 'Bus Tracker',
+      description: 'My first real go at APIs: live tracking north/southbound buses in the MIT/Harvard area.',
+      imgUrl: projImg3,
+      codeLink: 'https://github.com/s1nghularity/personal-portfolio/blob/acd0638fbbf135aa2ea02ae99c7b5637c4ae6897/src/assets/projects/bus-tracker/README-bus-tracker.md',
+      liveLink:'https://s1nghularity.github.io/bus-tracker/index.html',
+    },
   ];
-
-  const capstoneProjects = [
-
-    {
-      title: 'Bad Bank App',
-      description: 'A full stack MERN mock bank app built on a REST API designed to allow the user to register, login/out, withdraw/deposit money and even delete user accounts.',
-      imgUrl: projImg5,
-      codeLink: 'https://github.com/s1nghularity/bb-server/blob/main/README.md',
-      liveLink:'https://bb-client-r4iq.onrender.com/',
-    },
-    {
-      title: 'Beechler Website',
-      description: 'A front-end website for a local business, built with React and Bootstrap. The goal was to create a website with international appeal and modern design.',
-      imgUrl: projImg6,
-      codeLink: 'https://github.com/s1nghularity/',
-      liveLink:'https://beechler-website.onrender.com/',
-    },
-
-  ]
 
   return (
     <section className ="project" id="projects">
@@ -72,20 +43,17 @@ export const Projects = () => {
 
         <Row>
           <Col>
-            <span className="kicker">Where I started</span>
-            <h2>Sharpening the axe</h2>
-            <p>The bootcamp-era builds that turned a journalist into someone who can read a stack trace. Small, but they're where the hands-on part began.</p>
+            <span className="kicker">Featured work</span>
+            <h2>Things I've built</h2>
+            <p>The real builds first, then a couple of small ones from back when I was first learning to code.</p>
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Warm-Up</Nav.Link>
+                  <Nav.Link eventKey="first">Real builds</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="second">Sprints</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Marathon</Nav.Link>
+                  <Nav.Link eventKey="second">Where it started</Nav.Link>
                 </Nav.Item>
               </Nav>
 
@@ -93,7 +61,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
-                          introProjects.map((project, index) => {
+                          realBuilds.map((project, index) => {
                             return (
                             <ProjectCard
                               key={index}
@@ -104,26 +72,11 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    
+
                     <Tab.Pane eventKey="second">
                       <Row>
                         {
-                          mediumProjects.map((project, index) => {
-                            return (
-                            <ProjectCard
-                              key={index}
-                              {...project}
-                            />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    
-                    <Tab.Pane eventKey="third">
-                      <Row>
-                        {
-                          capstoneProjects.map((project, index) => {
+                          earlyBuilds.map((project, index) => {
                             return (
                             <ProjectCard
                               key={index}

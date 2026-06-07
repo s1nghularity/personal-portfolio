@@ -29,10 +29,10 @@ const workExperiences = [
   },
 
   {
-    title: 'Executive Assistant',
+    title: 'Operations Lead, LA Headquarters',
     location: 'Whitaker Peace & Development Initiative',
     href: 'https://www.wpdi.org/',
-    description: ['Non-profit admin', 'Social media manager', 'Content designer', 'Payroll facilitator'],
+    description: ['Ran day-to-day operations for the LA headquarters', 'Coordinated programs across multiple countries', 'Handled communications and content', 'Payroll and admin'],
     dates: 'Jun \'16 - Jan \'19',
   },
   {
@@ -87,10 +87,7 @@ const WorkTimeline = () => {
         padding: '4rem 0',
       }}
     >
-      <Typography variant="h4" textAlign="center">Recent Work Experience
-      
-      <Typography textAlign="center" className='experience-tag'><i>Life before programming</i></Typography>
-      </Typography>
+      <Typography variant="h4" textAlign="center">How I got here.</Typography>
 
       <Box
         sx={{
