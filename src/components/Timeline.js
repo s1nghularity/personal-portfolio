@@ -18,7 +18,7 @@ const roles = [
   {
     title: 'Social Media Manager',
     company: 'Boomgen Studios',
-    dates: "Jan '21 - Dec '22",
+    dates: "Jan '21 - 2023",
     desc: 'Promoted CBS comedy, coordinated book promotion, and ran the social accounts.',
   },
   {
@@ -30,7 +30,7 @@ const roles = [
   {
     title: 'Communications Specialist',
     company: 'Starfish Accelerator Foundation',
-    dates: "Oct '19 - Dec '22",
+    dates: "Oct '19 - 2023",
     desc: 'Brand and identity, social, and artist/activist community engagement on the founding team.',
   },
   {
