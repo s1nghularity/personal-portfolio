@@ -1,17 +1,3 @@
-@media (max-width: 440px) {
-
-  nav.navbar a.navbar-brand {
-    width: 9rem!important;
-    height: 3rem!important;
-    margin-bottom: .5rem!important;
-  }
-
-  .navbar-connect {
-    color: black!important;
-  }
-
-}
-
 nav.navbar {
   position: fixed;
   width: 100%;
@@ -19,15 +5,16 @@ nav.navbar {
   top: 0;
   z-index: 999;
   transition: 300ms ease-in-out;
-  background-color: #fff;
+  background-color: var(--paper);
 }
 
 nav.navbar.scrolled {
-  background-color: #246a45;
+  background-color: var(--green-700);
+  box-shadow: var(--shadow);
 }
 
 nav.navbar a.navbar-brand {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 1rem;
   width: 4.5rem;
   height: 4.5rem;
@@ -35,10 +22,12 @@ nav.navbar a.navbar-brand {
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  color: #246a45;
+  font-family: var(--font-display);
+  color: var(--green-900);
   font-weight: 400;
   padding: 1rem;
-  font-size: 1.25rem;
+  font-size: var(--step-0);
+  letter-spacing: 0.02em;
   opacity: 1;
 }
 
@@ -48,27 +37,37 @@ nav.navbar.scrolled .navbar-nav .nav-link.navbar-link {
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
-/*LETS CONNECT BUTTON*/
+/* LET'S TALK BUTTON */
 .navbar-connect {
   margin-right: 1rem;
+  font-family: var(--font-display);
   font-weight: 700;
-  border-radius: 1rem;
-  font-size: 1rem;
-  background-color: #a7ffc4;
-  transition: 0.300ms ease-in-out;
+  border-radius: var(--radius);
+  font-size: var(--step--1);
+  letter-spacing: 0.03em;
+  padding: 0.55rem 1.1rem;
+  background-color: var(--mint);
+  transition: var(--transition);
   z-index: 1;
-  scroll-behavior: smooth;
-  color: black!important;
+  color: var(--green-900) !important;
 }
 
 .navbar-connect:hover {
-  color: #246a45;
+  background-color: var(--green-100);
+  transform: translateY(-1px);
 }
 
+@media (max-width: 440px) {
+  nav.navbar a.navbar-brand {
+    width: 9rem !important;
+    height: 3rem !important;
+    margin-bottom: 0.5rem !important;
+  }
 
-  
-
-
+  .navbar-connect {
+    color: var(--green-900) !important;
+  }
+}

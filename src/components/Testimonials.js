@@ -8,11 +8,11 @@ import tousi from "../assets/img/tousi.jpg";
 
 const testimonials = [
   {
-    img: vani,
-    name: "Vani Gundara",
-    position: "Founder, Design Spinners",
+    img: loren,
+    name: "Loren Quaglieri",
+    position: "COO, Barrel Bag",
     quote:
-      "“Vikram is a team player, and always goes above and beyond what the job entails to get it right. His attention to detail is excellent and he is easy to work with. I would highly recommend Vikram to any firm who is looking for a creative content writer!”",
+      "“As a small, scrappy organization it was such a relief to have Vikram join us as a quick learner, self starter with impeccable organizational skills. He will be a tremendous asset to any team he joins and it was a sheer delight to have had this opportunity to work with him.”",
   },
   {
     img: tousi,
@@ -23,17 +23,21 @@ const testimonials = [
       "“Vikram came on board for the founding of the non-profit Starfish Accelerator and worked with the team on several other projects. He is a solid social media manager who can produce engaging content to increase brand visibility across channels. I appreciated his journalistic tilt to creative copywriting, and valued his contribution to Starfish's brand identity development.”",
   },
   {
-    img: loren,
-    name: "Loren Quaglieri",
-    position: "COO, Barrel Bag",
+    img: vani,
+    name: "Vani Gundara",
+    position: "Founder, Design Spinners",
     quote:
-      "“As a small, scrappy organization it was such a relief to have Vikram join us as a quick learner, self starter with impeccable organizational skills. He will be a tremendous asset to any team he joins and it was a sheer delight to have had this opportunity to work with him.”",
+      "“Vikram is a team player, and always goes above and beyond what the job entails to get it right. His attention to detail is excellent and he is easy to work with. I would highly recommend Vikram to any firm who is looking for a creative content writer!”",
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <section className="testimonials-container">
+    <section className="testimonials-container" id="testimonials">
+      <div className="testimonials-head">
+        <span className="kicker">In their words</span>
+        <h2 className="section-title">People I've worked with.</h2>
+      </div>
       <Carousel
         showStatus={false}
         showThumbs={false}
