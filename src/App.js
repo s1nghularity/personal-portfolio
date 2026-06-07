@@ -1,6 +1,7 @@
 import './App.css';
 import {NavBar} from './components/NavBar.js';
 import {Banner} from './components/Banner.js';
+import {Journey} from './components/Journey.js';
 import {Impact} from './components/Impact.js';
 import {About} from './components/About.js';
 import Carousel from './components/Carousel.js';
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <Banner/>
+      <Journey/>
       <Impact/>
       <About/>
       <Carousel/>
