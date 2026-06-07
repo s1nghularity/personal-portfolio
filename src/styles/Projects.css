@@ -28,61 +28,143 @@
   max-width: 52ch;
 }
 
-/* tab pills */
-.project .nav.nav-pills {
-  width: 52%;
-  margin: 0 auto var(--space-4);
-  border-radius: 50px;
-  background-color: rgba(36, 106, 69, 0.08);
+/* ---------- flagship feature build ---------- */
+.feature {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  max-width: 980px;
+  margin: 0 auto var(--space-3);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+.feature:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-lg);
 }
 
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 14px 0;
-  color: var(--green-700);
+.feature-media {
+  background: var(--green-900);
+}
+
+.feature-media img {
   width: 100%;
-  font-family: var(--font-display);
-  font-size: var(--step-0);
-  letter-spacing: 0.04em;
-  font-weight: 700;
-  position: relative;
-  transition: var(--transition);
-  text-align: center;
-  z-index: 0;
-}
-
-.project .nav.nav-pills .nav-link::before {
-  content: '';
-  position: absolute;
-  width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, var(--green-500) 0%, var(--green-700) 111.58%);
-  top: 0;
-  left: 0;
-  z-index: -1;
+  min-height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.feature-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  background: var(--green-100);
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  margin-bottom: var(--space-2);
+}
+
+.feature-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-3);
+  line-height: 1;
+  color: var(--green-900);
+  margin-bottom: var(--space-2);
+}
+
+.feature-desc {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 38ch;
+  margin-bottom: var(--space-3);
+}
+
+.feature-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step--1);
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.15rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--green-700);
+  color: var(--green-700);
+  background: transparent;
   transition: var(--transition);
 }
 
-.project .nav.nav-pills .nav-link.active {
+.feature-link:hover {
+  transform: translateY(-0.1rem);
+  color: var(--green-900);
+  border-color: var(--green-900);
+}
+
+.feature-link-primary {
+  background: var(--green-700);
   color: #fff;
 }
 
-.project .nav.nav-pills .nav-link.active::before {
-  width: 100% !important;
+.feature-link-primary:hover {
+  background: var(--green-900);
+  color: #fff;
 }
 
-.nav-link#projects-tabs-tab-first {
-  border-radius: 55px 0 0 55px;
+/* second real build, surfaced as a line */
+.feature-also {
+  max-width: 980px;
+  margin: 0 auto var(--space-5);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  color: var(--muted);
 }
 
-.nav-link#projects-tabs-tab-third {
-  border-radius: 0 55px 55px 0;
+.feature-also a {
+  color: var(--green-700);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.feature-also a:hover {
+  color: var(--green-900);
+}
+
+/* subhead for the learning-era builds */
+.project-subhead {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-1);
+  color: var(--green-900);
+  margin: 0 0 var(--space-4);
 }
 
 /* compact project cards (demoted) */
@@ -165,8 +247,12 @@
   gap: var(--space-1);
 }
 
-@media (max-width: 1080px) {
-  .project .nav.nav-pills {
-    width: 100%;
+@media (max-width: 768px) {
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-media img {
+    min-height: 220px;
   }
 }

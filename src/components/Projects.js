@@ -1,23 +1,11 @@
-import { Container, Row, Nav, Col, Tab } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { FileCodeFill, BoxArrowUpRight } from "react-bootstrap-icons";
 import { ProjectCard } from "./ProjectCard.js";
 import projImg3 from "../assets/img/proj-img/medium/bus.png";
 import projImg4 from "../assets/img/proj-img/medium/ndtv.png";
 import projImg6 from "../assets/img/proj-img/capstone/beechler.png";
 
 export const Projects = () => {
-
-  // Real builds, shipped end to end.
-  // TODO: add Private Affair (privateaffairband.com) once a screenshot asset
-  // is available, and confirm the Beechler live URL below.
-  const realBuilds = [
-    {
-      title: 'Beechler',
-      description: 'A custom React site I designed and built from scratch. I shot the product photography too. Start to finish, solo.',
-      imgUrl: projImg6,
-      codeLink: 'https://github.com/s1nghularity/',
-      liveLink: 'https://beechler.com/',
-    },
-  ];
 
   // Where the hands-on part started: small builds from learning to code.
   const earlyBuilds = [
@@ -40,60 +28,47 @@ export const Projects = () => {
   return (
     <section className ="project" id="projects">
       <Container>
-
         <Row>
           <Col>
             <span className="kicker">Featured work</span>
             <h2>Things I've built</h2>
-            <p>The real builds first, then a couple of small ones from back when I was first learning to code.</p>
-
-            <Tab.Container id="projects-tabs" defaultActiveKey="first">
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                <Nav.Item>
-                  <Nav.Link eventKey="first">Real builds</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second">Where it started</Nav.Link>
-                </Nav.Item>
-              </Nav>
-
-              <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          realBuilds.map((project, index) => {
-                            return (
-                            <ProjectCard
-                              key={index}
-                              {...project}
-                            />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-
-                    <Tab.Pane eventKey="second">
-                      <Row>
-                        {
-                          earlyBuilds.map((project, index) => {
-                            return (
-                            <ProjectCard
-                              key={index}
-                              {...project}
-                            />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-              </Tab.Content>
-
-            </Tab.Container>
+            <p className="project-intro">The real builds first, then a couple of small ones from back when I was first learning to code.</p>
           </Col>
         </Row>
-      </Container>
 
+        {/* flagship build */}
+        <article className="feature">
+          <div className="feature-media">
+            <img src={projImg6} alt="The Beechler website I designed and built" />
+          </div>
+          <div className="feature-body">
+            <span className="feature-label">Real build</span>
+            <h3 className="feature-title">Beechler</h3>
+            <p className="feature-desc">A custom React site I designed and built from scratch. I shot the product photography too. Start to finish, solo.</p>
+            <div className="feature-links">
+              <a className="feature-link feature-link-primary" href="https://beechler.com/" target="_blank" rel="noreferrer">
+                <BoxArrowUpRight /> Visit site
+              </a>
+              <a className="feature-link" href="https://github.com/s1nghularity/" target="_blank" rel="noreferrer">
+                <FileCodeFill /> View code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        {/* second real build, no screenshot yet */}
+        <p className="feature-also">
+          Also shipped <a href="https://privateaffairband.com/" target="_blank" rel="noreferrer">privateaffairband.com</a>, a multipage site for the band, designed and built end to end.
+        </p>
+
+        {/* learning-era builds */}
+        <h4 className="project-subhead">Where it started</h4>
+        <Row>
+          {earlyBuilds.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </Row>
+      </Container>
     </section>
   )
 }
