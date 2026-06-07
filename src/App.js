@@ -4,7 +4,6 @@ import {NavBar} from './components/NavBar.js';
 import {Banner} from './components/Banner.js';
 import {Journey} from './components/Journey.js';
 import {About} from './components/About.js';
-import Carousel from './components/Carousel.js';
 import {Expertise} from './components/Expertise.js';
 import {Projects} from './components/Projects.js';
 import WorkTimeline from './components/Timeline.js';
@@ -44,7 +43,6 @@ function App() {
       <Banner/>
       <Journey/>
       <About/>
-      <Carousel/>
       <Expertise/>
       <Projects/>
       <WorkTimeline/>

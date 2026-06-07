@@ -1,7 +1,6 @@
 @import url('./styles/Navbar.css');
 @import url('./styles/Banner.css');
 @import url('./styles/Journey.css');
-@import url('./styles/Carousel.css');
 @import url('./styles/Expertise.css');
 @import url('./styles/Projects.css');
 @import url('./styles/Skills.css');
@@ -236,26 +235,6 @@ p.danger { color: #c0392b; }
 }
 
 .about-bx .about-col p + p { margin-top: 18px; }
-
-.about-techrow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 42px;
-  padding-top: 30px;
-  border-top: 1px solid var(--line-light);
-}
-
-.about-chip {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  border: 1px solid var(--line-light);
-  border-radius: 999px;
-  padding: 8px 14px;
-}
 
 @media (max-width: 820px) {
   .about-body { grid-template-columns: 1fr; gap: var(--space-4); }

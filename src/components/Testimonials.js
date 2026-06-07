@@ -1,6 +1,4 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../styles/Testimonials.css";
 import vani from "../assets/img/vani.jpg";
 import loren from "../assets/img/loren.jpg";
@@ -43,37 +41,23 @@ export const Testimonials = () => {
           eye for the work.
         </p>
       </div>
-      <Carousel
-        showStatus={false}
-        showThumbs={false}
-        swipeable
-        emulateTouch
-        showArrows={false}
-        showIndicators
-        infiniteLoop
-        autoPlay
-        stopOnHover
-        interval={10000}
-        transitionTime={500}
-        className="custom-carousel"
-      >
+
+      <div className="testimonials-grid">
         {testimonials.map(({ img, name, position, quote }, index) => (
-          <div className="testimonial-wrapper" key={index}>
-            <div className="testimonial">
-              <div className="testimonial-image-wrapper">
-                <img className="testimonial-img" src={img} alt={name} />
-              </div>
-              <div className="testimonial-content">
-                <blockquote>
-                  <p className="testimonial-text">{quote}</p>
-                </blockquote>
+          <figure className="testimonial" key={index}>
+            <div className="testimonial-image-wrapper">
+              <img className="testimonial-img" src={img} alt={name} />
+            </div>
+            <blockquote className="testimonial-content">
+              <p className="testimonial-text">{quote}</p>
+              <figcaption>
                 <p className="testimonial-author">{name}</p>
                 <p className="testimonial-position">{position}</p>
-              </div>
-            </div>
-          </div>
+              </figcaption>
+            </blockquote>
+          </figure>
         ))}
-      </Carousel>
+      </div>
     </section>
   );
 };

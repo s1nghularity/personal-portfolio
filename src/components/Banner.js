@@ -6,10 +6,13 @@ export const Banner = () => {
     <section className='banner' id='home'>
       <Container>
         <div className='hero-main'>
-          <h1 className='hero-title reveal'>
-            The whole website in{' '}
-            <span className='accent'>one pair of hands.</span>
-          </h1>
+          <div className='hero-copy reveal'>
+            <h1 className='hero-title'>
+              The whole website in{' '}
+              <span className='accent'>one pair of hands.</span>
+            </h1>
+            <p className='hero-role'>Content. Copy. Code.</p>
+          </div>
 
           <div className='hero-side reveal'>
             <span className='badge'>

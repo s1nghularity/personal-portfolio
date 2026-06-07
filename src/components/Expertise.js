@@ -4,6 +4,11 @@ import '../styles/Expertise.css';
 
 const capabilities = [
   {
+    title: 'End-to-end builds',
+    description:
+      'I take a brand from a blank page to a live site: strategy, words, design, photography, and the code.',
+  },
+  {
     title: 'Fleet maintenance & triage',
     description:
       'First responder for a 40+ site WordPress fleet: keep them updated and running on ManageWP and Cloudways, triage and fix front-line issues, and route the deep engineering to the devs who live in it.',
@@ -117,7 +122,7 @@ export const Expertise = () => {
       <Container>
         <div className='reveal'>
           <span className='kicker'>What I do</span>
-          <h2 className='section-title'>Five things I'm on the hook for.</h2>
+          <h2 className='section-title'>Six things I'm on the hook for.</h2>
         </div>
 
         <ol className='xp-index'>

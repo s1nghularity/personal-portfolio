@@ -10,7 +10,7 @@ const roles = [
     desc: 'First responder for a fleet of ~40 client WordPress sites: keep them updated and running (ManageWP/Cloudways), triage and fix front-line issues, route deep engineering to devs, and manage the projects, budgets, and vendors around the work.',
   },
   {
-    title: 'Full Stack Web Developer',
+    title: 'Web Designer & Developer',
     company: 'S1nghularity · Freelance',
     dates: "Jan '23 - Present",
     desc: 'Refreshing business sites with modern design and UX. Built and shipped beechler.com and privateaffairband.com, start to finish.',
@@ -40,16 +40,10 @@ const roles = [
     desc: 'Content and copywriting, social consulting, and marketing strategy.',
   },
   {
-    title: 'Communications Specialist',
+    title: 'Operations Lead, LA Headquarters',
     company: 'Whitaker Peace & Development Initiative',
     dates: "Aug '16 - Jan '19",
-    desc: 'Internal communications and content, program highlight videos, design and copy, and digital marketing.',
-  },
-  {
-    title: 'Catering Staff',
-    company: '3CF Staffing',
-    dates: "Jun '15 - Jun '16",
-    desc: 'Barback and server at the Hollywood Bowl, Crypto.com Arena, and more.',
+    desc: 'Ran day-to-day operations for the LA headquarters, coordinated international programs, handled communications and content, and payroll and admin.',
   },
   {
     title: 'Internal Communications Specialist',
@@ -62,12 +56,6 @@ const roles = [
     company: 'SFBay.ca',
     dates: "Dec '12 - Jan '14",
     desc: 'Bay Area news and features, with an ongoing story archive.',
-  },
-  {
-    title: 'Student Reporter',
-    company: 'San Francisco Business Times',
-    dates: "Jan '13 - Jun '13",
-    desc: 'Reported business features as an editorial intern.',
   },
   {
     title: 'English Output Editor',
