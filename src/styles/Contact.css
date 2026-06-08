@@ -1,5 +1,5 @@
 /* ============================================================
-   CONTACT — line + mailto + plain text links on warm alt
+   CONTACT — two-column (line + actions) on warm alt
    ============================================================ */
 .contact {
   background-color: var(--bg-alt);
@@ -8,18 +8,26 @@
 }
 
 .contact-inner {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: end;
 }
 
 .contact-line {
-  max-width: 22ch;
-  margin: 0 0 clamp(20px, 3vw, 28px);
+  max-width: 18ch;
+  margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.1;
   color: var(--ink);
-  font-size: clamp(28px, 4.5vw, 44px);
+  font-size: clamp(30px, 4.5vw, 48px);
+  text-wrap: balance;
+}
+
+.contact-actions {
+  padding-bottom: 6px;
 }
 
 .contact-mail {
@@ -38,9 +46,9 @@
 }
 
 .contact-socials {
-  margin: clamp(24px, 3.5vw, 32px) 0 0;
+  margin: clamp(22px, 3vw, 28px) 0 0;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 2;
   color: var(--ink-soft);
 }
 
@@ -55,16 +63,14 @@
   border-color: currentColor;
 }
 
-.contact-sep {
-  margin: 0 10px;
-  color: var(--hairline);
-}
+@media (max-width: 820px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+  }
 
-@media (max-width: 480px) {
-  .contact-sep {
-    display: block;
-    height: 4px;
-    text-indent: -9999px;
-    margin: 0;
+  .contact-line {
+    max-width: 22ch;
   }
 }

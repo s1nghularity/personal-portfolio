@@ -6,8 +6,10 @@ export const Throughline = () => {
     <section className='throughline' id='about'>
       <Container>
         <div className='throughline-inner reveal'>
-          <span className='section-eyebrow'>How I got here</span>
-          <h2 className='section-title'>From the newsroom to the build.</h2>
+          <div className='throughline-head'>
+            <span className='section-eyebrow'>How I got here</span>
+            <h2 className='section-title'>From the newsroom to the build.</h2>
+          </div>
 
           <div className='throughline-body'>
             <p>

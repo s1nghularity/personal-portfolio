@@ -115,6 +115,7 @@ button:focus-visible {
   letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0;
+  text-wrap: balance;
 }
 
 /* buttons */
