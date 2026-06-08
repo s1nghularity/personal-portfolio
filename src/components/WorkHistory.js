@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import '../styles/WorkHistory.css';
 
@@ -15,6 +16,12 @@ const roles = [
     desc: 'Refreshing business sites with modern design and UX. Built and shipped beechler.com and privateaffairband.com.',
   },
   {
+    title: 'Global Digital Strategist (and founding member)',
+    company: 'Starfish Accelerator Foundation',
+    dates: "Oct '19 - Present",
+    desc: 'Joined as a founding member; now Global Digital Strategist — running brand, social, and digital for the nonprofit. Ongoing.',
+  },
+  {
     title: 'Social Media Manager',
     company: 'Boomgen Studios',
     dates: "Jan '21 - 2023",
@@ -27,16 +34,10 @@ const roles = [
     desc: 'Built and ran the monthly newsletter and social content.',
   },
   {
-    title: 'Communications Specialist',
-    company: 'Starfish Accelerator Foundation',
-    dates: "Oct '19 - 2023",
-    desc: 'Brand and identity, social, and artist and activist community engagement on the founding team.',
-  },
-  {
     title: 'Creative Copywriter',
     company: 'Design Spinners',
     dates: "Jan '19 - Jun '22",
-    desc: 'Content and copywriting, social consulting, and marketing strategy.',
+    desc: 'Content and copywriting, social consulting, and marketing strategy; project-managed the Kavita Studios e-commerce launch.',
   },
   {
     title: 'Operations Lead, LA Headquarters',
@@ -64,28 +65,44 @@ const roles = [
   },
 ];
 
+const VISIBLE = 5;
+
 export const WorkHistory = () => {
+  const [expanded, setExpanded] = useState(false);
+  const shown = expanded ? roles : roles.slice(0, VISIBLE);
+
   return (
     <section className='work-history' id='experience'>
       <Container>
-        <div className='history-inner'>
-          <h2 className='history-title reveal'>Where I've been</h2>
-
-          <ol className='history-list'>
-            {roles.map((role, i) => (
-              <li className='history-row reveal' key={i}>
-                <div className='history-dates'>{role.dates}</div>
-                <div className='history-main'>
-                  <h3 className='history-role'>
-                    {role.title}
-                    <span className='history-co'> · {role.company}</span>
-                  </h3>
-                  <p className='history-desc'>{role.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+        <div className='history-head reveal'>
+          <span className='section-eyebrow'>Where I've been</span>
+          <h2 className='section-title'>The longer record.</h2>
         </div>
+
+        <ol className='history-list'>
+          {shown.map((role, i) => (
+            <li className='history-row reveal' key={i}>
+              <div className='history-dates'>{role.dates}</div>
+              <div className='history-main'>
+                <h3 className='history-role'>
+                  {role.title}
+                  <span className='history-co'> · {role.company}</span>
+                </h3>
+                <p className='history-desc'>{role.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        {roles.length > VISIBLE && (
+          <button
+            className='history-toggle'
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+          >
+            {expanded ? 'Show less' : 'Show full history'}
+          </button>
+        )}
       </Container>
     </section>
   );

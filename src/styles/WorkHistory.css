@@ -1,25 +1,12 @@
 /* ============================================================
-   WORK HISTORY — editorial list on warm off-white
+   WHERE I'VE BEEN — record list on white
    ============================================================ */
 .work-history {
-  background-color: var(--bg-warm);
-  color: var(--text-dark);
+  background-color: var(--bg);
   padding: var(--section-y) 0;
 }
 
-.history-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.history-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: var(--text-dark);
-  font-size: clamp(28px, 4vw, 40px);
+.history-head {
   margin: 0 0 clamp(32px, 5vw, 56px);
 }
 
@@ -33,7 +20,7 @@
   display: grid;
   grid-template-columns: 9.5rem 1fr;
   gap: clamp(12px, 3vw, 32px);
-  padding: clamp(20px, 3vw, 28px) 0;
+  padding: clamp(20px, 3vw, 26px) 0;
   border-top: 1px solid var(--hairline);
 }
 
@@ -42,26 +29,27 @@
 }
 
 .history-dates {
+  font-family: var(--font-display);
   font-size: 14px;
+  font-weight: 500;
   line-height: 1.5;
   color: var(--ink-soft);
-  padding-top: 0.35em;
+  padding-top: 0.3em;
   font-variant-numeric: tabular-nums;
 }
 
 .history-role {
   font-family: var(--font-display);
   font-weight: 600;
-  text-transform: none;
-  letter-spacing: -0.005em;
+  font-size: clamp(18px, 2vw, 21px);
   line-height: 1.25;
-  color: var(--text-dark);
-  font-size: clamp(19px, 2vw, 22px);
+  letter-spacing: -0.01em;
+  color: var(--ink);
   margin: 0 0 8px;
 }
 
 .history-co {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--ink-soft);
 }
 
@@ -70,7 +58,21 @@
   margin: 0;
   font-size: 16px;
   line-height: 1.55;
-  color: var(--text-dark);
+  color: var(--ink-soft);
+}
+
+.history-toggle {
+  margin-top: 28px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.history-toggle:hover {
+  color: var(--accent-press);
 }
 
 @media (max-width: 600px) {
