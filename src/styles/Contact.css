@@ -1,51 +1,70 @@
 /* ============================================================
-   CONTACT — warm off-white, prose line + mailto + social links
+   CONTACT — line + mailto + plain text links on warm alt
    ============================================================ */
 .contact {
-  background-color: var(--bg-warm);
-  color: var(--text-dark);
+  background-color: var(--bg-alt);
   padding: var(--section-y) 0;
+  border-top: 1px solid var(--hairline);
 }
 
 .contact-inner {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 760px;
 }
 
 .contact-line {
-  max-width: 40ch;
-  margin: 0 0 clamp(16px, 2.5vw, 24px);
+  max-width: 22ch;
+  margin: 0 0 clamp(20px, 3vw, 28px);
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--text-dark);
-  font-size: clamp(24px, 3.4vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+  font-size: clamp(28px, 4.5vw, 44px);
 }
 
 .contact-mail {
   display: inline-block;
-  font-size: clamp(17px, 1.4vw, 20px);
-  color: var(--accent-link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 26px);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
 }
 
 .contact-mail:hover {
-  text-decoration: none;
+  color: var(--accent-press);
 }
 
 .contact-socials {
-  margin: clamp(20px, 3vw, 28px) 0 0;
+  margin: clamp(24px, 3.5vw, 32px) 0 0;
   font-size: 15px;
+  line-height: 1.8;
   color: var(--ink-soft);
 }
 
 .contact-socials a {
-  color: var(--ink-soft);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .contact-socials a:hover {
-  color: var(--accent-link);
+  color: var(--accent);
+  border-color: currentColor;
+}
+
+.contact-sep {
+  margin: 0 10px;
+  color: var(--hairline);
+}
+
+@media (max-width: 480px) {
+  .contact-sep {
+    display: block;
+    height: 4px;
+    text-indent: -9999px;
+    margin: 0;
+  }
 }
