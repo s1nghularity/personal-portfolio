@@ -1,39 +1,65 @@
 /* ============================================================
-   HERO — dark, editorial, static (no scroll animation)
+   HERO — clean, confident, left-aligned on white
    ============================================================ */
 .banner {
-  background-color: var(--hero-bg);
-  color: var(--hero-text);
-  padding-top: clamp(120px, 18vw, 200px);
+  background-color: var(--bg);
+  padding-top: clamp(72px, 12vw, 140px);
   padding-bottom: var(--section-y);
+  border-bottom: 1px solid var(--hairline);
 }
 
 .banner .hero-copy {
-  max-width: 18ch;
+  max-width: 880px;
 }
 
-.banner .hero-title {
+.hero-name {
   font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-  color: var(--hero-text);
-  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  color: var(--ink);
+  font-size: clamp(36px, 6.4vw, 72px);
+  max-width: 16ch;
   margin: 0;
 }
 
-.banner .hero-lede {
+.hero-subhead {
   max-width: 60ch;
-  margin: clamp(20px, 3vw, 32px) 0 0;
-  font-size: clamp(17px, 1.1vw, 19px);
+  margin: clamp(20px, 3vw, 28px) 0 0;
+  font-size: clamp(17px, 1.3vw, 20px);
   line-height: 1.55;
-  color: var(--hero-text);
-  opacity: 0.82;
+  color: var(--ink-soft);
 }
 
-@media (max-width: 600px) {
-  .banner .hero-copy {
-    max-width: none;
+.hero-availability {
+  max-width: 60ch;
+  margin: 18px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+@media (max-width: 480px) {
+  .hero-ctas .btn-accent,
+  .hero-ctas .btn-outline {
+    flex: 1 1 100%;
   }
 }
