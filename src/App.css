@@ -1,80 +1,40 @@
 @import url('./styles/Banner.css');
+@import url('./styles/WhatIDo.css');
+@import url('./styles/RecentWork.css');
 @import url('./styles/Throughline.css');
-@import url('./styles/SelectedWork.css');
 @import url('./styles/WorkHistory.css');
 @import url('./styles/Contact.css');
 
 /* ============================================================
-   DESIGN TOKENS  —  3-tone system (visual uplift)
+   DESIGN TOKENS  —  capable studio: white/ink, one blue accent
    ============================================================ */
 :root {
   /* surfaces */
-  --forest: oklch(0.27 0.045 156);   /* primary dark sections */
-  --forest-2: oklch(0.23 0.04 156);  /* deeper dark */
-  --paper: oklch(0.972 0.012 110);   /* warm off-white */
-  --paper-2: oklch(0.945 0.014 110); /* slightly deeper paper */
-
-  /* accent — highlights ONLY (links, nodes, numbers, CTAs, hovers) */
-  --accent: oklch(0.78 0.155 152);
-  --accent-ink: oklch(0.42 0.10 152);
+  --bg: #FFFFFF;
+  --bg-alt: #FAFAF8;       /* warm alternate */
 
   /* text */
-  --ink: oklch(0.26 0.02 152);
-  --ink-soft: oklch(0.46 0.02 152);
-  --on-dark: oklch(0.95 0.012 110);
-  --on-dark-soft: oklch(0.80 0.02 150);
+  --ink: #18181B;
+  --ink-soft: #52525B;
 
-  /* hairlines */
-  --line-dark: oklch(0.95 0.012 110 / 0.16);
-  --line-light: oklch(0.26 0.02 152 / 0.14);
+  /* one accent — links, CTA, small marks */
+  --accent: #2563EB;
+  --accent-press: #1D4ED8;
+
+  /* hairline */
+  --hairline: #E5E5E5;
 
   /* type */
-  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, monospace;
-
-  /* editorial palette */
-  --hero-bg: #0E0E0E;
-  --hero-text: #F5F1E8;
-  --bg-warm: #FAF8F4;
-  --text-dark: #1A1A1A;
-  --accent-link: #4A6B6F;
-  --hairline: #E5E0D6;
-
-  /* fluid type scale */
-  --step--1: clamp(0.75rem, 0.72rem + 0.12vw, 0.82rem); /* labels / meta */
-  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);       /* body ~17.5px */
-  --step-1: clamp(1.3rem, 1.1rem + 1vw, 1.75rem);       /* lead */
-  --step-2: clamp(1.5rem, 1.1rem + 1.9vw, 2.25rem);     /* row / role title */
-  --step-3: clamp(2.1rem, 1.3rem + 3.6vw, 3.75rem);     /* section h2 */
-  --step-4: clamp(2.5rem, 1.4rem + 5vw, 5.75rem);       /* big display */
-  --step-5: clamp(2.9rem, 1.3rem + 8.2vw, 8.4rem);      /* hero */
 
   /* spacing */
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2.5rem;
-  --space-5: 4rem;
-  --space-6: 6rem;
-
-  --section-y: clamp(64px, 9vw, 120px);
+  --section-y: clamp(56px, 9vw, 128px);
   --gutter: clamp(20px, 5vw, 40px);
-  --radius: 14px;
-  --shadow: 0 0.5rem 1.5rem rgba(20, 40, 28, 0.1);
-  --shadow-lg: 0 1rem 2.5rem rgba(20, 40, 28, 0.18);
-  --transition: 0.25s ease;
-  --measure: 62ch;
-
-  /* ---- legacy aliases so untouched sections adopt the new palette ---- */
-  --green-900: var(--forest);
-  --green-700: var(--accent-ink);
-  --green-500: oklch(0.55 0.10 152);
-  --green-300: var(--accent);
-  --green-100: var(--accent);
-  --mint: var(--accent);
-  --line: var(--line-light);
-  --muted: var(--ink-soft);
+  --container: 1080px;
+  --measure: 68ch;
+  --radius: 12px;
+  --transition: 0.2s ease;
 }
 
 /* ============================================================
@@ -82,92 +42,133 @@
    ============================================================ */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 24px;
 }
 
 body {
   overflow-x: hidden;
   position: relative;
-  color: var(--text-dark);
-  background-color: var(--bg-warm);
+  color: var(--ink);
+  background-color: var(--bg);
   font-family: var(--font-body);
-  font-size: 19px;
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 600px) {
   body {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.15;
+  line-height: 1.1;
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600;
   text-transform: none;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.02em;
 }
 
-img { width: 100%; height: auto; }
+img { width: 100%; height: auto; display: block; }
 button { border: 0; background-color: transparent; }
 a { color: inherit; }
 
-input:focus, textarea:focus, select:focus { outline: none; }
+/* constrain the bootstrap container to our content width (beats bootstrap's later import) */
+.App .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
 
 /* visible keyboard focus (a11y) */
 a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-.nav-link:focus-visible {
+button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-@media (min-width: 1700px) {
-  main .container {
-    max-width: 100%;
-    padding: 0 150px;
-  }
-}
-
-p.success { color: var(--accent-ink); }
-p.danger { color: #c0392b; }
-
 /* ============================================================
-   REUSABLE SECTION PATTERN
+   SHARED PATTERNS
    ============================================================ */
-.kicker,
-.eyebrow {
+.section-eyebrow {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-ink);
-  margin-bottom: 18px;
+  color: var(--accent);
+  margin: 0 0 16px;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: var(--step-3);
-  line-height: 0.92;
-  margin-bottom: var(--space-3);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--ink);
+  margin: 0;
 }
 
-.section-lead {
-  font-size: var(--step-1);
-  max-width: var(--measure);
-  color: var(--ink-soft);
+/* buttons */
+.btn-accent,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 26px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-press);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-outline:hover {
+  background-color: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* text link with accent */
+.link-accent {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.link-accent:hover {
+  color: var(--accent-press);
 }
 
 /* scroll reveal — gated behind motion preference */
@@ -183,4 +184,3 @@ p.danger { color: #c0392b; }
     transform: none;
   }
 }
-
