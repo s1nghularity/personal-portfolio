@@ -7,8 +7,7 @@ export const Throughline = () => {
       <Container>
         <div className='throughline-inner reveal'>
           <div className='throughline-head'>
-            <span className='section-eyebrow'>How I got here</span>
-            <h2 className='section-title'>From the newsroom to the build.</h2>
+            <h2 className='section-title'>How I got here</h2>
           </div>
 
           <div className='throughline-body'>

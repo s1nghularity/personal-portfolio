@@ -75,13 +75,12 @@ export const WorkHistory = () => {
     <section className='work-history' id='experience'>
       <Container>
         <div className='history-head reveal'>
-          <span className='section-eyebrow'>Where I've been</span>
-          <h2 className='section-title'>The longer record.</h2>
+          <h2 className='section-title'>Where I've been</h2>
         </div>
 
         <ol className='history-list'>
           {shown.map((role, i) => (
-            <li className='history-row reveal' key={i}>
+            <li className='history-row' key={i}>
               <div className='history-dates'>{role.dates}</div>
               <div className='history-main'>
                 <h3 className='history-role'>

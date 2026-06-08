@@ -36,8 +36,7 @@ export const RecentWork = () => {
     <section className='recent-work' id='work'>
       <Container>
         <div className='rw-head reveal'>
-          <span className='section-eyebrow'>Recent work</span>
-          <h2 className='section-title'>Three sites, built and kept running.</h2>
+          <h2 className='section-title'>Recent work</h2>
         </div>
 
         <div className='rw-list'>

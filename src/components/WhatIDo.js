@@ -21,8 +21,7 @@ export const WhatIDo = () => {
     <section className='what-i-do' id='services'>
       <Container>
         <div className='wid-head reveal'>
-          <span className='section-eyebrow'>What I do</span>
-          <h2 className='section-title'>Strategy, build, upkeep — one person across all three.</h2>
+          <h2 className='section-title'>What I do</h2>
         </div>
 
         <div className='wid-grid'>
