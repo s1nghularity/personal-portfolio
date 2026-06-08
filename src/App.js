@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import './App.css';
 import { Banner } from './components/Banner.js';
+import { WhatIDo } from './components/WhatIDo.js';
+import { RecentWork } from './components/RecentWork.js';
 import { Throughline } from './components/Throughline.js';
-import { SelectedWork } from './components/SelectedWork.js';
 import { WorkHistory } from './components/WorkHistory.js';
 import { Contact } from './components/Contact.js';
 
@@ -34,8 +35,9 @@ function App() {
   return (
     <div className="App">
       <Banner />
+      <WhatIDo />
+      <RecentWork />
       <Throughline />
-      <SelectedWork />
       <WorkHistory />
       <Contact />
     </div>
