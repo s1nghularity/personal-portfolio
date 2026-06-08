@@ -1,82 +1,40 @@
-@import url('./styles/Navbar.css');
 @import url('./styles/Banner.css');
-@import url('./styles/Impact.css');
-@import url('./styles/Carousel.css');
-@import url('./styles/Expertise.css');
-@import url('./styles/Projects.css');
-@import url('./styles/Skills.css');
+@import url('./styles/WhatIDo.css');
+@import url('./styles/RecentWork.css');
+@import url('./styles/Throughline.css');
+@import url('./styles/WorkHistory.css');
 @import url('./styles/Contact.css');
-@import url('./styles/Footer.css');
-
-/*custom fonts*/
-
-@font-face {
-  font-family: Phudu;
-  src: url('./assets/font/Phudu-Black.ttf');
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Phudu;
-  src: url('./assets/font/Phudu-Medium.ttf');
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Phudu;
-  src: url('./assets/font/Phudu-Light.ttf');
-  font-weight: 300;
-  font-display: swap;
-}
 
 /* ============================================================
-   DESIGN TOKENS
+   DESIGN TOKENS  —  capable studio: white/ink, one blue accent
    ============================================================ */
 :root {
-  /* green brand scale (consolidated from ~9 ad-hoc greens) */
-  --green-900: #1a4e32;
-  --green-700: #246a45;
-  --green-500: #599e75;
-  --green-300: #86ce8f;
-  --green-100: #a9f2a9;
-  --mint: #a7ffc4;
+  /* surfaces */
+  --bg: #FFFFFF;
+  --bg-alt: #FAFAF8;       /* warm alternate */
 
-  /* neutrals */
-  --ink: #1c2620;
-  --paper: #faf8f3;   /* warm off-white, editorial */
-  --paper-2: #f0f0f0;
-  --line: #e3ded3;
-  --muted: #5b6b60;
+  /* text */
+  --ink: #18181B;
+  --ink-soft: #52525B;
 
-  /* display + body type pairing (newsroom) */
-  --font-display: 'Phudu', sans-serif;
-  --font-body: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia,
-    'Times New Roman', serif;
+  /* one accent — links, CTA, small marks */
+  --accent: #15803D;
+  --accent-press: #166534;
 
-  /* fluid type scale */
-  --step--1: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
-  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
-  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
-  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-  --step-3: clamp(1.95rem, 1.6rem + 1.6vw, 2.8rem);
-  --step-4: clamp(2.4rem, 1.9rem + 2.5vw, 3.8rem);
-  --step-5: clamp(3rem, 2.2rem + 4vw, 5.5rem);
+  /* hairline */
+  --hairline: #E5E5E5;
 
-  /* spacing scale */
-  --space-1: 0.5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-  --space-4: 2.5rem;
-  --space-5: 4rem;
-  --space-6: 6rem;
+  /* type */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
-  --radius: 14px;
-  --shadow: 0 0.5rem 1.5rem rgba(26, 78, 50, 0.12);
-  --shadow-lg: 0 1rem 2.5rem rgba(26, 78, 50, 0.2);
-  --transition: 0.3s ease-in-out;
-  --measure: 65ch;
+  /* spacing */
+  --section-y: clamp(56px, 9vw, 128px);
+  --gutter: clamp(20px, 5vw, 40px);
+  --container: 1080px;
+  --measure: 68ch;
+  --radius: 12px;
+  --transition: 0.2s ease;
 }
 
 /* ============================================================
@@ -84,174 +42,146 @@
    ============================================================ */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 24px;
 }
 
 body {
   overflow-x: hidden;
   position: relative;
   color: var(--ink);
-  background-color: var(--paper);
+  background-color: var(--bg);
   font-family: var(--font-body);
-  font-size: var(--step-0);
+  font-size: 18px;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.05;
+  line-height: 1.1;
   font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.02em;
 }
 
-img {
+img { width: 100%; height: auto; display: block; }
+button { border: 0; background-color: transparent; }
+a { color: inherit; }
+
+/* constrain the bootstrap container to our content width (beats bootstrap's later import) */
+.App .container {
   width: 100%;
-  height: auto;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-button {
-  border: 0;
-  background-color: transparent;
-}
-
-a {
-  color: inherit;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-}
-
-/* visible keyboard focus everywhere (a11y) */
+/* visible keyboard focus (a11y) */
 a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-.nav-link:focus-visible {
-  outline: 3px solid var(--green-300);
+button:focus-visible {
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-@media (min-width: 1700px) {
-  main .container {
-    max-width: 100%;
-    padding: 0 150px;
-  }
-}
-
-p.success {
-  color: var(--green-700);
-}
-
-p.danger {
-  color: #c0392b;
-}
-
 /* ============================================================
-   REUSABLE EDITORIAL SECTION PATTERN
+   SHARED PATTERNS
    ============================================================ */
-.kicker {
+.section-eyebrow {
   display: inline-block;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--step--1);
-  letter-spacing: 0.22em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: var(--space-2);
+  color: var(--accent);
+  margin: 0 0 16px;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--step-3);
-  line-height: 1.02;
-  margin-bottom: var(--space-3);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+  text-wrap: balance;
 }
 
-.section-lead {
-  font-size: var(--step-1);
-  max-width: var(--measure);
-  color: var(--muted);
-}
-
-/* ============================================================
-   ABOUT (editorial reading column with drop cap)
-   ============================================================ */
-.about {
-  z-index: 1;
-  background: var(--green-700);
-}
-
-.about > img {
-  width: 105%;
-  margin: 0 auto -0.5rem auto;
-  overflow: hidden;
-}
-
-.about .about-bx {
-  background: linear-gradient(var(--green-700) 0%, var(--green-500) 100%);
-  margin: 0 auto;
-  padding: var(--space-6) var(--space-3) var(--space-5);
-  color: #fff;
-}
-
-.about .about-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0 var(--space-2);
-}
-
-.about-bx .kicker {
-  color: var(--green-100);
-}
-
-.about-bx h2 {
-  font-size: var(--step-4);
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: var(--space-4);
-  line-height: 1;
-}
-
-.about-bx p {
-  font-family: var(--font-body);
-  font-size: var(--step-1);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.94);
-  line-height: 1.65;
-  margin-bottom: var(--space-3);
-}
-
-/* drop cap on the lead paragraph */
-.about-bx p.lead::first-letter {
+/* buttons */
+.btn-accent,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-display);
-  font-weight: 700;
-  float: left;
-  font-size: 3.6em;
-  line-height: 0.72;
-  padding: 0.06em 0.12em 0 0;
-  color: var(--green-100);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 26px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+  text-decoration: none;
 }
 
-/* ============================================================
-   MOBILE
-   ============================================================ */
-@media (max-width: 768px) {
-  .about .about-bx {
-    padding: var(--space-5) var(--space-2) var(--space-4);
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-press);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-outline:hover {
+  background-color: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* text link with accent */
+.link-accent {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.link-accent:hover {
+  color: var(--accent-press);
+}
+
+/* scroll reveal — gated behind motion preference */
+.reveal { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
-  body {
-    overflow-x: hidden;
-  }
-  .custom-carousel {
-    touch-action: pan-y;
+  .reveal.in {
+    opacity: 1;
+    transform: none;
   }
 }
