@@ -1,0 +1,32 @@
+/* ============================================================
+   THROUGHLINE — warm off-white, single column prose
+   ============================================================ */
+.throughline {
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  padding: var(--section-y) 0;
+}
+
+.throughline-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.throughline-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-dark);
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 clamp(20px, 3vw, 28px);
+}
+
+.throughline-body {
+  max-width: 64ch;
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.55;
+  color: var(--text-dark);
+}

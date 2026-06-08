@@ -1,16 +1,9 @@
 import { useEffect } from 'react';
 import './App.css';
-import {NavBar} from './components/NavBar.js';
-import {Banner} from './components/Banner.js';
-import {Journey} from './components/Journey.js';
-import {About} from './components/About.js';
-import {Expertise} from './components/Expertise.js';
-import {Projects} from './components/Projects.js';
-import WorkTimeline from './components/Timeline.js';
-import {Testimonials} from './components/Testimonials';
-import {ContactForm} from './components/Contact.js';
-import {Footer} from './components/Footer.js';
-import { Container } from 'react-bootstrap';
+import { Banner } from './components/Banner.js';
+import { Throughline } from './components/Throughline.js';
+import { SelectedWork } from './components/SelectedWork.js';
+import { Contact } from './components/Contact.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,20 +32,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <Banner/>
-      <Journey/>
-      <About/>
-      <Expertise/>
-      <Projects/>
-      <WorkTimeline/>
-
-      <Container>
-        <Testimonials/>
-        <ContactForm/>
-      </Container>
-
-      <Footer/>
+      <Banner />
+      <Throughline />
+      <SelectedWork />
+      <Contact />
     </div>
   );
 }

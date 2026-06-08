@@ -1,0 +1,74 @@
+/* ============================================================
+   SELECTED WORK — warm off-white, single column, text + 1 image
+   ============================================================ */
+.selected-work {
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  padding: var(--section-y) 0;
+}
+
+.work-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.work-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-dark);
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 clamp(32px, 5vw, 56px);
+}
+
+.work-block {
+  margin: 0 0 clamp(48px, 7vw, 80px);
+}
+
+.work-block:last-child {
+  margin-bottom: 0;
+}
+
+.work-media {
+  width: 100%;
+  margin: 0 0 clamp(16px, 2.5vw, 24px);
+  border: 1px solid var(--hairline);
+}
+
+.work-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.work-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+  color: var(--text-dark);
+  font-size: clamp(22px, 2.6vw, 28px);
+  margin: 0 0 12px;
+}
+
+.work-body {
+  max-width: 64ch;
+  margin: 0 0 16px;
+  line-height: 1.55;
+  color: var(--text-dark);
+}
+
+.work-link {
+  color: var(--accent-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.work-link:hover {
+  text-decoration: none;
+}
