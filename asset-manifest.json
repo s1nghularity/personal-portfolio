@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.1d5759c4.css",
-    "main.js": "/personal-portfolio/static/js/main.53b355c8.js",
+    "main.js": "/personal-portfolio/static/js/main.d939411a.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/beechler.png": "/personal-portfolio/static/media/beechler.a52c9d78ef0443a51eaa.png",
+    "static/media/kavita.webp": "/personal-portfolio/static/media/kavita.d231a38bfebaacd1416e.webp",
+    "static/media/private-affair.webp": "/personal-portfolio/static/media/private-affair.e5c64a50adce3677eb9a.webp",
     "static/media/bootstrap-icons.woff?": "/personal-portfolio/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/personal-portfolio/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "index.html": "/personal-portfolio/index.html",
-    "static/media/placeholder-pab.svg": "/personal-portfolio/static/media/placeholder-pab.f80ba4749b41916db097c6b8aa6b2596.svg",
-    "static/media/placeholder-kavita.svg": "/personal-portfolio/static/media/placeholder-kavita.b4da1c636a9f39a06cd967075da85298.svg",
     "main.1d5759c4.css.map": "/personal-portfolio/static/css/main.1d5759c4.css.map",
-    "main.53b355c8.js.map": "/personal-portfolio/static/js/main.53b355c8.js.map",
+    "main.d939411a.js.map": "/personal-portfolio/static/js/main.d939411a.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d5759c4.css",
-    "static/js/main.53b355c8.js"
+    "static/js/main.d939411a.js"
   ]
 }
