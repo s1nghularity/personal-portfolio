@@ -1,36 +1,30 @@
 /* ============================================================
-   THROUGHLINE — warm off-white, single column prose
+   HOW I GOT HERE — prose on warm alt
    ============================================================ */
 .throughline {
-  background-color: var(--bg-warm);
-  color: var(--text-dark);
+  background-color: var(--bg-alt);
   padding: var(--section-y) 0;
 }
 
 .throughline-inner {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 760px;
 }
 
-.throughline-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: var(--text-dark);
-  font-size: clamp(28px, 4vw, 40px);
-  margin: 0 0 clamp(20px, 3vw, 28px);
+.throughline-inner .section-title {
+  margin: 0 0 clamp(24px, 3.5vw, 36px);
 }
 
 .throughline-body {
-  max-width: 64ch;
-  margin: 0;
-  font-size: inherit;
-  line-height: 1.55;
-  color: var(--text-dark);
+  max-width: var(--measure);
 }
 
-.throughline-body + .throughline-body {
+.throughline-body p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.throughline-body p + p {
   margin-top: 1.1em;
 }
