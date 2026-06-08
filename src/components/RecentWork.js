@@ -1,8 +1,8 @@
 import { Container } from 'react-bootstrap';
 import '../styles/RecentWork.css';
 import beechler from '../assets/img/proj-img/capstone/beechler.png';
-import pabShot from '../assets/img/proj-img/placeholder-pab.svg';
-import kavitaShot from '../assets/img/proj-img/placeholder-kavita.svg';
+import pabShot from '../assets/img/proj-img/private-affair.webp';
+import kavitaShot from '../assets/img/proj-img/kavita.webp';
 
 const projects = [
   {
