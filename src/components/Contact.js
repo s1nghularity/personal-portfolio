@@ -1,67 +1,45 @@
-import React, { useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-import contact from "../assets/img/contact1.svg";
-import "animate.css";
-import { Card, Modal, Button } from "react-bootstrap";
-import { TurtleSvg } from "../components/Modal.js";
+import { Container } from 'react-bootstrap';
+import '../styles/Contact.css';
 
-export const ContactForm = () => {
-  const [showModal, setShowModal] = React.useState(false);
-  const [state, handleSubmit] = useForm("xyyajnbb");
-
-  useEffect(() => {
-    if (state.succeeded) {
-      setShowModal(true);
-    }
-  }, [state.succeeded]);
-
-  const handleClose = () => setShowModal(false);
-
+export const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
-      <div className="work-together">
-        <span className="kicker">Get in touch</span>
-        <h2>Got a platform that needs a steady hand?</h2>
-        <p>I'm open to new projects in technical project management and web-platform ownership.</p>
-        <p>Drop me a line — I read everything, and I'll get back to you.</p>
-        <img src={contact} alt="contact-img" />
-      </div>
-      <Card className="contact-form">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" />
-          <ValidationError
-            prefix="Email"
-            field="email"
-            errors={state.errors}
-          />{" "}
-          <br />
-          <br />
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-          <button type="submit" disabled={state.submitting}>
-            Talk soon!
-          </button>
-          <Modal show={showModal} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Thanks for reaching out.</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <TurtleSvg />
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </form>
-      </Card>
-    </div>
+    <section className='contact' id='contact'>
+      <Container>
+        <div className='contact-inner reveal'>
+          <div className='contact-head'>
+            <span className='section-eyebrow'>Get in touch</span>
+            <p className='contact-line'>
+              Open to new projects. Partial to the ones that still have to work
+              on Monday.
+            </p>
+          </div>
+
+          <div className='contact-actions'>
+            <a className='contact-mail' href='mailto:vikpremsingh@pm.me'>
+              vikpremsingh@pm.me
+            </a>
+            <p className='contact-socials'>
+              GitHub —{' '}
+              <a
+                href='https://github.com/s1nghularity'
+                target='_blank'
+                rel='noreferrer'
+              >
+                github.com/s1nghularity
+              </a>
+              <br />
+              LinkedIn —{' '}
+              <a
+                href='https://www.linkedin.com/in/vikramsinghca/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                linkedin.com/in/vikramsinghca
+              </a>
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 };

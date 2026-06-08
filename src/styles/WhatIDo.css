@@ -1,0 +1,59 @@
+/* ============================================================
+   WHAT I DO — 3-up capability blocks on warm alt
+   ============================================================ */
+.what-i-do {
+  background-color: var(--bg-alt);
+  padding: var(--section-y) 0;
+}
+
+.wid-head {
+  max-width: 24ch;
+  margin: 0 0 clamp(40px, 6vw, 64px);
+}
+
+.wid-head .section-title {
+  max-width: 18ch;
+}
+
+.wid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.wid-block {
+  border-top: 2px solid var(--ink);
+  padding-top: 22px;
+}
+
+.wid-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.wid-body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 820px) {
+  .wid-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .wid-block {
+    padding: 22px 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .wid-block:first-child {
+    border-top: 2px solid var(--ink);
+  }
+}

@@ -1,88 +1,40 @@
-import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import avatar2 from '../assets/img/vs-avatar2.png';
+import { Container } from 'react-bootstrap';
 
 export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['scope the work.', 'direct the build.', 'keep it running.'];
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1500;
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text]);
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum((loopNum) => loopNum + 1);
-      setDelta(500);
-    }
-  };
-
   return (
     <section className='banner' id='home'>
       <Container>
-        <Row className='align-items-center'>
-          <Col md={8} className='banner-copy'>
-            <span className='kicker'>Vikram Singh</span>
-            <h1>
-              Technical Project &amp; <br className='d-none d-md-block' />
-              Product Owner
-            </h1>
-            <p className='banner-role'>
-              I <span className='typed'>{text}</span>
-              <span className='cursor'>
-                <b>|</b>
-              </span>
+        <div className='hero-grid'>
+          <div className='hero-main'>
+            <p className='hero-name'>Vikram Singh</p>
+            <h1 className='hero-title'>A digital strategist who builds.</h1>
+            <p className='hero-subhead'>
+              I grew up in the dot-com boom, the generation that crossed from no
+              internet to all of it — and I've been closing the gap between
+              people and their tech ever since. End to end: strategy, words,
+              design, build, then the upkeep after launch.
             </p>
-            <p className='banner-tag'>
-              I own web platforms end to end — scoping the work, directing the
-              build, and making sure it ships and keeps running.
+            <div className='hero-ctas'>
+              <a className='btn-accent' href='#work'>
+                See the work
+              </a>
+              <a className='btn-outline' href='#contact'>
+                Get in touch
+              </a>
+            </div>
+          </div>
+
+          <aside className='hero-aside'>
+            <span className='hero-status'>
+              <span className='hero-dot' aria-hidden='true' />
+              Open to more
+            </span>
+            <p className='hero-availability'>
+              Currently with the Foundation for California Community Colleges and
+              Starfish.
             </p>
-
-            <button
-              className='banner-cta'
-              onClick={() =>
-                document
-                  .querySelector('#contact')
-                  .scrollIntoView({ behavior: 'smooth' })
-              }
-            >
-              Let's talk <ArrowRightCircle size={28} />
-            </button>
-          </Col>
-
-          <Col md={4} className='banner-portrait'>
-            <span className='available'>Open to new projects</span>
-            <img src={avatar2} alt='Vikram Singh' />
-          </Col>
-        </Row>
+          </aside>
+        </div>
       </Container>
     </section>
   );
