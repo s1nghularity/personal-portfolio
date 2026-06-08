@@ -1,0 +1,86 @@
+/* ============================================================
+   WORK HISTORY — editorial list on warm off-white
+   ============================================================ */
+.work-history {
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  padding: var(--section-y) 0;
+}
+
+.history-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.history-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-dark);
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 clamp(32px, 5vw, 56px);
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: clamp(12px, 3vw, 32px);
+  padding: clamp(20px, 3vw, 28px) 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.history-row:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.history-dates {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding-top: 0.35em;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+  color: var(--text-dark);
+  font-size: clamp(19px, 2vw, 22px);
+  margin: 0 0 8px;
+}
+
+.history-co {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.history-desc {
+  max-width: 56ch;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text-dark);
+}
+
+@media (max-width: 600px) {
+  .history-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .history-dates {
+    padding-top: 0;
+    order: -1;
+  }
+}

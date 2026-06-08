@@ -14,6 +14,12 @@ export const Throughline = () => {
             development the slow way, by needing the sites I was writing about to
             actually work. Now I build them and stick around for the boring parts.
           </p>
+          <p className='throughline-body'>
+            These days that means small websites: the design and the words, then
+            the quieter work of keeping them online and current. It's the same
+            instinct as the newsroom — make the thing clear, make it work, and
+            stick around for what happens after launch.
+          </p>
         </div>
       </Container>
     </section>

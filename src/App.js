@@ -3,6 +3,7 @@ import './App.css';
 import { Banner } from './components/Banner.js';
 import { Throughline } from './components/Throughline.js';
 import { SelectedWork } from './components/SelectedWork.js';
+import { WorkHistory } from './components/WorkHistory.js';
 import { Contact } from './components/Contact.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,6 +36,7 @@ function App() {
       <Banner />
       <Throughline />
       <SelectedWork />
+      <WorkHistory />
       <Contact />
     </div>
   );
