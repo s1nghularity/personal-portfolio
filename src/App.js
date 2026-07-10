@@ -3,6 +3,7 @@ import './App.css';
 import { Banner } from './components/Banner.js';
 import { WhatIDo } from './components/WhatIDo.js';
 import { RecentWork } from './components/RecentWork.js';
+import { Services } from './components/Services.js';
 import { Throughline } from './components/Throughline.js';
 import { WorkHistory } from './components/WorkHistory.js';
 import { Contact } from './components/Contact.js';
@@ -37,6 +38,7 @@ function App() {
       <Banner />
       <WhatIDo />
       <RecentWork />
+      <Services />
       <Throughline />
       <WorkHistory />
       <Contact />
