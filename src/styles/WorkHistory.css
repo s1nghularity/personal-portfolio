@@ -29,19 +29,19 @@
 }
 
 .history-dates {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--ink-soft);
-  padding-top: 0.3em;
+  padding-top: 0.4em;
   font-variant-numeric: tabular-nums;
 }
 
 .history-role {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 500;
+  font-size: clamp(19px, 2vw, 22px);
   line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -87,16 +87,19 @@
 
 .history-toggle {
   margin-top: 28px;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 15px;
-  color: var(--accent);
+  color: var(--ink);
   cursor: pointer;
   padding: 10px 0;
+  border-bottom: 1px solid var(--ink);
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .history-toggle:hover {
-  color: var(--accent-press);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 @media (max-width: 600px) {

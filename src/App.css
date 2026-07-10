@@ -6,26 +6,26 @@
 @import url('./styles/Contact.css');
 
 /* ============================================================
-   DESIGN TOKENS  —  capable studio: white/ink, one blue accent
+   DESIGN TOKENS  —  literary editorial: warm paper/ink, one oxblood accent
    ============================================================ */
 :root {
   /* surfaces */
-  --bg: #FFFFFF;
-  --bg-alt: #FAFAF8;       /* warm alternate */
+  --bg: #F7F3EC;          /* warm ivory paper */
+  --bg-alt: #EFE9DE;      /* slightly deeper warm, for alternating sections */
 
   /* text */
-  --ink: #18181B;
-  --ink-soft: #52525B;
+  --ink: #211C16;         /* warm near-black */
+  --ink-soft: #6B6055;    /* warm taupe-gray */
 
-  /* one accent — links, CTA, small marks */
-  --accent: #15803D;
-  --accent-press: #166534;
+  /* one accent — seasoned oxblood, used sparingly */
+  --accent: #8A3B2F;
+  --accent-press: #6E2D23;
 
   /* hairline */
-  --hairline: #E5E5E5;
+  --hairline: #E3DACB;    /* warm rule */
 
   /* type */
-  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* spacing */
@@ -33,7 +33,7 @@
   --gutter: clamp(20px, 5vw, 40px);
   --container: 1080px;
   --measure: 68ch;
-  --radius: 12px;
+  --radius: 2px;
   --transition: 0.2s ease;
 }
 
@@ -68,9 +68,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   line-height: 1.1;
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 500;
   text-transform: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 img { width: 100%; height: auto; display: block; }
@@ -103,73 +103,78 @@ button:focus-visible {
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink-soft);
   margin: 0 0 16px;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
   color: var(--ink);
   margin: 0;
   text-wrap: balance;
 }
 
-/* buttons */
-.btn-accent,
-.btn-outline {
+/* primary CTA — solid warm ink, square, quiet */
+.btn-accent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
   padding: 15px 26px;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: background-color var(--transition), color var(--transition),
-    border-color var(--transition), transform var(--transition);
+  transition: background-color var(--transition), color var(--transition);
   text-decoration: none;
-}
-
-.btn-accent {
-  background-color: var(--accent);
-  color: #fff;
+  background-color: var(--ink);
+  color: var(--bg);
 }
 
 .btn-accent:hover {
-  background-color: var(--accent-press);
-  color: #fff;
-  transform: translateY(-1px);
+  background-color: #000;
+  color: var(--bg);
 }
 
+/* secondary — plain underlined text link, not a pill */
 .btn-outline {
-  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 4px;
+  cursor: pointer;
+  text-decoration: none;
   color: var(--ink);
-  border: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .btn-outline:hover {
-  background-color: var(--ink);
-  color: #fff;
-  transform: translateY(-1px);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-/* text link with accent */
+/* text link — ink by default, oxblood on hover */
 .link-accent {
-  color: var(--accent);
+  color: var(--ink);
   font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid var(--ink);
   padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .link-accent:hover {
-  color: var(--accent-press);
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* scroll reveal — gated behind motion preference */
