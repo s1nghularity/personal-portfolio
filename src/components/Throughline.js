@@ -14,7 +14,7 @@ export const Throughline = () => {
             <p>
               I came up through newsrooms and comms — a Delhi TV desk, then a
               decade writing for executives, building brand identity for
-              nonprofits, and running social for a CBS comedy. Learning to build
+              nonprofits, and promoting a CBS comedy. Learning to build
               the sites myself was a short step: I'm from Saratoga, grew up with
               half my friends' parents working in tech, and was always the kid
               tinkering on whatever software was around.

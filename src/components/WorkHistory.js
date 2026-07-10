@@ -27,17 +27,11 @@ const roles = [
     desc: 'Joined as a founding member; now Global Digital Strategist — running brand, social, and digital for the nonprofit. Ongoing.',
   },
   {
-    title: 'Social Media Manager',
+    title: 'Marketing & Promotions',
     company: 'Boomgen Studios',
     href: 'https://www.boomgenstudios.com/',
     dates: "Jan '21 - 2023",
     desc: 'Promoted a CBS comedy, coordinated book promotion, and ran the social accounts.',
-  },
-  {
-    title: 'Social Media Manager',
-    company: 'Barrel Bag',
-    dates: "Oct '21 - May '22",
-    desc: 'Built and ran the monthly newsletter and social content.',
   },
   {
     title: 'Creative Copywriter',
