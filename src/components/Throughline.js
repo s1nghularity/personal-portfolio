@@ -7,33 +7,25 @@ export const Throughline = () => {
       <Container>
         <div className='throughline-inner reveal'>
           <div className='throughline-head'>
-            <h2 className='section-title'>How I got here</h2>
+            <h2 className='section-title'>About</h2>
           </div>
 
           <div className='throughline-body'>
             <p>
-              I came up through newsrooms and comms — a Delhi TV desk, then a
-              decade writing for executives, building brand identity for
-              nonprofits, and promoting a CBS comedy. Learning to build
-              the sites myself was a short step: I'm from Saratoga, grew up with
-              half my friends' parents working in tech, and was always the kid
-              tinkering on whatever software was around.
+              Vikram Singh is a digital strategist and builder. He takes a
+              company's web presence end to end — strategy, words, design, and
+              build — then stays on to keep it running. He does this today for
+              the Foundation for California Community Colleges and as Starfish's
+              Global Digital Strategist, alongside select client work through his
+              own practice.
             </p>
             <p>
-              These days that means small websites and the digital strategy
-              around them: the design and the words, then the quieter work of
-              keeping them online and current. Same instinct as the newsroom —
-              make the thing clear, make it work, and stick around for what
-              happens after launch.
-            </p>
-            <p>
-              Off the clock: new dad as of April 2026, which rearranged
-              everything. Californian down to the bone — L.A., the Bay, SF,
-              family scattered across all of it, and a backyard I'm in no hurry
-              to leave. I'd tell you I read a ton and play a lot of games, but
-              I'd be lying — I love both more than I do them. What I actually do:
-              stand-up, sci-fi, good drama, anything with real storytelling, and
-              turning up for the arts.
+              His background is in communications and journalism: a decade
+              writing for executives, building brand identity for nonprofits, and
+              running campaigns before moving into web development. That newsroom
+              training — clarity, speed, and getting to the point — is what he
+              brings to every build, from the first strategy call to the upkeep
+              long after launch.
             </p>
           </div>
         </div>

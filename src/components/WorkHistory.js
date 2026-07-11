@@ -96,7 +96,7 @@ export const WorkHistory = () => {
     <section className='work-history' id='experience'>
       <Container>
         <div className='history-head reveal'>
-          <h2 className='section-title'>Where I've been</h2>
+          <h2 className='section-title'>Experience</h2>
         </div>
 
         <ol className='history-list'>

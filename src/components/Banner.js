@@ -8,10 +8,10 @@ export const Banner = () => {
           <p className='hero-name'>Vikram Singh</p>
           <h1 className='hero-title'>A digital strategist who builds.</h1>
           <p className='hero-subhead'>
-            I grew up in the dot-com boom, the generation that crossed from no
-            internet to all of it — and I've been closing the gap between people
-            and their tech ever since. End to end: strategy, words, design,
-            build, then the upkeep after launch.
+            I take a company's web presence end to end — strategy, words, design,
+            and build — then stay on to keep it running. A decade in newsrooms
+            and communications shaped how I do it: clear, fast, and built to
+            last.
           </p>
           <p className='hero-availability'>
             Currently with the Foundation for California Community Colleges and
