@@ -1,0 +1,77 @@
+/* ============================================================
+   SERVICES — stacked offering list on warm paper
+   ============================================================ */
+.services {
+  background-color: var(--bg);
+  padding: var(--section-y) 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.services-head {
+  max-width: 720px;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+
+.services-lead {
+  margin: 16px 0 0;
+  max-width: 48ch;
+  font-size: clamp(17px, 1.2vw, 19px);
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.services-list {
+  list-style: none;
+  margin: 0 0 clamp(28px, 4vw, 40px);
+  padding: 0;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(12px, 3vw, 40px);
+  align-items: baseline;
+  padding: clamp(20px, 3vw, 28px) 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.services-row:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.services-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(21px, 2.4vw, 27px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.services-desc {
+  max-width: 58ch;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.services-price {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.4vw, 19px);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.services-cta {
+  display: inline-block;
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .services-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
