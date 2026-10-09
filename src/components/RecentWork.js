@@ -26,23 +26,23 @@ const projects = [
     linkText: 'beechler.com',
     img: beechler,
     alt: 'The Beechler website',
-    body: 'Beechler has hand-finished saxophone and clarinet mouthpieces in Los Angeles since 1942, sold through dealers in 27 countries. Their catalog deserved better than the site it lived on. I sat down with the owners to work out what players and dealers needed to find, shot new product photography, and built the site in React on a server I set up and hardened myself. More engineering than a catalog needed, and nothing they can edit without me. I\'d build it differently today. It still runs.',
+    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself. More build than a catalog needed. It still runs.',
     changes: [
       {
         label: 'Catalog',
-        note: 'Was one page per material: a banner and bullet points. Now every mouthpiece in one place, filterable by instrument and type, with new product photography.',
+        note: "Was one page per material. Now every mouthpiece, filterable by instrument and type.",
         before: beechlerBefore,
         after: beechlerAfter,
       },
       {
         label: 'Photography',
-        note: "The old Photos page said 'Coming Soon.' Now every mouthpiece has its own photo, shot for the site.",
+        note: "The Photos page said 'Coming Soon.' Now every mouthpiece has its own shot.",
         before: beechlerPhotosBefore,
         after: beechlerPhotosAfter,
       },
       {
         label: 'Dealers',
-        note: 'Was a graphic in the sidebar that led to text lists. Now a searchable map of dealers in 27 countries.',
+        note: "Was a sidebar graphic linking to text lists. Now a searchable map, 27 countries.",
         before: beechlerDealersBefore,
         after: beechlerDealersAfter,
       },
@@ -54,23 +54,23 @@ const projects = [
     linkText: 'privateaffairband.com',
     img: pabShot,
     alt: 'The Private Affair Band website',
-    body: 'A Los Angeles R&B and funk band with years of packed dance floors and an old site, timelesspab, that didn\'t show it. I sat down with the band to work out what bookers need to see, wrote the copy, and rebuilt it in WordPress as privateaffairband.com. Inquiries come through a proper contact form, and the band updates their own song list. No developer required.',
+    body: 'L.A. R&B and funk band, decades of packed dance floors, and an old site (timelesspab) that didn\'t show it. The brief: make them easy to book. WordPress, so the band updates the song list themselves.',
     changes: [
       {
         label: 'Homepage',
-        note: 'Was a wall of text under a yellow headline. Now one photo, one line, and a button to book.',
+        note: "Was five paragraphs under a yellow headline. Now a photo, a line, a button.",
         before: pabHomeBefore,
         after: pabHomeAfter,
       },
       {
         label: 'Song list',
-        note: 'Was one long list in orange type. Now 200+ songs grouped by genre, and the band edits it themselves in WordPress.',
+        note: "Was one long orange list. Now 200+ songs by genre, edited by the band.",
         before: pabSongsBefore,
         after: pabSongsAfter,
       },
       {
         label: 'Booking',
-        note: 'Was name, email, message. Now event date, type, guest count, and venue: what a booker needs to send a quote.',
+        note: "Was name, email, message. Now date, event type, guests, venue: enough to quote.",
         before: pabBefore,
         after: pabAfter,
       },
@@ -82,7 +82,7 @@ const projects = [
     linkText: 'kavitastudios.com',
     img: kavitaShot,
     alt: 'The Kavita Studios storefront',
-    body: 'Hand-painted silk scarves and jackets — forty years of design, Paris to California. I project-managed the launch: directed design through Design Spinners, shot the photography, and got the Shopify store live and selling. It’s my mother’s label. No pressure.',
+    body: 'Hand-painted silk scarves and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store live and selling. My mother\'s label. No pressure.',
   },
 ];
 
