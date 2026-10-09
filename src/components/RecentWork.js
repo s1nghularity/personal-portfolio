@@ -17,7 +17,7 @@ const projects = [
     linkText: 'beechler.com',
     img: beechler,
     alt: 'The Beechler website',
-    body: 'Beechler has hand-finished saxophone and clarinet mouthpieces in Los Angeles since 1942, sold through dealers in 27 countries. The job was to make a deep catalog easy to browse. It came to me through family, early on, and I built it with the tools I had: React from a MERN bootcamp, and a server I set up and hardened myself. More engineering than a catalog strictly needed. It still runs.',
+    body: 'Beechler has hand-finished saxophone and clarinet mouthpieces in Los Angeles since 1942, sold through dealers in 27 countries. Their catalog deserved better than the site it lived on. I sat down with the owners to work out what players and dealers needed to find, shot new product photography, and built the site in React on a server I set up and hardened myself. More engineering than a catalog needed, and nothing they can edit without me. I\'d build it differently today. It still runs.',
     // compare: { before: beechlerBefore, after: beechlerAfter },
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     linkText: 'privateaffairband.com',
     img: pabShot,
     alt: 'The Private Affair Band website',
-    body: 'A Los Angeles R&B and funk band with years of packed dance floors and nothing online to prove it. I sat in on rehearsal, wrote the copy, and built the booking site in WordPress. It now fields the inquiries a manager used to.',
+    body: 'A Los Angeles R&B and funk band with years of packed dance floors and an old site, timelesspab, that didn\'t show it. I sat down with the band to work out what bookers need to see, wrote the copy, and rebuilt it in WordPress as privateaffairband.com. Inquiries come through a proper contact form, and the band updates their own song list. No developer required.',
   },
   {
     name: 'Kavita Studios',
