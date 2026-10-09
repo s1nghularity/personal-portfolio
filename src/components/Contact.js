@@ -9,8 +9,7 @@ export const Contact = () => {
           <div className='contact-head'>
             <span className='section-eyebrow'>Get in touch</span>
             <p className='contact-line'>
-              Open to new projects. Partial to the ones that still have to work
-              on Monday.
+              New site, old site, broken site. Write me.
             </p>
           </div>
 

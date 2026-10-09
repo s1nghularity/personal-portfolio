@@ -22,9 +22,10 @@ export const Throughline = () => {
             <p>
               Today I look after a fleet of program websites for the Foundation
               for California Community Colleges, and I'm Global Digital
-              Strategist for the Starfish Accelerator Foundation. I also write
-              sketch comedy, which turns out to be useful training. A joke and a
-              homepage fail the same way: too much setup, not enough clarity.
+              Strategist for the Starfish Accelerator Foundation. In between, I
+              take on a few client projects a year — small businesses that need
+              a site that works and someone who'll still answer the phone after
+              it launches.
             </p>
           </div>
         </div>
