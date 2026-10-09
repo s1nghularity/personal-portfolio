@@ -1,20 +1,24 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.87294f3f.css",
-    "main.js": "/personal-portfolio/static/js/main.979bdd45.js",
+    "main.js": "/personal-portfolio/static/js/main.5a3ca7be.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/beechler.png": "/personal-portfolio/static/media/beechler.a52c9d78ef0443a51eaa.png",
     "static/media/kavita.webp": "/personal-portfolio/static/media/kavita.d231a38bfebaacd1416e.webp",
+    "static/media/beechler-before.jpg": "/personal-portfolio/static/media/beechler-before.504145d361aedebfa07f.jpg",
     "static/media/private-affair.webp": "/personal-portfolio/static/media/private-affair.e5c64a50adce3677eb9a.webp",
     "static/media/bootstrap-icons.woff?": "/personal-portfolio/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/personal-portfolio/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "static/media/beechler-after.jpg": "/personal-portfolio/static/media/beechler-after.eebfdf6632281bb760b7.jpg",
+    "static/media/pab-after.jpg": "/personal-portfolio/static/media/pab-after.3b959668b5a954ce6334.jpg",
+    "static/media/pab-before.jpg": "/personal-portfolio/static/media/pab-before.ee2f7fd27b1f5c9902ff.jpg",
     "index.html": "/personal-portfolio/index.html",
     "main.87294f3f.css.map": "/personal-portfolio/static/css/main.87294f3f.css.map",
-    "main.979bdd45.js.map": "/personal-portfolio/static/js/main.979bdd45.js.map",
+    "main.5a3ca7be.js.map": "/personal-portfolio/static/js/main.5a3ca7be.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87294f3f.css",
-    "static/js/main.979bdd45.js"
+    "static/js/main.5a3ca7be.js"
   ]
 }
