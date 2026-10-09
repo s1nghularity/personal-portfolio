@@ -7,33 +7,25 @@ export const Throughline = () => {
       <Container>
         <div className='throughline-inner reveal'>
           <div className='throughline-head'>
-            <h2 className='section-title'>How I got here</h2>
+            <h2 className='section-title'>About</h2>
           </div>
 
           <div className='throughline-body'>
             <p>
-              I came up through newsrooms and comms — a Delhi TV desk, then a
-              decade writing for executives, building brand identity for
-              nonprofits, and running social for a CBS comedy. Learning to build
-              the sites myself was a short step: I'm from Saratoga, grew up with
-              half my friends' parents working in tech, and was always the kid
-              tinkering on whatever software was around.
+              I've spent my career in the gap between people and the technology
+              that's supposed to serve them. It started in newsrooms — the output
+              desk at NDTV in New Delhi, then Bay Area news — and turned into a
+              decade of communications work: writing for executives, building
+              brands for nonprofits, promoting a CBS comedy. Somewhere along the
+              way I started building the websites myself, because someone had to.
             </p>
             <p>
-              These days that means small websites and the digital strategy
-              around them: the design and the words, then the quieter work of
-              keeping them online and current. Same instinct as the newsroom —
-              make the thing clear, make it work, and stick around for what
-              happens after launch.
-            </p>
-            <p>
-              Off the clock: new dad as of April 2026, which rearranged
-              everything. Californian down to the bone — L.A., the Bay, SF,
-              family scattered across all of it, and a backyard I'm in no hurry
-              to leave. I'd tell you I read a ton and play a lot of games, but
-              I'd be lying — I love both more than I do them. What I actually do:
-              stand-up, sci-fi, good drama, anything with real storytelling, and
-              turning up for the arts.
+              Today I look after a fleet of program websites for the Foundation
+              for California Community Colleges, and I'm Global Digital
+              Strategist for the Starfish Accelerator Foundation. In between, I
+              take on a few client projects a year — small businesses that need
+              a site that works and someone who'll still answer the phone after
+              it launches.
             </p>
           </div>
         </div>

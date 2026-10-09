@@ -3,6 +3,17 @@ import '../styles/RecentWork.css';
 import beechler from '../assets/img/proj-img/capstone/beechler.png';
 import pabShot from '../assets/img/proj-img/private-affair.webp';
 import kavitaShot from '../assets/img/proj-img/kavita.webp';
+import { Changes } from './Changes';
+
+// Before/after screenshots, 16:10, cropped from the top of each page.
+import beechlerBefore from '../assets/img/proj-img/beechler-before.jpg';
+import beechlerAfter from '../assets/img/proj-img/beechler-after.jpg';
+import beechlerPhotosBefore from '../assets/img/proj-img/beechler-photos-before.jpg';
+import beechlerPhotosAfter from '../assets/img/proj-img/beechler-photos-after.jpg';
+import pabHomeBefore from '../assets/img/proj-img/pab-home-before.jpg';
+import pabHomeAfter from '../assets/img/proj-img/pab-home-after.jpg';
+import pabSongsBefore from '../assets/img/proj-img/pab-songs-before.jpg';
+import pabSongsAfter from '../assets/img/proj-img/pab-songs-after.jpg';
 
 const projects = [
   {
@@ -11,7 +22,21 @@ const projects = [
     linkText: 'beechler.com',
     img: beechler,
     alt: 'The Beechler website',
-    body: 'A High Desert business that needed its site to do one real job: get the phone to ring. I worked with the owner to figure out what it had to say, shot the product photography myself, designed it, and built it in React. Still keep it running.',
+    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself. It still runs.',
+    changes: [
+      {
+        label: 'Catalog',
+        note: "Was one page per material. Now every mouthpiece, filterable by instrument and type.",
+        before: beechlerBefore,
+        after: beechlerAfter,
+      },
+      {
+        label: 'Photography',
+        note: "The Photos page said 'Coming Soon.' Now every mouthpiece has its own shot.",
+        before: beechlerPhotosBefore,
+        after: beechlerPhotosAfter,
+      },
+    ],
   },
   {
     name: 'Private Affair Band',
@@ -19,7 +44,21 @@ const projects = [
     linkText: 'privateaffairband.com',
     img: pabShot,
     alt: 'The Private Affair Band website',
-    body: 'An L.A. R&B and funk band with years of packed dance floors and no real way to show it online. I built the booking site in WordPress, wrote the copy, and sat in on rehearsal to get what made them them. Now it does the work of a manager, quietly.',
+    body: 'L.A. R&B and funk band, decades of packed dance floors, and an old site (timelesspab) that didn\'t show it. The brief: make them easy to book. WordPress, so the band updates the song list themselves.',
+    changes: [
+      {
+        label: 'Homepage',
+        note: "Was five paragraphs under a yellow headline. Now a photo, a line, a button.",
+        before: pabHomeBefore,
+        after: pabHomeAfter,
+      },
+      {
+        label: 'Song list',
+        note: "Was one long orange list. Now 200+ songs by genre, edited by the band.",
+        before: pabSongsBefore,
+        after: pabSongsAfter,
+      },
+    ],
   },
   {
     name: 'Kavita Studios',
@@ -27,7 +66,7 @@ const projects = [
     linkText: 'kavitastudios.com',
     img: kavitaShot,
     alt: 'The Kavita Studios storefront',
-    body: 'A wearable-art label — hand-painted silk scarves and jackets, forty years of design behind them, Paris to California. I was the project manager: directed the design through Design Spinners, shot the photography myself, and got the Shopify storefront live and selling. It’s my mother’s label, out of Saratoga, where I grew up.',
+    body: 'Hand-painted silk and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store. My mother\'s label.',
   },
 ];
 
@@ -37,29 +76,33 @@ export const RecentWork = () => {
       <Container>
         <div className='rw-head reveal'>
           <h2 className='section-title'>Recent work</h2>
+          <p className='rw-lead'>What each site did before, what it does now, and what changed in between.</p>
         </div>
 
         <div className='rw-list'>
           {projects.map((p, i) => (
-            <article
-              className={`rw-block reveal${i % 2 === 1 ? ' rw-reverse' : ''}`}
-              key={p.name}
-            >
-              <a className='rw-media' href={p.href} target='_blank' rel='noreferrer'>
-                <img src={p.img} alt={p.alt} loading='lazy' />
-              </a>
+            <article className='rw-block reveal' key={p.name}>
               <div className='rw-body'>
                 <h3 className='rw-name'>{p.name}</h3>
-                <p className='rw-desc'>{p.body}</p>
-                <a
-                  className='link-accent'
-                  href={p.href}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  {p.linkText}
-                </a>
+                <div>
+                  <p className='rw-desc'>{p.body}</p>
+                  <a
+                    className='link-accent'
+                    href={p.href}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {p.linkText}
+                  </a>
+                </div>
               </div>
+              {p.changes ? (
+                <Changes changes={p.changes} name={p.name} />
+              ) : (
+                <a className='rw-media' href={p.href} target='_blank' rel='noreferrer'>
+                  <img src={p.img} alt={p.alt} loading='lazy' />
+                </a>
+              )}
             </article>
           ))}
         </div>

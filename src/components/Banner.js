@@ -1,39 +1,41 @@
 import { Container } from 'react-bootstrap';
+import SplitText from './SplitText';
 
 export const Banner = () => {
   return (
     <section className='banner' id='home'>
       <Container>
-        <div className='hero-grid'>
-          <div className='hero-main'>
-            <p className='hero-name'>Vikram Singh</p>
-            <h1 className='hero-title'>A digital strategist who builds.</h1>
-            <p className='hero-subhead'>
-              I grew up in the dot-com boom, the generation that crossed from no
-              internet to all of it — and I've been closing the gap between
-              people and their tech ever since. End to end: strategy, words,
-              design, build, then the upkeep after launch.
-            </p>
-            <div className='hero-ctas'>
-              <a className='btn-accent' href='#work'>
-                See the work
-              </a>
-              <a className='btn-outline' href='#contact'>
-                Get in touch
-              </a>
-            </div>
+        <div className='hero-copy'>
+          <p className='hero-name'>Vikram Singh</p>
+          <SplitText
+            tag='h1'
+            className='hero-title'
+            text='A digital strategist who builds.'
+            splitType='chars'
+            delay={22}
+            duration={1}
+            ease='power3.out'
+            from={{ opacity: 0, y: 44 }}
+            to={{ opacity: 1, y: 0 }}
+            textAlign='left'
+          />
+          <p className='hero-subhead'>
+            Most websites are built for launch day. I build them for the years
+            after — strategy, copy, design, and code, then the upkeep nobody
+            budgets for.
+          </p>
+          <p className='hero-availability'>
+            Currently with the Foundation for California Community Colleges and
+            the Starfish Accelerator Foundation. Taking on select client work.
+          </p>
+          <div className='hero-ctas'>
+            <a className='btn-accent' href='#work'>
+              See the work
+            </a>
+            <a className='btn-outline' href='#contact'>
+              Get in touch
+            </a>
           </div>
-
-          <aside className='hero-aside'>
-            <span className='hero-status'>
-              <span className='hero-dot' aria-hidden='true' />
-              Open to more
-            </span>
-            <p className='hero-availability'>
-              Currently with the Foundation for California Community Colleges and
-              Starfish.
-            </p>
-          </aside>
         </div>
       </Container>
     </section>
