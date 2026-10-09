@@ -26,7 +26,7 @@ const projects = [
     linkText: 'beechler.com',
     img: beechler,
     alt: 'The Beechler website',
-    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself. More build than a catalog needed. It still runs.',
+    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself. It still runs.',
     changes: [
       {
         label: 'Catalog',
@@ -39,12 +39,6 @@ const projects = [
         note: "The Photos page said 'Coming Soon.' Now every mouthpiece has its own shot.",
         before: beechlerPhotosBefore,
         after: beechlerPhotosAfter,
-      },
-      {
-        label: 'Dealers',
-        note: "Was a sidebar graphic linking to text lists. Now a searchable map, 27 countries.",
-        before: beechlerDealersBefore,
-        after: beechlerDealersAfter,
       },
     ],
   },
@@ -68,12 +62,6 @@ const projects = [
         before: pabSongsBefore,
         after: pabSongsAfter,
       },
-      {
-        label: 'Booking',
-        note: "Was name, email, message. Now date, event type, guests, venue: enough to quote.",
-        before: pabBefore,
-        after: pabAfter,
-      },
     ],
   },
   {
@@ -82,7 +70,7 @@ const projects = [
     linkText: 'kavitastudios.com',
     img: kavitaShot,
     alt: 'The Kavita Studios storefront',
-    body: 'Hand-painted silk scarves and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store live and selling. My mother\'s label. No pressure.',
+    body: 'Hand-painted silk and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store. My mother\'s label.',
   },
 ];
 
