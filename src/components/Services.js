@@ -4,16 +4,16 @@ import '../styles/Services.css';
 const services = [
   {
     name: 'New websites',
-    desc: 'Strategy, copy, design, and build, start to finish — in React, WordPress, or Shopify. Product photography when it\'s needed.',
+    desc: 'Strategy, copy, design, and build, start to finish. React, WordPress, or Shopify. Photography when the product deserves it.',
     // price: '',  // e.g. 'From $X' — left empty until real figures
   },
   {
     name: 'Redesigns & refreshes',
-    desc: "Bringing an existing site's design, UX, and words up to date without starting from scratch.",
+    desc: "Your site works, mostly. I fix the parts that don't — structure, UX, and copy — without tearing out what's still earning its keep.",
   },
   {
     name: 'Ongoing care',
-    desc: 'Updates, fixes, and keeping a site healthy and current long after launch.',
+    desc: 'Updates, security, fixes, and small improvements on a steady schedule — so the site you paid for stays the site you paid for.',
   },
 ];
 
@@ -24,7 +24,7 @@ export const Services = () => {
         <div className='services-head reveal'>
           <h2 className='section-title'>Services</h2>
           <p className='services-lead'>
-            Ways I work with clients — from a first site to the long-term upkeep.
+            Three ways to work together.
           </p>
         </div>
 

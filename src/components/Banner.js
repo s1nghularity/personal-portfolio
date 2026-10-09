@@ -20,14 +20,13 @@ export const Banner = () => {
             textAlign='left'
           />
           <p className='hero-subhead'>
-            I take a company's web presence end to end — strategy, words, design,
-            and build — then stay on to keep it running. A decade in newsrooms
-            and communications shaped how I do it: clear, fast, and built to
-            last.
+            Most websites are built for launch day. I build them for the years
+            after — strategy, copy, design, and code, then the upkeep nobody
+            budgets for.
           </p>
           <p className='hero-availability'>
             Currently with the Foundation for California Community Colleges and
-            Starfish. Open to more.
+            the Starfish Accelerator Foundation. Taking on select client work.
           </p>
           <div className='hero-ctas'>
             <a className='btn-accent' href='#work'>

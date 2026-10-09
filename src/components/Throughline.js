@@ -12,20 +12,19 @@ export const Throughline = () => {
 
           <div className='throughline-body'>
             <p>
-              Vikram Singh is a digital strategist and builder. He takes a
-              company's web presence end to end — strategy, words, design, and
-              build — then stays on to keep it running. He does this today for
-              the Foundation for California Community Colleges and as Starfish's
-              Global Digital Strategist, alongside select client work through his
-              own practice.
+              I've spent my career in the gap between people and the technology
+              that's supposed to serve them. It started in newsrooms — the output
+              desk at NDTV in New Delhi, then Bay Area news — and turned into a
+              decade of communications work: writing for executives, building
+              brands for nonprofits, promoting a CBS comedy. Somewhere along the
+              way I started building the websites myself, because someone had to.
             </p>
             <p>
-              His background is in communications and journalism: a decade
-              writing for executives, building brand identity for nonprofits, and
-              running campaigns before moving into web development. That newsroom
-              training — clarity, speed, and getting to the point — is what he
-              brings to every build, from the first strategy call to the upkeep
-              long after launch.
+              Today I look after a fleet of program websites for the Foundation
+              for California Community Colleges, and I'm Global Digital
+              Strategist for the Starfish Accelerator Foundation. I also write
+              sketch comedy, which turns out to be useful training. A joke and a
+              homepage fail the same way: too much setup, not enough clarity.
             </p>
           </div>
         </div>

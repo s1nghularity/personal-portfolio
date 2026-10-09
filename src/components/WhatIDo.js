@@ -4,15 +4,15 @@ import '../styles/WhatIDo.css';
 const blocks = [
   {
     title: 'Strategy & words',
-    body: 'Figure out what the site actually needs to say, then say it. A decade in newsrooms and comms taught me to cut to the point.',
+    body: 'Ten years in newsrooms and communications. I find the one thing a site has to say, then cut whatever gets in its way.',
   },
   {
     title: 'Design & build',
-    body: "Make it — in WordPress, React, or Shopify — and bring in the right devs where it counts. I'm the one who holds the whole thing together.",
+    body: "WordPress, React, or Shopify — whatever fits the business, not whatever's fashionable. I bring in specialist developers when the job calls for it, and I own the result either way.",
   },
   {
     title: 'Keep it running',
-    body: "The part most people skip: updates, fixes, staying current. I do this day to day for a foundation that supports California's entire community college system — so launch is the start, not the finish.",
+    body: "Software rots. Plugins update, browsers change, the contact form breaks on a Friday. I run upkeep for a fleet of sites serving California's community colleges. Launch is day one.",
   },
 ];
 

@@ -11,7 +11,7 @@ const projects = [
     linkText: 'beechler.com',
     img: beechler,
     alt: 'The Beechler website',
-    body: 'A High Desert business that needed its site to do one real job: get the phone to ring. I worked with the owner to figure out what it had to say, shot the product photography myself, designed it, and built it in React. Still keep it running.',
+    body: 'A High Desert business whose website had one job: make the phone ring. I worked out the message with the owner, shot the product photography, designed the site, and built it in React. I still maintain it.',
   },
   {
     name: 'Private Affair Band',
@@ -19,7 +19,7 @@ const projects = [
     linkText: 'privateaffairband.com',
     img: pabShot,
     alt: 'The Private Affair Band website',
-    body: 'An L.A. R&B and funk band with years of packed dance floors and no real way to show it online. I built the booking site in WordPress, wrote the copy, and sat in on rehearsal to get what made them them. Now it does the work of a manager, quietly.',
+    body: 'A Los Angeles R&B and funk band with years of packed dance floors and nothing online to prove it. I sat in on rehearsal, wrote the copy, and built the booking site in WordPress. It now fields the inquiries a manager used to.',
   },
   {
     name: 'Kavita Studios',
@@ -27,7 +27,7 @@ const projects = [
     linkText: 'kavitastudios.com',
     img: kavitaShot,
     alt: 'The Kavita Studios storefront',
-    body: 'A wearable-art label — hand-painted silk scarves and jackets, forty years of design behind them, Paris to California. I was the project manager: directed the design through Design Spinners, shot the photography myself, and got the Shopify storefront live and selling. It’s my mother’s label, out of Saratoga, where I grew up.',
+    body: 'Hand-painted silk scarves and jackets — forty years of design, Paris to California. I project-managed the launch: directed design through Design Spinners, shot the photography, and got the Shopify store live and selling. It’s my mother’s label. No pressure.',
   },
 ];
 
