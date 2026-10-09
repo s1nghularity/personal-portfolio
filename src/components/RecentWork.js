@@ -21,7 +21,14 @@ const projects = [
     img: beechler,
     alt: 'The Beechler website',
     body: 'Beechler has hand-finished saxophone and clarinet mouthpieces in Los Angeles since 1942, sold through dealers in 27 countries. Their catalog deserved better than the site it lived on. I sat down with the owners to work out what players and dealers needed to find, shot new product photography, and built the site in React on a server I set up and hardened myself. More engineering than a catalog needed, and nothing they can edit without me. I\'d build it differently today. It still runs.',
-    compare: [{ label: 'Catalog', before: beechlerBefore, after: beechlerAfter }],
+    compare: [
+      {
+        label: 'Catalog',
+        caption: 'One page per material and a banner, to every mouthpiece filterable by instrument and type, with new photography.',
+        before: beechlerBefore,
+        after: beechlerAfter,
+      },
+    ],
   },
   {
     name: 'Private Affair Band',
@@ -31,8 +38,18 @@ const projects = [
     alt: 'The Private Affair Band website',
     body: 'A Los Angeles R&B and funk band with years of packed dance floors and an old site, timelesspab, that didn\'t show it. I sat down with the band to work out what bookers need to see, wrote the copy, and rebuilt it in WordPress as privateaffairband.com. Inquiries come through a proper contact form, and the band updates their own song list. No developer required.',
     compare: [
-      { label: 'Song list', before: pabSongsBefore, after: pabSongsAfter },
-      { label: 'Booking', before: pabBefore, after: pabAfter },
+      {
+        label: 'Song list',
+        caption: 'One long list in orange type, to 200+ songs grouped by genre. The band edits it themselves in WordPress.',
+        before: pabSongsBefore,
+        after: pabSongsAfter,
+      },
+      {
+        label: 'Booking',
+        caption: 'Name, email, message, to event date, type, guest count, and venue: what a booker needs to quote.',
+        before: pabBefore,
+        after: pabAfter,
+      },
     ],
   },
   {
@@ -55,10 +72,21 @@ export const RecentWork = () => {
 
         <div className='rw-list'>
           {projects.map((p, i) => (
-            <article
-              className={`rw-block reveal${i % 2 === 1 ? ' rw-reverse' : ''}`}
-              key={p.name}
-            >
+            <article className='rw-block reveal' key={p.name}>
+              <div className='rw-body'>
+                <h3 className='rw-name'>{p.name}</h3>
+                <div>
+                  <p className='rw-desc'>{p.body}</p>
+                  <a
+                    className='link-accent'
+                    href={p.href}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {p.linkText}
+                  </a>
+                </div>
+              </div>
               {p.compare ? (
                 <div className='rw-media rw-media-compare'>
                   <BeforeAfterSet pairs={p.compare} name={p.name} />
@@ -68,18 +96,6 @@ export const RecentWork = () => {
                   <img src={p.img} alt={p.alt} loading='lazy' />
                 </a>
               )}
-              <div className='rw-body'>
-                <h3 className='rw-name'>{p.name}</h3>
-                <p className='rw-desc'>{p.body}</p>
-                <a
-                  className='link-accent'
-                  href={p.href}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  {p.linkText}
-                </a>
-              </div>
             </article>
           ))}
         </div>

@@ -1,15 +1,58 @@
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/BeforeAfter.css';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const REST = 38; // where the handle settles after the reveal (% of width showing "before")
 
 /**
  * Drag-to-compare slider. The "after" image sits underneath; the "before"
- * image is clipped from the right as the handle moves. A visually hidden
- * range input drives it, so it works with keyboard and screen readers.
+ * image is clipped from the right as the handle moves.
+ *
+ * On first scroll into view it wipes from all-before to mostly-after, so the
+ * change is visible without anyone dragging. Any touch stops the wipe.
+ * A visually hidden range input drives it for keyboard and screen readers.
  */
-export const BeforeAfter = ({ before, after, beforeAlt, afterAlt, start = 50 }) => {
-  const [pos, setPos] = useState(start);
+export const BeforeAfter = ({ before, after, beforeAlt, afterAlt }) => {
+  const reduce =
+    typeof window !== 'undefined' &&
+    window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+  const [pos, setPos] = useState(reduce ? 50 : 100);
   const frameRef = useRef(null);
   const dragging = useRef(false);
+  const tween = useRef(null);
+
+  // the reveal
+  useEffect(() => {
+    if (reduce) return undefined;
+    const el = frameRef.current;
+    const proxy = { v: 100 };
+    tween.current = gsap.to(proxy, {
+      v: REST,
+      duration: 2.2,
+      ease: 'power3.inOut',
+      delay: 0.35,
+      paused: true,
+      onUpdate: () => setPos(proxy.v),
+    });
+    const st = ScrollTrigger.create({
+      trigger: el,
+      start: 'top 70%',
+      once: true,
+      onEnter: () => tween.current?.play(),
+    });
+    return () => {
+      st.kill();
+      tween.current?.kill();
+    };
+  }, [reduce]);
+
+  const stopReveal = () => {
+    if (tween.current?.isActive()) tween.current.kill();
+  };
 
   const moveTo = useCallback((clientX) => {
     const rect = frameRef.current.getBoundingClientRect();
@@ -18,6 +61,7 @@ export const BeforeAfter = ({ before, after, beforeAlt, afterAlt, start = 50 }) 
   }, []);
 
   const onPointerDown = (e) => {
+    stopReveal();
     dragging.current = true;
     e.currentTarget.setPointerCapture(e.pointerId);
     moveTo(e.clientX);
@@ -58,7 +102,10 @@ export const BeforeAfter = ({ before, after, beforeAlt, afterAlt, start = 50 }) 
         min='0'
         max='100'
         value={Math.round(pos)}
-        onChange={(e) => setPos(Number(e.target.value))}
+        onChange={(e) => {
+          stopReveal();
+          setPos(Number(e.target.value));
+        }}
         aria-label={`Compare before and after: ${beforeAlt} versus ${afterAlt}`}
       />
     </div>
@@ -67,7 +114,7 @@ export const BeforeAfter = ({ before, after, beforeAlt, afterAlt, start = 50 }) 
 
 /**
  * Several before/after pairs for one project, switched with small tabs.
- * `pairs` is [{ label, before, after }]. A single pair renders no tabs.
+ * `pairs` is [{ label, caption, before, after }]. A single pair renders no tabs.
  */
 export const BeforeAfterSet = ({ pairs, name }) => {
   const [active, setActive] = useState(0);
@@ -98,6 +145,10 @@ export const BeforeAfterSet = ({ pairs, name }) => {
         beforeAlt={`The ${name} ${pair.label.toLowerCase()} page before the redesign`}
         afterAlt={`The ${name} ${pair.label.toLowerCase()} page after the redesign`}
       />
+      <p className='ba-caption'>
+        {pair.caption}
+        <span className='ba-hint'>Drag to compare</span>
+      </p>
     </div>
   );
 };
