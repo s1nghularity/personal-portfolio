@@ -1,7 +1,7 @@
 @import url('./styles/Banner.css');
 @import url('./styles/WhatIDo.css');
 @import url('./styles/RecentWork.css');
-@import url('./styles/BeforeAfter.css');
+@import url('./styles/Changes.css');
 @import url('./styles/Services.css');
 @import url('./styles/Throughline.css');
 @import url('./styles/WorkHistory.css');
@@ -17,7 +17,7 @@
 
   /* text */
   --ink: #211C16;         /* warm near-black */
-  --ink-soft: #6B6055;    /* warm taupe-gray */
+  --ink-soft: #4F473F;    /* warm dark gray: secondary text, still high contrast */
 
   /* one accent — seasoned oxblood, used sparingly */
   --accent: #8A3B2F;
@@ -54,7 +54,7 @@ body {
   background-color: var(--bg);
   font-family: var(--font-body);
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -102,7 +102,7 @@ button:focus-visible {
   display: inline-block;
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);

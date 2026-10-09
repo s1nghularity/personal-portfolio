@@ -15,9 +15,9 @@
 .services-lead {
   margin: 16px 0 0;
   max-width: 48ch;
-  font-size: clamp(17px, 1.2vw, 19px);
-  line-height: 1.55;
-  color: var(--ink-soft);
+  font-size: clamp(18px, 1.2vw, 20px);
+  line-height: 1.6;
+  color: var(--ink);
 }
 
 .services-list {
@@ -52,9 +52,9 @@
 .services-desc {
   max-width: 58ch;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.55;
-  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
 }
 
 .services-price {
