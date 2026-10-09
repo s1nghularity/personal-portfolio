@@ -70,3 +70,9 @@
     order: 0;
   }
 }
+
+/* the slider draws its own frame */
+.rw-media-compare {
+  border: 0;
+  overflow: visible;
+}
