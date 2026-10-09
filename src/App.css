@@ -178,16 +178,19 @@ button:focus-visible {
   border-bottom-color: var(--accent);
 }
 
-/* scroll reveal — gated behind motion preference */
+/* scroll reveal — GSAP-driven; hidden initially only when motion is allowed */
 .reveal { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
-  .reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.in {
-    opacity: 1;
-    transform: none;
-  }
+  .reveal { opacity: 0; }
 }
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* SplitText: keep split pieces from adding scrollbars mid-animation */
+.split-parent { max-width: 100%; }

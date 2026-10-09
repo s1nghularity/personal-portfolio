@@ -1,4 +1,5 @@
 import { Container } from 'react-bootstrap';
+import SplitText from './SplitText';
 
 export const Banner = () => {
   return (
@@ -6,7 +7,18 @@ export const Banner = () => {
       <Container>
         <div className='hero-copy'>
           <p className='hero-name'>Vikram Singh</p>
-          <h1 className='hero-title'>A digital strategist who builds.</h1>
+          <SplitText
+            tag='h1'
+            className='hero-title'
+            text='A digital strategist who builds.'
+            splitType='chars'
+            delay={22}
+            duration={1}
+            ease='power3.out'
+            from={{ opacity: 0, y: 44 }}
+            to={{ opacity: 1, y: 0 }}
+            textAlign='left'
+          />
           <p className='hero-subhead'>
             I take a company's web presence end to end — strategy, words, design,
             and build — then stay on to keep it running. A decade in newsrooms
