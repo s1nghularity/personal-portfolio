@@ -8,14 +8,10 @@ import { Changes } from './Changes';
 // Before/after screenshots, 16:10, cropped from the top of each page.
 import beechlerBefore from '../assets/img/proj-img/beechler-before.jpg';
 import beechlerAfter from '../assets/img/proj-img/beechler-after.jpg';
-import beechlerDealersBefore from '../assets/img/proj-img/beechler-dealers-before.jpg';
-import beechlerDealersAfter from '../assets/img/proj-img/beechler-dealers-after.jpg';
 import beechlerPhotosBefore from '../assets/img/proj-img/beechler-photos-before.jpg';
 import beechlerPhotosAfter from '../assets/img/proj-img/beechler-photos-after.jpg';
 import pabHomeBefore from '../assets/img/proj-img/pab-home-before.jpg';
 import pabHomeAfter from '../assets/img/proj-img/pab-home-after.jpg';
-import pabBefore from '../assets/img/proj-img/pab-before.jpg';
-import pabAfter from '../assets/img/proj-img/pab-after.jpg';
 import pabSongsBefore from '../assets/img/proj-img/pab-songs-before.jpg';
 import pabSongsAfter from '../assets/img/proj-img/pab-songs-after.jpg';
 
