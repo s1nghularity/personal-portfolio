@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/personal-portfolio/static/css/main.f54a2810.css",
-    "main.js": "/personal-portfolio/static/js/main.fff72ee5.js",
+    "main.js": "/personal-portfolio/static/js/main.680eca60.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/beechler.png": "/personal-portfolio/static/media/beechler.a52c9d78ef0443a51eaa.png",
     "static/media/kavita.webp": "/personal-portfolio/static/media/kavita.d231a38bfebaacd1416e.webp",
-    "static/media/beechler-dealers-before.jpg": "/personal-portfolio/static/media/beechler-dealers-before.7f983c19a427de68f233.jpg",
     "static/media/beechler-before.jpg": "/personal-portfolio/static/media/beechler-before.247ddf17649826963775.jpg",
     "static/media/pab-home-before.jpg": "/personal-portfolio/static/media/pab-home-before.75a1ac7d476e411df5ff.jpg",
     "static/media/private-affair.webp": "/personal-portfolio/static/media/private-affair.e5c64a50adce3677eb9a.webp",
@@ -14,19 +13,16 @@
     "static/media/bootstrap-icons.woff2?": "/personal-portfolio/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "static/media/pab-songs-before.jpg": "/personal-portfolio/static/media/pab-songs-before.c4e55ce1a6c9baa5b4c8.jpg",
     "static/media/beechler-after.jpg": "/personal-portfolio/static/media/beechler-after.6c0e4f146f9234f99830.jpg",
-    "static/media/beechler-dealers-after.jpg": "/personal-portfolio/static/media/beechler-dealers-after.a155df707313cb5cbc1a.jpg",
     "static/media/pab-home-after.jpg": "/personal-portfolio/static/media/pab-home-after.c97023fa38871e2c375e.jpg",
     "static/media/pab-songs-after.jpg": "/personal-portfolio/static/media/pab-songs-after.bb44194bedb1c9822016.jpg",
-    "static/media/pab-after.jpg": "/personal-portfolio/static/media/pab-after.3b959668b5a954ce6334.jpg",
     "static/media/beechler-photos-after.jpg": "/personal-portfolio/static/media/beechler-photos-after.b261ab60eca0d6d3ff62.jpg",
-    "static/media/pab-before.jpg": "/personal-portfolio/static/media/pab-before.ee2f7fd27b1f5c9902ff.jpg",
     "index.html": "/personal-portfolio/index.html",
     "main.f54a2810.css.map": "/personal-portfolio/static/css/main.f54a2810.css.map",
-    "main.fff72ee5.js.map": "/personal-portfolio/static/js/main.fff72ee5.js.map",
+    "main.680eca60.js.map": "/personal-portfolio/static/js/main.680eca60.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f54a2810.css",
-    "static/js/main.fff72ee5.js"
+    "static/js/main.680eca60.js"
   ]
 }
