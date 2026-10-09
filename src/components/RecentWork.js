@@ -10,6 +10,10 @@ import beechlerBefore from '../assets/img/proj-img/beechler-before.jpg';
 import beechlerAfter from '../assets/img/proj-img/beechler-after.jpg';
 import beechlerDealersBefore from '../assets/img/proj-img/beechler-dealers-before.jpg';
 import beechlerDealersAfter from '../assets/img/proj-img/beechler-dealers-after.jpg';
+import beechlerPhotosBefore from '../assets/img/proj-img/beechler-photos-before.jpg';
+import beechlerPhotosAfter from '../assets/img/proj-img/beechler-photos-after.jpg';
+import pabHomeBefore from '../assets/img/proj-img/pab-home-before.jpg';
+import pabHomeAfter from '../assets/img/proj-img/pab-home-after.jpg';
 import pabBefore from '../assets/img/proj-img/pab-before.jpg';
 import pabAfter from '../assets/img/proj-img/pab-after.jpg';
 import pabSongsBefore from '../assets/img/proj-img/pab-songs-before.jpg';
@@ -31,6 +35,12 @@ const projects = [
         after: beechlerAfter,
       },
       {
+        label: 'Photography',
+        note: "The old Photos page said 'Coming Soon.' Now every mouthpiece has its own photo, shot for the site.",
+        before: beechlerPhotosBefore,
+        after: beechlerPhotosAfter,
+      },
+      {
         label: 'Dealers',
         note: 'Was a graphic in the sidebar that led to text lists. Now a searchable map of dealers in 27 countries.',
         before: beechlerDealersBefore,
@@ -46,6 +56,12 @@ const projects = [
     alt: 'The Private Affair Band website',
     body: 'A Los Angeles R&B and funk band with years of packed dance floors and an old site, timelesspab, that didn\'t show it. I sat down with the band to work out what bookers need to see, wrote the copy, and rebuilt it in WordPress as privateaffairband.com. Inquiries come through a proper contact form, and the band updates their own song list. No developer required.',
     changes: [
+      {
+        label: 'Homepage',
+        note: 'Was a wall of text under a yellow headline. Now one photo, one line, and a button to book.',
+        before: pabHomeBefore,
+        after: pabHomeAfter,
+      },
       {
         label: 'Song list',
         note: 'Was one long list in orange type. Now 200+ songs grouped by genre, and the band edits it themselves in WordPress.',

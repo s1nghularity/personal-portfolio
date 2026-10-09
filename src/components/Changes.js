@@ -2,7 +2,7 @@ import '../styles/Changes.css';
 
 /**
  * What changed on a project, one row per change: a label, a sentence on
- * why it mattered, and the before/after side by side.
+ * why it mattered, and the before/after side by side underneath.
  * `changes` is [{ label, note, before, after }].
  */
 export const Changes = ({ changes, name }) => (
@@ -20,7 +20,7 @@ export const Changes = ({ changes, name }) => (
               alt={`${name} ${c.label.toLowerCase()}, before`}
               loading='lazy'
             />
-            <figcaption>Before</figcaption>
+            <span className='chg-tag' aria-hidden='true'>Before</span>
           </figure>
           <figure className='chg-shot chg-shot-after'>
             <img
@@ -28,7 +28,7 @@ export const Changes = ({ changes, name }) => (
               alt={`${name} ${c.label.toLowerCase()}, after`}
               loading='lazy'
             />
-            <figcaption>After</figcaption>
+            <span className='chg-tag' aria-hidden='true'>After</span>
           </figure>
         </div>
       </div>

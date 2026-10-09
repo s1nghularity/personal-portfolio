@@ -4,33 +4,38 @@
 .chg-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 4vw, 44px);
+  gap: clamp(32px, 4.5vw, 52px);
   padding-top: clamp(8px, 1.5vw, 16px);
   border-top: 1px solid var(--hairline);
 }
 
 .chg-row {
   display: grid;
+  gap: 18px;
+  padding-top: clamp(20px, 3vw, 28px);
+}
+
+.chg-text {
+  display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
   gap: clamp(20px, 4vw, 56px);
-  align-items: start;
-  padding-top: clamp(20px, 3vw, 28px);
+  align-items: baseline;
 }
 
 .chg-label {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(21px, 2.2vw, 26px);
+  font-size: clamp(22px, 2.3vw, 27px);
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink);
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .chg-note {
-  max-width: 34ch;
+  max-width: 62ch;
   margin: 0;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--ink);
 }
@@ -38,10 +43,11 @@
 .chg-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(12px, 1.5vw, 20px);
+  gap: clamp(12px, 1.8vw, 24px);
 }
 
 .chg-shot {
+  position: relative;
   margin: 0;
 }
 
@@ -60,31 +66,40 @@
   border-color: var(--ink);
 }
 
-.chg-shot figcaption {
-  margin-top: 10px;
-  font-size: 14px;
+/* small tag in the corner instead of a caption underneath */
+.chg-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  line-height: 1;
   color: var(--ink-soft);
+  background: rgba(247, 243, 236, 0.94);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  pointer-events: none;
 }
 
-.chg-shot-after figcaption {
-  color: var(--ink);
+.chg-shot-after .chg-tag {
+  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
 }
 
 @media (max-width: 820px) {
-  .chg-row {
+  .chg-text {
     grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .chg-note {
-    max-width: 60ch;
+    gap: 8px;
   }
 }
 
 @media (max-width: 560px) {
   .chg-pair {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
   }
 }
