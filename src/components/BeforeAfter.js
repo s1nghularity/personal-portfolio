@@ -64,3 +64,40 @@ export const BeforeAfter = ({ before, after, beforeAlt, afterAlt, start = 50 }) 
     </div>
   );
 };
+
+/**
+ * Several before/after pairs for one project, switched with small tabs.
+ * `pairs` is [{ label, before, after }]. A single pair renders no tabs.
+ */
+export const BeforeAfterSet = ({ pairs, name }) => {
+  const [active, setActive] = useState(0);
+  const pair = pairs[active];
+
+  return (
+    <div className='ba-set'>
+      {pairs.length > 1 && (
+        <div className='ba-tabs' role='tablist' aria-label={`${name} before and after`}>
+          {pairs.map((p, i) => (
+            <button
+              key={p.label}
+              type='button'
+              role='tab'
+              aria-selected={i === active}
+              className={`ba-tab${i === active ? ' is-active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+      )}
+      <BeforeAfter
+        key={pair.label}
+        before={pair.before}
+        after={pair.after}
+        beforeAlt={`The ${name} ${pair.label.toLowerCase()} page before the redesign`}
+        afterAlt={`The ${name} ${pair.label.toLowerCase()} page after the redesign`}
+      />
+    </div>
+  );
+};
