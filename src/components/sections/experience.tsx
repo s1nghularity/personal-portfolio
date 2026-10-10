@@ -1,9 +1,19 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import { ArrowUpRight, Instagram } from 'react-bootstrap-icons';
-import '../styles/WorkHistory.css';
+import { ArrowUpRight } from 'lucide-react';
+import { BlurFade } from '@/components/ui/blur-fade';
+import { InstagramIcon } from '@/components/icons';
+import { Reveal } from '@/components/reveal';
 
-const roles = [
+type Role = {
+  title: string;
+  company: string;
+  href?: string;
+  icon?: 'instagram';
+  dates: string;
+  desc: string;
+};
+
+const roles: Role[] = [
   {
     title: 'Project Specialist',
     company: 'Foundation for California Community Colleges',
@@ -72,61 +82,81 @@ const roles = [
 
 const VISIBLE = 5;
 
-const CompanyName = ({ role }) => {
+const CompanyName = ({ role }: { role: Role }) => {
   if (!role.href) return <>{role.company}</>;
-  const Icon = role.icon === 'instagram' ? Instagram : ArrowUpRight;
+  const Icon = role.icon === 'instagram' ? InstagramIcon : ArrowUpRight;
   return (
     <a
-      className='history-link'
+      className='hover:text-accent group border-b border-transparent text-inherit no-underline transition-colors hover:border-current'
       href={role.href}
       target='_blank'
       rel='noreferrer'
     >
       {role.company}
-      <Icon className='history-link-icon' aria-hidden='true' />
+      <Icon
+        aria-hidden='true'
+        className='ml-[0.2em] inline size-[0.72em] align-baseline opacity-65 group-hover:opacity-100'
+      />
     </a>
   );
 };
 
-export const WorkHistory = () => {
+const Row = ({ role }: { role: Role }) => (
+  <div className='grid gap-1.5 py-[clamp(20px,3vw,26px)] sm:grid-cols-[9.5rem_1fr] sm:gap-[clamp(12px,3vw,32px)]'>
+    <div className='text-muted-foreground text-[15px] leading-normal font-medium tabular-nums sm:pt-[0.4em]'>
+      {role.dates}
+    </div>
+    <div>
+      <h3 className='mb-2 text-[clamp(19px,2vw,22px)] leading-tight'>
+        {role.title}
+        <span className='text-muted-foreground'>
+          {' · '}
+          <CompanyName role={role} />
+        </span>
+      </h3>
+      <p className='m-0 max-w-[56ch] text-[17px] leading-relaxed'>{role.desc}</p>
+    </div>
+  </div>
+);
+
+export const Experience = () => {
   const [expanded, setExpanded] = useState(false);
   const shown = expanded ? roles : roles.slice(0, VISIBLE);
 
   return (
-    <section className='work-history' id='experience'>
-      <Container>
-        <div className='history-head reveal'>
+    <section id='experience' className='section-y'>
+      <div className='container-page'>
+        <Reveal className='mb-[clamp(32px,5vw,56px)]'>
           <h2 className='section-title'>Experience</h2>
-        </div>
+        </Reveal>
 
-        <ol className='history-list'>
+        <ol className='m-0 list-none p-0'>
           {shown.map((role, i) => (
-            <li className='history-row' key={i}>
-              <div className='history-dates'>{role.dates}</div>
-              <div className='history-main'>
-                <h3 className='history-role'>
-                  {role.title}
-                  <span className='history-co'>
-                    {' · '}
-                    <CompanyName role={role} />
-                  </span>
-                </h3>
-                <p className='history-desc'>{role.desc}</p>
-              </div>
+            <li key={role.title} className='border-border border-t last:border-b'>
+              {i < VISIBLE ? (
+                <Reveal delay={i * 0.04}>
+                  <Row role={role} />
+                </Reveal>
+              ) : (
+                // Rows revealed by "Show full history" fade in on mount.
+                <BlurFade direction='up' delay={(i - VISIBLE) * 0.05}>
+                  <Row role={role} />
+                </BlurFade>
+              )}
             </li>
           ))}
         </ol>
 
         {roles.length > VISIBLE && (
           <button
-            className='history-toggle'
+            className='hover:text-accent mt-7 cursor-pointer border-b border-current py-2.5 text-[15px] font-medium transition-colors'
             onClick={() => setExpanded((v) => !v)}
             aria-expanded={expanded}
           >
             {expanded ? 'Show less' : 'Show full history'}
           </button>
         )}
-      </Container>
+      </div>
     </section>
   );
 };
