@@ -39,3 +39,11 @@ Feel free to reach out if you're looking for a developer, have questions, or sim
 
 ✉️ [singhularity@proton.me](mailto:singhularity@proton.me)  
 💼 [LinkedIn](https://linkedin.com/in/vikramsinghca)
+
+## 🛠 Development
+
+Vite + React + TypeScript + Tailwind CSS v4, with [Magic UI](https://magicui.design) components in `src/components/ui/`.
+
+- `npm run dev` — local dev server
+- `npm run build` — typecheck and build to `dist/`
+- `npm run deploy` — build and publish `dist/` to GitHub Pages

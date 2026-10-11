@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'tailwindcss';
+
+/* ============================================================
+   DESIGN TOKENS — literary editorial: warm paper/ink, one oxblood accent.
+   Names follow shadcn conventions so Magic UI components pick them up.
+   ============================================================ */
+@theme {
+  --color-background: #f7f3ec; /* warm ivory paper */
+  --color-muted: #efe9de; /* deeper warm, alternating sections */
+  --color-foreground: #211c16; /* warm near-black */
+  --color-muted-foreground: #4f473f; /* secondary text, still high contrast */
+  --color-primary: #211c16;
+  --color-primary-foreground: #f7f3ec;
+  --color-accent: #8a3b2f; /* seasoned oxblood, used sparingly */
+  --color-border: #e3dacb; /* warm hairline */
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px; /* clears the sticky nav */
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-medium;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* ============================================================
+   SHARED PATTERNS
+   ============================================================ */
+@utility container-page {
+  width: 100%;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 40px);
+}
+
+@utility section-y {
+  padding-block: clamp(56px, 9vw, 128px);
+}
+
+@utility section-title {
+  @apply font-display text-foreground font-medium;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.12;
+}
+
+@utility eyebrow {
+  @apply text-muted-foreground font-sans text-sm font-medium tracking-[0.14em] uppercase;
+}
+
+/* text link — ink by default, oxblood on hover */
+@utility link-ink {
+  @apply text-foreground hover:text-accent hover:border-accent border-b border-current pb-px font-medium no-underline transition-colors;
 }
