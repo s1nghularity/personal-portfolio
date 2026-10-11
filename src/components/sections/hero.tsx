@@ -1,21 +1,13 @@
 import { BlurFade } from '@/components/ui/blur-fade';
-import { DotPattern } from '@/components/ui/dot-pattern';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import { TextAnimate } from '@/components/ui/text-animate';
 
 export const Hero = () => (
   <section
     id='home'
-    className='border-border relative overflow-hidden border-b pt-[clamp(72px,12vw,148px)] pb-[clamp(56px,9vw,128px)]'
+    className='border-border border-b pt-[clamp(72px,12vw,148px)] pb-[clamp(56px,9vw,128px)]'
   >
-    <DotPattern
-      width={22}
-      height={22}
-      cr={1}
-      className='text-foreground/20 [mask-image:radial-gradient(520px_circle_at_85%_15%,white,transparent)]'
-    />
-
-    <div className='container-page relative'>
+    <div className='container-page'>
       <div className='max-w-[900px]'>
         <BlurFade delay={0.05}>
           <p className='eyebrow mb-[22px] text-[15px]'>Vikram Singh</p>

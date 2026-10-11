@@ -1,4 +1,3 @@
-import { MagicCard } from '@/components/ui/magic-card';
 import { Reveal } from '@/components/reveal';
 
 const blocks = [
@@ -23,23 +22,17 @@ export const WhatIDo = () => (
         <h2 className='section-title'>What I do</h2>
       </Reveal>
 
-      <div className='grid gap-5 md:grid-cols-3 md:gap-6'>
+      <div className='grid md:grid-cols-3 md:gap-[clamp(28px,4vw,48px)]'>
         {blocks.map((b, i) => (
-          <Reveal key={b.title} delay={i * 0.08} className='h-full'>
-            <MagicCard
-              className='h-full rounded-md'
-              gradientSize={240}
-              gradientColor='#EFE9DE'
-              gradientFrom='#8A3B2F'
-              gradientTo='#C9A27A'
-            >
-              <div className='p-7'>
-                <h3 className='mb-3 text-[clamp(21px,2.2vw,25px)] leading-tight'>
-                  {b.title}
-                </h3>
-                <p className='m-0 leading-relaxed'>{b.body}</p>
-              </div>
-            </MagicCard>
+          <Reveal
+            key={b.title}
+            delay={i * 0.08}
+            className='border-border border-t py-[22px] first:border-t-2 first:border-foreground md:border-foreground md:border-t-2 md:pb-0'
+          >
+            <h3 className='mb-3 text-[clamp(21px,2.2vw,25px)] leading-tight'>
+              {b.title}
+            </h3>
+            <p className='m-0 leading-relaxed'>{b.body}</p>
           </Reveal>
         ))}
       </div>

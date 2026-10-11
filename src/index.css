@@ -21,7 +21,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 24px;
+    scroll-padding-top: 72px; /* clears the sticky nav */
   }
 
   @media (prefers-reduced-motion: reduce) {

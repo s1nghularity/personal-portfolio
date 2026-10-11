@@ -3,7 +3,7 @@ import { Reveal } from '@/components/reveal';
 export const Contact = () => (
   <section
     id='contact'
-    className='bg-muted border-border border-t pt-[clamp(56px,9vw,128px)] pb-[calc(clamp(56px,9vw,128px)+72px)]'
+    className='bg-muted border-border section-y border-t'
   >
     <div className='container-page'>
       <Reveal className='grid items-start gap-7 md:grid-cols-[1.4fr_1fr] md:items-end md:gap-[clamp(32px,6vw,80px)]'>

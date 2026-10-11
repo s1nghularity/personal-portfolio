@@ -1,6 +1,6 @@
 import { MotionConfig } from 'motion/react';
 import { ScrollProgress } from '@/components/ui/scroll-progress';
-import { NavDock } from '@/components/nav-dock';
+import { SiteNav } from '@/components/site-nav';
 import { Hero } from '@/components/sections/hero';
 import { WhatIDo } from '@/components/sections/what-i-do';
 import { RecentWork } from '@/components/sections/recent-work';
@@ -14,6 +14,7 @@ export default function App() {
     // Honour prefers-reduced-motion: Motion drops transform animations.
     <MotionConfig reducedMotion='user'>
       <ScrollProgress className='bg-accent h-0.5 bg-none' />
+      <SiteNav />
       <main>
         <Hero />
         <WhatIDo />
@@ -23,7 +24,6 @@ export default function App() {
         <Experience />
         <Contact />
       </main>
-      <NavDock />
     </MotionConfig>
   );
 }
