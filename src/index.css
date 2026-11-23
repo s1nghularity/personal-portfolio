@@ -1,18 +1,18 @@
 @import 'tailwindcss';
 
 /* ============================================================
-   DESIGN TOKENS — literary editorial: warm paper/ink, one oxblood accent.
+   DESIGN TOKENS — editorial: white page, ink type, one oxblood accent.
    Names follow shadcn conventions so Magic UI components pick them up.
    ============================================================ */
 @theme {
-  --color-background: #f7f3ec; /* warm ivory paper */
-  --color-muted: #efe9de; /* deeper warm, alternating sections */
-  --color-foreground: #211c16; /* warm near-black */
-  --color-muted-foreground: #4f473f; /* secondary text, still high contrast */
-  --color-primary: #211c16;
-  --color-primary-foreground: #f7f3ec;
+  --color-background: #ffffff;
+  --color-muted: #f5f5f4; /* alternating sections */
+  --color-foreground: #1c1917;
+  --color-muted-foreground: #57534e; /* secondary text, still high contrast */
+  --color-primary: #1c1917;
+  --color-primary-foreground: #ffffff;
   --color-accent: #8a3b2f; /* seasoned oxblood, used sparingly */
-  --color-border: #e3dacb; /* warm hairline */
+  --color-border: #e7e5e4; /* hairline */
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -76,10 +76,6 @@
   @apply font-display text-foreground font-medium;
   font-size: clamp(28px, 4vw, 42px);
   line-height: 1.12;
-}
-
-@utility eyebrow {
-  @apply text-muted-foreground font-sans text-sm font-medium tracking-[0.14em] uppercase;
 }
 
 /* text link — ink by default, oxblood on hover */

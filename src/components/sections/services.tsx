@@ -1,5 +1,3 @@
-import { Reveal } from '@/components/reveal';
-
 const services: { name: string; desc: string; price?: string }[] = [
   {
     name: 'New websites',
@@ -19,21 +17,20 @@ const services: { name: string; desc: string; price?: string }[] = [
 export const Services = () => (
   <section id='offerings' className='border-border section-y border-t'>
     <div className='container-page'>
-      <Reveal className='mb-[clamp(28px,4vw,44px)] max-w-[720px]'>
+      <div className='mb-[clamp(28px,4vw,44px)] max-w-[720px]'>
         <h2 className='section-title'>Services</h2>
         <p className='mt-4 mb-0 max-w-[48ch] text-[clamp(18px,1.2vw,20px)] leading-relaxed'>
           Three ways to work together.
         </p>
-      </Reveal>
+      </div>
 
       <ul className='mb-[clamp(28px,4vw,40px)] list-none p-0'>
-        {services.map((s, i) => (
+        {services.map((s) => (
           <li
             key={s.name}
             className='border-border border-t last:border-b'
           >
-            <Reveal
-              delay={i * 0.06}
+            <div
               className='grid items-baseline gap-1.5 py-[clamp(20px,3vw,28px)] sm:grid-cols-[1fr_auto] sm:gap-[clamp(12px,3vw,40px)]'
             >
               <div>
@@ -47,13 +44,13 @@ export const Services = () => (
                   {s.price}
                 </div>
               )}
-            </Reveal>
+            </div>
           </li>
         ))}
       </ul>
 
       <a className='link-ink text-[17px]' href='#contact'>
-        Start a conversation →
+        Start a conversation
       </a>
     </div>
   </section>

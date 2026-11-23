@@ -1,28 +1,28 @@
 const links = [
   { label: 'Work', href: '#work' },
-  { label: 'Services', href: '#offerings' },
+  { label: 'Services', href: '#offerings', wide: true },
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience', wide: true },
   { label: 'Contact', href: '#contact' },
 ];
 
 /**
- * Plain sticky text nav. On small screens the name (shown in the hero) and
- * the Experience link are hidden so the rest fits on one line.
+ * Plain sticky text nav. On small screens the Services and Experience links
+ * are hidden so the name and the rest fit on one line.
  */
 export const SiteNav = () => (
   <header className='bg-background/95 border-border sticky top-0 z-40 border-b backdrop-blur-md'>
     <nav
       aria-label='Primary'
-      className='container-page flex h-14 items-center justify-between gap-6'
+      className='container-page flex h-14 items-center justify-between gap-4'
     >
       <a
         href='#home'
-        className='font-display hidden text-lg font-medium no-underline sm:block'
+        className='font-display shrink-0 text-lg font-medium no-underline'
       >
         Vikram Singh
       </a>
-      <ul className='m-0 flex w-full list-none justify-between gap-4 p-0 text-[15px] font-medium sm:w-auto sm:gap-7'>
+      <ul className='m-0 flex list-none gap-3.5 p-0 text-[15px] font-medium sm:gap-7'>
         {links.map((l) => (
           <li key={l.href} className={'wide' in l ? 'hidden sm:list-item' : undefined}>
             <a
