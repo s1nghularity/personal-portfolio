@@ -1,14 +1,9 @@
 import { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import { BlurFade } from '@/components/ui/blur-fade';
-import { InstagramIcon } from '@/components/icons';
-import { Reveal } from '@/components/reveal';
 
 type Role = {
   title: string;
   company: string;
   href?: string;
-  icon?: 'instagram';
   dates: string;
   desc: string;
 };
@@ -23,7 +18,7 @@ const roles: Role[] = [
   },
   {
     title: 'Web Designer & Developer',
-    company: 'S1nghularity · Freelance',
+    company: 'S1nghularity (freelance)',
     href: 'https://github.com/s1nghularity',
     dates: "Jan '23 - Present",
     desc: 'Refreshing business sites with modern design and UX. Built and shipped beechler.com and privateaffairband.com.',
@@ -32,7 +27,6 @@ const roles: Role[] = [
     title: 'Global Digital Strategist (and founding member)',
     company: 'Starfish Accelerator Foundation',
     href: 'https://www.instagram.com/thestarfishorg/',
-    icon: 'instagram',
     dates: "Oct '19 - Present",
     desc: 'Joined as a founding member; now Global Digital Strategist — running brand, social, and digital for the nonprofit. Ongoing.',
   },
@@ -84,19 +78,14 @@ const VISIBLE = 5;
 
 const CompanyName = ({ role }: { role: Role }) => {
   if (!role.href) return <>{role.company}</>;
-  const Icon = role.icon === 'instagram' ? InstagramIcon : ArrowUpRight;
   return (
     <a
-      className='hover:text-accent group border-b border-transparent text-inherit no-underline transition-colors hover:border-current'
+      className='hover:text-accent border-b border-transparent text-inherit no-underline transition-colors hover:border-current'
       href={role.href}
       target='_blank'
       rel='noreferrer'
     >
       {role.company}
-      <Icon
-        aria-hidden='true'
-        className='ml-[0.2em] inline size-[0.72em] align-baseline opacity-65 group-hover:opacity-100'
-      />
     </a>
   );
 };
@@ -107,13 +96,10 @@ const Row = ({ role }: { role: Role }) => (
       {role.dates}
     </div>
     <div>
-      <h3 className='mb-2 text-[clamp(19px,2vw,22px)] leading-tight'>
-        {role.title}
-        <span className='text-muted-foreground'>
-          {' · '}
-          <CompanyName role={role} />
-        </span>
-      </h3>
+      <h3 className='text-[clamp(19px,2vw,22px)] leading-tight'>{role.title}</h3>
+      <p className='text-muted-foreground mt-1 mb-2 text-[17px] font-medium'>
+        <CompanyName role={role} />
+      </p>
       <p className='m-0 max-w-[56ch] text-[17px] leading-relaxed'>{role.desc}</p>
     </div>
   </div>
@@ -126,23 +112,12 @@ export const Experience = () => {
   return (
     <section id='experience' className='section-y'>
       <div className='container-page'>
-        <Reveal className='mb-[clamp(32px,5vw,56px)]'>
-          <h2 className='section-title'>Experience</h2>
-        </Reveal>
+        <h2 className='section-title mb-[clamp(32px,5vw,56px)]'>Experience</h2>
 
         <ol className='m-0 list-none p-0'>
-          {shown.map((role, i) => (
+          {shown.map((role) => (
             <li key={role.title} className='border-border border-t last:border-b'>
-              {i < VISIBLE ? (
-                <Reveal delay={i * 0.04}>
-                  <Row role={role} />
-                </Reveal>
-              ) : (
-                // Rows revealed by "Show full history" fade in on mount.
-                <BlurFade direction='up' delay={(i - VISIBLE) * 0.05}>
-                  <Row role={role} />
-                </BlurFade>
-              )}
+              <Row role={role} />
             </li>
           ))}
         </ol>

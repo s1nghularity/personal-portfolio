@@ -1,5 +1,3 @@
-import { Reveal } from '@/components/reveal';
-
 const blocks = [
   {
     title: 'Strategy & words',
@@ -11,31 +9,28 @@ const blocks = [
   },
   {
     title: 'Keep it running',
-    body: "Software rots. Plugins update, browsers change, the contact form breaks on a Friday. I run upkeep for a fleet of sites serving California's community colleges. Launch is day one.",
+    body: "Software decays on its own: plugins update, browsers change, and the contact form breaks on a Friday. I run upkeep for a fleet of sites serving California's community colleges, where launch day is only the start.",
   },
 ];
 
 export const WhatIDo = () => (
   <section id='services' className='bg-muted section-y'>
     <div className='container-page'>
-      <Reveal className='mb-[clamp(40px,6vw,64px)]'>
-        <h2 className='section-title'>What I do</h2>
-      </Reveal>
+      <h2 className='section-title mb-[clamp(32px,5vw,56px)]'>What I do</h2>
 
-      <div className='grid md:grid-cols-3 md:gap-[clamp(28px,4vw,48px)]'>
-        {blocks.map((b, i) => (
-          <Reveal
+      <dl className='m-0'>
+        {blocks.map((b) => (
+          <div
             key={b.title}
-            delay={i * 0.08}
-            className='border-border border-t py-[22px] first:border-t-2 first:border-foreground md:border-foreground md:border-t-2 md:pb-0'
+            className='border-border grid gap-2 border-t py-[clamp(20px,3vw,28px)] last:border-b md:grid-cols-[1fr_1.6fr] md:gap-[clamp(20px,4vw,56px)]'
           >
-            <h3 className='mb-3 text-[clamp(21px,2.2vw,25px)] leading-tight'>
+            <dt className='font-display text-[clamp(21px,2.2vw,25px)] leading-tight font-medium'>
               {b.title}
-            </h3>
-            <p className='m-0 leading-relaxed'>{b.body}</p>
-          </Reveal>
+            </dt>
+            <dd className='m-0 max-w-[60ch] leading-relaxed'>{b.body}</dd>
+          </div>
         ))}
-      </div>
+      </dl>
     </div>
   </section>
 );

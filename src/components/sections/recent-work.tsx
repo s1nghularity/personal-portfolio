@@ -1,5 +1,4 @@
 import { Safari } from '@/components/ui/safari';
-import { Reveal } from '@/components/reveal';
 import { cn } from '@/lib/utils';
 
 import kavitaShot from '@/assets/img/proj-img/kavita.webp';
@@ -28,7 +27,7 @@ const projects: Project[] = [
     name: 'Beechler',
     href: 'https://beechler.com/',
     linkText: 'beechler.com',
-    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself. It still runs.',
+    body: 'Saxophone and clarinet mouthpieces, hand-finished in Los Angeles since 1942, sold in 27 countries. The brief: make the catalog browsable. React, my photography, a server I set up myself, still running today.',
     changes: [
       {
         label: 'Catalog',
@@ -69,7 +68,7 @@ const projects: Project[] = [
     href: 'https://kavitastudios.com/',
     linkText: 'kavitastudios.com',
     img: kavitaShot,
-    body: "Hand-painted silk and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store. My mother's label.",
+    body: "My mother's label: hand-painted silk and jackets, forty years of design, Paris to California. I project-managed the launch: design through Design Spinners, my photography, a Shopify store.",
   },
 ];
 
@@ -131,18 +130,17 @@ const Changes = ({ project }: { project: Project & { changes: Change[] } }) => (
 export const RecentWork = () => (
   <section id='work' className='section-y'>
     <div className='container-page'>
-      <Reveal className='mb-[clamp(40px,6vw,72px)]'>
+      <div className='mb-[clamp(40px,6vw,72px)]'>
         <h2 className='section-title'>Recent work</h2>
         <p className='mt-3.5 mb-0 max-w-[56ch] leading-relaxed'>
           What each site did before, what it does now, and what changed in
           between.
         </p>
-      </Reveal>
+      </div>
 
       <div className='flex flex-col gap-[clamp(56px,8vw,96px)]'>
         {projects.map((p) => (
-          <Reveal key={p.name}>
-            <article className='grid gap-[clamp(18px,2.5vw,28px)]'>
+          <article key={p.name} className='grid gap-[clamp(18px,2.5vw,28px)]'>
               <div className='grid items-start gap-2.5 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-[clamp(20px,4vw,56px)]'>
                 <h3 className='mb-3.5 text-[clamp(24px,3vw,33px)] leading-[1.12]'>
                   {p.name}
@@ -174,8 +172,7 @@ export const RecentWork = () => (
                   </a>
                 )
               )}
-            </article>
-          </Reveal>
+          </article>
         ))}
       </div>
     </div>

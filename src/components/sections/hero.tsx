@@ -1,7 +1,3 @@
-import { BlurFade } from '@/components/ui/blur-fade';
-import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
-import { TextAnimate } from '@/components/ui/text-animate';
-
 export const Hero = () => (
   <section
     id='home'
@@ -9,51 +5,32 @@ export const Hero = () => (
   >
     <div className='container-page'>
       <div className='max-w-[900px]'>
-        <BlurFade delay={0.05}>
-          <p className='eyebrow mb-[22px] text-[15px]'>Vikram Singh</p>
-        </BlurFade>
-
-        <TextAnimate
-          as='h1'
-          by='word'
-          animation='blurInUp'
-          duration={0.7}
-          delay={0.15}
-          startOnView={false}
-          once
-          className='max-w-[15ch] text-[clamp(40px,7vw,80px)] leading-[1.06] tracking-[-0.015em]'
-        >
+        <h1 className='max-w-[15ch] text-[clamp(40px,7vw,80px)] leading-[1.06] tracking-[-0.015em]'>
           A digital strategist who builds.
-        </TextAnimate>
+        </h1>
 
-        <BlurFade delay={0.55}>
-          <p className='mt-[clamp(24px,3.5vw,34px)] max-w-[56ch] text-[clamp(18px,1.3vw,21px)] leading-relaxed text-pretty'>
-            Most websites are built for launch day. I build them for the years
-            after — strategy, copy, design, and code, then the upkeep nobody
-            budgets for.
-          </p>
-        </BlurFade>
+        <p className='mt-[clamp(24px,3.5vw,34px)] max-w-[56ch] text-[clamp(18px,1.3vw,21px)] leading-relaxed text-pretty'>
+          Most websites are built for launch day. I build them for the years
+          after — strategy, copy, design, and code, then the upkeep nobody
+          budgets for.
+        </p>
 
-        <BlurFade delay={0.7}>
-          <p className='font-display mt-[18px] max-w-[56ch] text-[clamp(16px,1.2vw,18px)] leading-normal italic'>
-            Currently with the Foundation for California Community Colleges and
-            the Starfish Accelerator Foundation. Taking on select client work.
-          </p>
-        </BlurFade>
+        <p className='text-muted-foreground mt-[18px] max-w-[56ch] text-[clamp(16px,1.2vw,18px)] leading-normal'>
+          Currently with the Foundation for California Community Colleges and
+          the Starfish Accelerator Foundation. Taking on select client work.
+        </p>
 
-        <BlurFade delay={0.85}>
-          <div className='mt-[clamp(30px,4vw,42px)] flex flex-wrap items-center gap-x-7 gap-y-4'>
-            <InteractiveHoverButton
-              href='#work'
-              className='border-foreground px-7 py-3 text-base font-medium max-[480px]:w-full'
-            >
-              See the work
-            </InteractiveHoverButton>
-            <a className='link-ink py-1 text-base' href='#contact'>
-              Get in touch
-            </a>
-          </div>
-        </BlurFade>
+        <div className='mt-[clamp(30px,4vw,42px)] flex flex-wrap items-center gap-x-7 gap-y-4'>
+          <a
+            href='#work'
+            className='bg-foreground text-background inline-flex items-center justify-center rounded-sm px-[26px] py-[15px] text-base leading-none font-medium no-underline transition-colors hover:bg-black max-[480px]:w-full'
+          >
+            See the work
+          </a>
+          <a className='link-ink py-1 text-base' href='#contact'>
+            Get in touch
+          </a>
+        </div>
       </div>
     </div>
   </section>
